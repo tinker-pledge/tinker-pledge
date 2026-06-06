@@ -14,8 +14,8 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
-        <UnlocksSection />
         <HypothesisSection />
+        <UnlocksSection />
         <HowSection />
         <StoriesSection />
         <BusinessCaseSection />
