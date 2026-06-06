@@ -1,8 +1,8 @@
 const steps = [
   {
     number: "01",
-    title: "Everyone gets $200 each month",
-    body: "Added quietly alongside payroll or as a simple reimbursement. No approvals, no chasing receipts for a $20 subscription.",
+    title: "Set a budget that fits your company",
+    body: "Pick an amount that makes sense for your size and locality, then add it quietly alongside payroll or as a simple reimbursement. No approvals, no chasing receipts for a small subscription.",
   },
   {
     number: "02",

@@ -11,7 +11,7 @@ export function Hero() {
           </span>
 
           <h1 className="text-balance font-serif text-4xl font-light leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Give every person <span className="text-primary">$200 a month</span> to play with AI.
+            Give every person a budget to <span className="text-primary">play with AI.</span>
           </h1>
 
           <p className="max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">

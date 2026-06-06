@@ -18,8 +18,8 @@ const points = [
   },
   {
     icon: ShieldCheck,
-    stat: "$2,400 / yr / person",
-    label: "Small on a spreadsheet, simple to approve, and one day to roll out — no multi-quarter procurement cycle.",
+    stat: "A budget you control",
+    label: "Set it to fit your size and locality, scale it up or down anytime, and roll it out in a day — no multi-quarter procurement cycle.",
   },
 ]
 
@@ -33,8 +33,8 @@ export function BusinessCaseSection() {
             And yes — the business case holds up too.
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            We led with people on purpose. But if you need the numbers to take this to finance, here they are. They&apos;re
-            kind on their own.
+            We led with people on purpose. But if you need to take this to finance, the logic holds up at any budget you
+            choose — the value scales with how much people use it, not with what you spend.
           </p>
         </div>
 

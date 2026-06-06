@@ -15,9 +15,9 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: '$200 a Month to Play with AI — A Benefit for Whole People',
+  title: 'Give People a Budget to Play with AI — A Benefit for Whole People',
   description:
-    'Give every person $200 a month to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
+    'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
   generator: 'v0.app',
   icons: {
     icon: [
