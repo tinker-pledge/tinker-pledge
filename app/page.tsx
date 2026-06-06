@@ -1,9 +1,10 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
-import { WhySection } from "@/components/why-section"
+import { UnlocksSection } from "@/components/unlocks-section"
+import { HypothesisSection } from "@/components/hypothesis-section"
 import { HowSection } from "@/components/how-section"
-import { MathSection } from "@/components/math-section"
 import { StoriesSection } from "@/components/stories-section"
+import { BusinessCaseSection } from "@/components/business-case-section"
 import { CtaSection } from "@/components/cta-section"
 import { SiteFooter } from "@/components/site-footer"
 
@@ -13,10 +14,11 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
-        <WhySection />
+        <UnlocksSection />
+        <HypothesisSection />
         <HowSection />
-        <MathSection />
         <StoriesSection />
+        <BusinessCaseSection />
         <CtaSection />
       </main>
       <SiteFooter />

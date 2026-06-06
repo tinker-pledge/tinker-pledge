@@ -7,40 +7,40 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-16 pt-16 md:grid-cols-2 md:pb-24 md:pt-24">
         <div className="flex flex-col items-start gap-6">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-sm text-accent-foreground">
-            <span className="size-1.5 rounded-full bg-primary" />A people-first proposal
+            <span className="size-1.5 rounded-full bg-primary" />For the people, first
           </span>
 
           <h1 className="text-balance font-serif text-4xl font-light leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Give every person <span className="text-primary">$200 a month</span> for the AI tools they love.
+            Give every person <span className="text-primary">$200 a month</span> to play with AI.
           </h1>
 
           <p className="max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
-            Not for the company. For them. A small, human benefit that lets people bring the tools they already trust
-            into their work and their lives — and gives a little time back to everyone.
+            To learn a language. To plan a trip. To finally understand their taxes. The more people use these tools in
+            their own lives, the more fluent they become — and that fluency comes with them everywhere they go.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button
-              render={<a href="#cta" />}
+              render={<a href="#unlocks" />}
               nativeButton={false}
               size="lg"
               className="rounded-full px-7"
             >
-              Make the case
+              See what it unlocks
             </Button>
             <Button
-              render={<a href="#why" />}
+              render={<a href="#case" />}
               nativeButton={false}
               size="lg"
               variant="outline"
               className="rounded-full px-7"
             >
-              See why it works
+              Read the business case
             </Button>
           </div>
 
           <p className="text-sm text-muted-foreground">
-            Trusted by teams who&apos;d rather invest in people than perks.
+            People who are free to experiment, experiment more.
           </p>
         </div>
 
@@ -56,8 +56,8 @@ export function Hero() {
             />
           </div>
           <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-border/70 bg-card px-5 py-4 shadow-lg sm:block">
-            <p className="font-serif text-2xl text-foreground">~5 hrs</p>
-            <p className="text-sm text-muted-foreground">given back each week</p>
+            <p className="font-serif text-2xl text-foreground">No rules</p>
+            <p className="text-sm text-muted-foreground">just curiosity</p>
           </div>
         </div>
       </div>

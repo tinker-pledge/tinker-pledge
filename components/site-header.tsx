@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Why it matters", href: "#why" },
+  { label: "What it unlocks", href: "#unlocks" },
+  { label: "The idea", href: "#hypothesis" },
   { label: "How it works", href: "#how" },
-  { label: "The math", href: "#math" },
-  { label: "Stories", href: "#stories" },
+  { label: "The business case", href: "#case" },
 ]
 
 export function SiteHeader() {
@@ -38,7 +38,7 @@ export function SiteHeader() {
 
         <div className="hidden md:block">
           <Button render={<a href="#cta" />} nativeButton={false} className="rounded-full">
-            Propose the benefit
+            Bring it to your team
           </Button>
         </div>
 
@@ -69,7 +69,7 @@ export function SiteHeader() {
               nativeButton={false}
               className="mt-2 rounded-full"
             >
-              Propose the benefit
+              Bring it to your team
             </Button>
           </nav>
         </div>

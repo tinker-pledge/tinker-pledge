@@ -15,9 +15,9 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'The $200 AI Stipend — A Benefit That Gives Time Back',
+  title: '$200 a Month to Play with AI — A Benefit for Whole People',
   description:
-    'Give every employee $200 a month to use the AI tools they love. A simple, human benefit that reduces burnout, sparks growth, and gives people their time back.',
+    'Give every person $200 a month to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
   generator: 'v0.app',
   icons: {
     icon: [
