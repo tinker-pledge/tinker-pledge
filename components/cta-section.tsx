@@ -5,11 +5,11 @@ export function CtaSection() {
     <section id="cta" className="border-t border-border/60 bg-primary text-primary-foreground">
       <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-28">
         <h2 className="text-balance font-serif text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
-          Be the one who proposes it.
+          Make the Tinker Pledge.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
-          Bring a benefit your team will remember — one that says you see them as whole people, not just job titles.
-          Start with a short, ready-to-send proposal.
+          Commit to giving your people the freedom to explore — a benefit that says you see them as whole people, not
+          just job titles. Start with a short, ready-to-send proposal.
         </p>
 
         <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" action="#">

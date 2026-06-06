@@ -19,9 +19,9 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2.5">
           <span className="flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <span className="font-serif text-lg leading-none">e</span>
+            <span className="font-serif text-lg leading-none">T</span>
           </span>
-          <span className="font-serif text-lg tracking-tight text-foreground">ember</span>
+          <span className="font-serif text-lg tracking-tight text-foreground">The Tinker Pledge</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

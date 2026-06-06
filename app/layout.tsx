@@ -15,7 +15,7 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
-  title: 'Give People a Budget to Play with AI — A Benefit for Whole People',
+  title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
   description:
     'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
   generator: 'v0.app',
