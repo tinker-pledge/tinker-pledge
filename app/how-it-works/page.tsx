@@ -10,11 +10,12 @@ import {
   Users,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ToolsSection } from "@/components/tools-section"
 
 export const metadata: Metadata = {
   title: "How It Works | The Tinker Pledge",
   description:
-    "Budget guidance, rollout steps, and guardrails for launching a personal AI budget at work.",
+    "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
 }
 
 const budgetNotes = [
@@ -174,6 +175,8 @@ export default function HowItWorksPage() {
           </div>
         </div>
       </section>
+
+      <ToolsSection />
 
       <section>
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">

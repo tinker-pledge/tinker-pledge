@@ -39,6 +39,16 @@ export function HowSection() {
             >
               See the rollout details
             </Button>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Includes a starter list with familiar tools like ChatGPT, Claude, Gemini, Perplexity, GitHub Copilot, and
+              creative AI apps.
+            </p>
+            <a
+              href="/how-it-works#tools"
+              className="mt-3 inline-flex text-sm font-medium text-primary underline-offset-4 hover:underline"
+            >
+              View starter tools
+            </a>
           </div>
 
           <ol className="flex flex-col gap-px overflow-hidden rounded-3xl border border-border/70 bg-border/70">
