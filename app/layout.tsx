@@ -1,6 +1,8 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Fraunces } from 'next/font/google'
+import { SiteFooter } from '@/components/site-footer'
+import { SiteHeader } from '@/components/site-header'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -15,10 +17,28 @@ const fraunces = Fraunces({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tinkerpledge.org'),
   title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
   description:
     'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
   generator: 'v0.app',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
+    description:
+      'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them.',
+    url: '/',
+    siteName: 'The Tinker Pledge',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Tinker Pledge',
+    description:
+      'Give every person a budget to use AI in their own life, and let fluency come back to work.',
+  },
   icons: {
     icon: [
       {
@@ -49,7 +69,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} bg-background`}
     >
       <body className="font-sans antialiased">
-        {children}
+        <div className="min-h-screen bg-background">
+          <SiteHeader />
+          {children}
+          <SiteFooter />
+        </div>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

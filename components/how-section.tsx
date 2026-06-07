@@ -1,13 +1,15 @@
+import { Button } from "@/components/ui/button"
+
 const steps = [
   {
     number: "01",
     title: "Set a budget that fits your company",
-    body: "Pick an amount that makes sense for your size and locality, then add it quietly alongside payroll or as a simple reimbursement. No approvals, no chasing receipts for a small subscription.",
+    body: "Pick an amount that makes sense for your size and locality, then add it as a simple reimbursement against a curated starter list of AI tools.",
   },
   {
     number: "02",
     title: "They choose what actually helps",
-    body: "A writing assistant, a research tool, a coding copilot, a tool for learning a language at night. The same tools they'd pick for themselves.",
+    body: "A writing assistant, a research tool, a coding copilot, a tool for learning a language at night. Start with known options, then expand as people find what works.",
   },
   {
     number: "03",
@@ -24,11 +26,19 @@ export function HowSection() {
           <div className="md:sticky md:top-28 md:self-start">
             <p className="text-sm uppercase tracking-[0.2em] text-primary">How it works</p>
             <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-              Simple enough to launch this quarter.
+              Simple enough to launch today.
             </h2>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
               No new platform to buy. No long rollout. Just a small, trusting gesture that people will feel right away.
             </p>
+            <Button
+              render={<a href="/how-it-works" />}
+              nativeButton={false}
+              variant="outline"
+              className="mt-7 rounded-full"
+            >
+              See the rollout details
+            </Button>
           </div>
 
           <ol className="flex flex-col gap-px overflow-hidden rounded-3xl border border-border/70 bg-border/70">

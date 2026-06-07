@@ -3,8 +3,8 @@ import { Clock, GraduationCap, Magnet, ShieldCheck } from "lucide-react"
 const points = [
   {
     icon: Clock,
-    stat: "~5 hrs / wk",
-    label: "Routine drafting, summarizing, and research the right tools quietly absorb — time redirected to work only your people can do.",
+    stat: "Time back",
+    label: "Routine drafting, summarizing, and research are the first places people find leverage — time redirected to work only your people can do.",
   },
   {
     icon: GraduationCap,

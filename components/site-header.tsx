@@ -5,26 +5,26 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "The idea", href: "#hypothesis" },
-  { label: "What it unlocks", href: "#unlocks" },
-  { label: "How it works", href: "#how" },
-  { label: "The business case", href: "#case" },
+  { label: "The idea", href: "/#hypothesis" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "Business case", href: "/#case" },
+  { label: "Manifesto", href: "/manifesto" },
 ]
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md print:hidden">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2.5">
+        <a href="/" className="flex items-center gap-2.5">
           <span className="flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
             <span className="font-serif text-lg leading-none">T</span>
           </span>
           <span className="font-serif text-lg tracking-tight text-foreground">The Tinker Pledge</span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -36,14 +36,14 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button render={<a href="#cta" />} nativeButton={false} className="rounded-full">
+        <div className="hidden lg:block">
+          <Button render={<a href="/proposal" />} nativeButton={false} className="rounded-full">
             Bring it to your team
           </Button>
         </div>
 
         <button
-          className="text-foreground md:hidden"
+          className="text-foreground lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
         >
@@ -52,7 +52,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background px-6 py-4 md:hidden">
+        <div className="border-t border-border/60 bg-background px-6 py-4 lg:hidden">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
@@ -65,7 +65,7 @@ export function SiteHeader() {
               </a>
             ))}
             <Button
-              render={<a href="#cta" onClick={() => setOpen(false)} />}
+              render={<a href="/proposal" onClick={() => setOpen(false)} />}
               nativeButton={false}
               className="mt-2 rounded-full"
             >

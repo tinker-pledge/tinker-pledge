@@ -5,36 +5,35 @@ export function CtaSection() {
     <section id="cta" className="border-t border-border/60 bg-primary text-primary-foreground">
       <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-28">
         <h2 className="text-balance font-serif text-3xl font-light leading-tight sm:text-4xl md:text-5xl">
-          Make the Tinker Pledge.
+          Bring the Tinker Pledge to work.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
-          Commit to giving your people the freedom to explore — a benefit that says you see them as whole people, not
-          just job titles. Start with a short, ready-to-send proposal.
+          Be the person who makes it concrete. Generate a ready-to-send proposal, then forward the one-page manifesto
+          if people need the bigger argument.
         </p>
 
-        <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" action="#">
-          <label htmlFor="email" className="sr-only">
-            Work email
-          </label>
-          <input
-            id="email"
-            type="email"
-            required
-            placeholder="you@company.com"
-            className="h-12 flex-1 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-5 text-primary-foreground placeholder:text-primary-foreground/60 outline-none focus:border-primary-foreground/70"
-          />
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button
-            type="submit"
             size="lg"
             variant="secondary"
             className="h-12 rounded-full px-7 text-secondary-foreground"
+            render={<a href="/proposal" />}
+            nativeButton={false}
           >
-            Send me the proposal
+            Generate your proposal
           </Button>
-        </form>
+          <Button
+            size="lg"
+            className="h-12 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-7 text-primary-foreground hover:bg-primary-foreground/20"
+            render={<a href="/manifesto" />}
+            nativeButton={false}
+          >
+            Share the manifesto
+          </Button>
+        </div>
 
         <p className="mt-4 text-sm text-primary-foreground/70">
-          A one-page template you can forward to your manager today.
+          No sign-up. Everything you need to start the conversation today.
         </p>
       </div>
     </section>
