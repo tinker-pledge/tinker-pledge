@@ -8,33 +8,32 @@ export function CtaSection() {
           Make the Tinker Pledge.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
-          Commit to giving your people the freedom to explore — a benefit that says you see them as whole people, not
-          just job titles. Start with a short, ready-to-send proposal.
+          Be the person who brings it up. Generate a ready-to-send proposal, or share the one-page manifesto with the
+          people who can say yes.
         </p>
 
-        <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" action="#">
-          <label htmlFor="email" className="sr-only">
-            Work email
-          </label>
-          <input
-            id="email"
-            type="email"
-            required
-            placeholder="you@company.com"
-            className="h-12 flex-1 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-5 text-primary-foreground placeholder:text-primary-foreground/60 outline-none focus:border-primary-foreground/70"
-          />
+        <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button
-            type="submit"
             size="lg"
             variant="secondary"
             className="h-12 rounded-full px-7 text-secondary-foreground"
+            render={<a href="#proposal" />}
+            nativeButton={false}
           >
-            Send me the proposal
+            Generate your proposal
           </Button>
-        </form>
+          <Button
+            size="lg"
+            className="h-12 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-7 text-primary-foreground hover:bg-primary-foreground/20"
+            render={<a href="#manifesto" />}
+            nativeButton={false}
+          >
+            Share the manifesto
+          </Button>
+        </div>
 
         <p className="mt-4 text-sm text-primary-foreground/70">
-          A one-page template you can forward to your manager today.
+          No sign-up. Everything you need to start the conversation today.
         </p>
       </div>
     </section>

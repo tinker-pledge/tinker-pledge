@@ -9,6 +9,7 @@ const navLinks = [
   { label: "What it unlocks", href: "#unlocks" },
   { label: "How it works", href: "#how" },
   { label: "The business case", href: "#case" },
+  { label: "Make a proposal", href: "#proposal" },
 ]
 
 export function SiteHeader() {
@@ -37,7 +38,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <Button render={<a href="#cta" />} nativeButton={false} className="rounded-full">
+          <Button render={<a href="#proposal" />} nativeButton={false} className="rounded-full">
             Bring it to your team
           </Button>
         </div>
@@ -65,7 +66,7 @@ export function SiteHeader() {
               </a>
             ))}
             <Button
-              render={<a href="#cta" onClick={() => setOpen(false)} />}
+              render={<a href="#proposal" onClick={() => setOpen(false)} />}
               nativeButton={false}
               className="mt-2 rounded-full"
             >
