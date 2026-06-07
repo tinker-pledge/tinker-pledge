@@ -1,5 +1,6 @@
 export const SHARE_URL = "https://tinkerpledge.org"
 export const PLEDGE_LINE = "the freedom to tinker is how people get fluent — so the breakthroughs take care of themselves."
+const X_HANDLE = "@tinkerpledge"
 
 export function buildPledgeShareText(firstName = "") {
   const who = firstName
@@ -10,7 +11,8 @@ export function buildPledgeShareText(firstName = "") {
 }
 
 export function buildXShareUrl(text: string) {
-  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(SHARE_URL)}`
+  const xText = `${text}\n\nvia ${X_HANDLE}`
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(xText)}&url=${encodeURIComponent(SHARE_URL)}`
 }
 
 export function buildLinkedInShareUrl() {

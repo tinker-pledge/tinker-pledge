@@ -1,33 +1,76 @@
-# tinker-pledge
+# The Tinker Pledge
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+The Tinker Pledge is an open-source project for making personal AI fluency a workplace benefit.
 
-## Built with v0
+The core idea: employers can reimburse a small personal AI budget so people build confidence through low-stakes use in their own lives. The work benefit follows from the fluency.
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Live site: [tinkerpledge.org](https://tinkerpledge.org)
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_r8gHZLVm42ksqxVrkMJEgA5MNiPJ)
+## Project Status
 
-## Getting Started
+This is being built in the open. The current site includes:
 
-First, run the development server:
+- A short homepage explaining the pledge.
+- A practical "how it works" guide.
+- A starter AI tools list.
+- A proposal generator for bringing the idea to a workplace.
+- A manifesto and sharing flow.
+
+The curated tool list and starter policy examples are still evolving.
+
+## Join The Conversation
+
+Please use [GitHub Issues](https://github.com/tinker-pledge/tinker-pledge/issues) for:
+
+- Tool suggestions for the starter list.
+- Policy examples and reimbursement ideas.
+- Copy feedback.
+- Design or accessibility issues.
+- Bug reports.
+- Questions about how to adapt the pledge at a real company.
+
+If you are not sure whether something belongs in the repo, open an issue first. That keeps the discussion public and easier for others to build on.
+
+## Local Development
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install --frozen-lockfile
+```
+
+Run the development server:
+
+```bash
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run a TypeScript check:
 
-## Learn More
+```bash
+pnpm exec tsc --noEmit
+```
 
-To learn more, take a look at the following resources:
+Note: `pnpm build` may need network access because the app uses `next/font` with Google Fonts.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+## Project Structure
+
+- `app/page.tsx`: homepage flow.
+- `app/how-it-works/page.tsx`: implementation guide and starter tools section.
+- `app/proposal/page.tsx`: proposal generator.
+- `app/manifesto/page.tsx`: manifesto and pledge sharing.
+- `data/starter-tools.json`: starter tool catalog.
+- `components/tools-section.tsx` and `components/tools-browser.tsx`: tools list UI.
+- `AGENTS.md`: project guidance for AI coding agents and contributors.
+
+## Contributing Notes
+
+Keep the project credible and transparent:
+
+- Do not invent testimonials, customer quotes, adoption metrics, or ROI claims.
+- Keep tool entries compact and familiar.
+- Avoid exact pricing, plan names, or privacy claims unless they were just verified from primary sources.
+- Keep guardrails clear: personal tools are for personal practice unless a company explicitly approves them for company data.
+- Prefer issues for discussion before broad product or copy changes.

@@ -32,6 +32,18 @@ export function SiteFooter() {
               Shrek
             </a>
           </p>
+          <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
+            {"Follow the project at "}
+            <a
+              href="https://x.com/tinkerpledge"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+            >
+              @tinkerpledge
+            </a>
+            {"."}
+          </p>
         </div>
       </div>
     </footer>
