@@ -40,8 +40,8 @@ export function HowSection() {
               See the rollout details
             </Button>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Includes a starter list with familiar tools like ChatGPT, Claude, Gemini, Perplexity, GitHub Copilot, and
-              creative AI apps.
+              Includes a starter list with familiar tools like ChatGPT, Claude, Gemini, Perplexity, Cursor, GitHub
+              Copilot, v0, and creative AI apps.
             </p>
             <a
               href="/how-it-works#tools"

@@ -1,0 +1,167 @@
+{
+  "categories": [
+    {
+      "id": "think-ask",
+      "label": "Think & ask",
+      "description": "General assistants for planning, explaining, drafting, and curiosity."
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "description": "Question-answering and source discovery for personal learning."
+    },
+    {
+      "id": "write-organize",
+      "label": "Write & organize",
+      "description": "Assistants inside the places people already write and plan."
+    },
+    {
+      "id": "code-build",
+      "label": "Code & build",
+      "description": "Coding assistants for people already tinkering inside a codebase."
+    },
+    {
+      "id": "prototype-apps",
+      "label": "Prototype apps",
+      "description": "Prompt-to-app builders for small tools, websites, and experiments."
+    },
+    {
+      "id": "create",
+      "label": "Create",
+      "description": "Image, design, and video tools for creative exploration."
+    },
+    {
+      "id": "voice-media",
+      "label": "Voice & media",
+      "description": "Audio and video tools for editing, narration, and experiments."
+    }
+  ],
+  "tools": [
+    {
+      "name": "ChatGPT",
+      "categoryId": "think-ask",
+      "href": "https://chatgpt.com/",
+      "use": "Draft, plan, explain, summarize, and brainstorm.",
+      "tags": ["assistant", "writing", "learning"]
+    },
+    {
+      "name": "Claude",
+      "categoryId": "think-ask",
+      "href": "https://claude.ai/",
+      "use": "Work through writing, analysis, documents, and code.",
+      "tags": ["assistant", "writing", "analysis"]
+    },
+    {
+      "name": "Gemini",
+      "categoryId": "think-ask",
+      "href": "https://gemini.google.com/",
+      "use": "Explore ideas, ask questions, and get help across everyday tasks.",
+      "tags": ["assistant", "learning", "planning"]
+    },
+    {
+      "name": "Perplexity",
+      "categoryId": "research",
+      "href": "https://www.perplexity.ai/",
+      "use": "Search, compare sources, and chase down unfamiliar topics.",
+      "tags": ["research", "search", "sources"]
+    },
+    {
+      "name": "Grammarly",
+      "categoryId": "write-organize",
+      "href": "https://www.grammarly.com/",
+      "use": "Polish messages, drafts, and everyday writing.",
+      "tags": ["writing", "editing", "communication"]
+    },
+    {
+      "name": "Notion AI",
+      "categoryId": "write-organize",
+      "href": "https://www.notion.com/product/ai",
+      "use": "Turn notes, plans, and docs into clearer next steps.",
+      "tags": ["notes", "docs", "planning"]
+    },
+    {
+      "name": "GitHub Copilot",
+      "categoryId": "code-build",
+      "href": "https://github.com/features/copilot",
+      "use": "Pair on code, scripts, and personal technical projects.",
+      "tags": ["coding", "developer", "ide"]
+    },
+    {
+      "name": "Cursor",
+      "categoryId": "code-build",
+      "href": "https://cursor.com/",
+      "use": "Build and refactor inside an AI-native code editor.",
+      "tags": ["coding", "developer", "editor"]
+    },
+    {
+      "name": "Claude Code",
+      "categoryId": "code-build",
+      "href": "https://claude.com/product/claude-code",
+      "use": "Delegate coding tasks from the terminal, IDE, web, or desktop.",
+      "tags": ["coding", "developer", "agent"]
+    },
+    {
+      "name": "Replit Agent",
+      "categoryId": "prototype-apps",
+      "href": "https://replit.com/products/agent",
+      "use": "Turn an app or website idea into a working project in the browser.",
+      "tags": ["apps", "prototype", "builder"]
+    },
+    {
+      "name": "v0",
+      "categoryId": "prototype-apps",
+      "href": "https://v0.app/",
+      "use": "Generate and iterate on web apps, interfaces, and prototypes.",
+      "tags": ["apps", "ui", "prototype"]
+    },
+    {
+      "name": "Bolt",
+      "categoryId": "prototype-apps",
+      "href": "https://bolt.new/",
+      "use": "Build websites, apps, and prototypes from a chat prompt.",
+      "tags": ["apps", "prototype", "builder"]
+    },
+    {
+      "name": "Lovable",
+      "categoryId": "prototype-apps",
+      "href": "https://lovable.dev/",
+      "use": "Create apps and websites by chatting with AI.",
+      "tags": ["apps", "prototype", "builder"]
+    },
+    {
+      "name": "Midjourney",
+      "categoryId": "create",
+      "href": "https://www.midjourney.com/",
+      "use": "Explore visual ideas and generate image concepts.",
+      "tags": ["images", "creative", "visual"]
+    },
+    {
+      "name": "Canva Magic Studio",
+      "categoryId": "create",
+      "href": "https://www.canva.com/magic/",
+      "use": "Make quick graphics, presentations, and design drafts.",
+      "tags": ["design", "presentations", "visual"]
+    },
+    {
+      "name": "Runway",
+      "categoryId": "create",
+      "href": "https://runwayml.com/",
+      "use": "Experiment with AI video, images, and motion.",
+      "tags": ["video", "images", "creative"]
+    },
+    {
+      "name": "ElevenLabs",
+      "categoryId": "voice-media",
+      "href": "https://elevenlabs.io/",
+      "use": "Create voice experiments, narration, and audio ideas.",
+      "tags": ["voice", "audio", "media"]
+    },
+    {
+      "name": "Descript",
+      "categoryId": "voice-media",
+      "href": "https://www.descript.com/",
+      "use": "Edit podcasts, videos, and transcripts with AI help.",
+      "tags": ["audio", "video", "editing"]
+    }
+  ]
+}
