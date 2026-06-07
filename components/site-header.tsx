@@ -9,6 +9,7 @@ const navLinks = [
   { label: "What it unlocks", href: "#unlocks" },
   { label: "How it works", href: "#how" },
   { label: "The business case", href: "#case" },
+  { label: "Take the pledge", href: "#pledge" },
   { label: "Make a proposal", href: "#proposal" },
 ]
 

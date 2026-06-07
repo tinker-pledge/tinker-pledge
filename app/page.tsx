@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { UnlocksSection } from "@/components/unlocks-section"
 import { HypothesisSection } from "@/components/hypothesis-section"
+import { PledgeSection } from "@/components/pledge-section"
 import { HowSection } from "@/components/how-section"
 import { StoriesSection } from "@/components/stories-section"
 import { BusinessCaseSection } from "@/components/business-case-section"
@@ -21,6 +22,7 @@ export default function Page() {
         <HowSection />
         <StoriesSection />
         <BusinessCaseSection />
+        <PledgeSection />
         <ProposalGenerator />
         <ManifestoSection />
         <CtaSection />
