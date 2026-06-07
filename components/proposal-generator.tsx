@@ -39,7 +39,7 @@ Hi team,
 
 ${opener}
 
-The idea: give every person at ${who} ${amount} each month${place} to spend on the consumer AI tools they're drawn to — to use in their own lives, however they like. No approval process, no mandated tool, no usage reports.
+The idea: give every person at ${who} ${amount} each month${place} to spend on consumer AI tools they can use in their own lives. We can start with a curated list of trusted options, keep reimbursement lightweight, and avoid usage reports.
 
 Why this, and why now:
 
@@ -49,8 +49,8 @@ So this isn't "buy a tool to make people more productive." It's "give people the
 
 What I'm asking for:
 • A per-person monthly budget (we choose the number that fits us).
-• Added simply alongside payroll or as a light reimbursement.
-• Freedom for people to pick their own tools — no central mandate.
+• Added as a light reimbursement.
+• A curated starter list, with room to add tools as people find what works.
 
 I'm happy to own the rollout and keep it lightweight. I think it would say something real about how we see the people here: as whole people, not just job titles.
 

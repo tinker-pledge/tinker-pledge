@@ -15,27 +15,27 @@ export function Hero() {
           </h1>
 
           <p className="max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
-            To learn a language. To plan a trip. To finally understand their taxes. The more people use these tools in
-            their own lives, the more fluent they become — and that fluency comes with them everywhere they go.
+            Give every employee a personal AI budget to use in their own life. When people use these tools for what
+            matters to them, they get more fluent.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button
-              render={<a href="#unlocks" />}
+              render={<a href="/proposal" />}
               nativeButton={false}
               size="lg"
               className="rounded-full px-7"
             >
-              See what it unlocks
+              Generate your proposal
             </Button>
             <Button
-              render={<a href="#case" />}
+              render={<a href="/how-it-works" />}
               nativeButton={false}
               size="lg"
               variant="outline"
               className="rounded-full px-7"
             >
-              Read the business case
+              See how it works
             </Button>
           </div>
 
@@ -56,7 +56,7 @@ export function Hero() {
             />
           </div>
           <div className="absolute -bottom-5 -left-5 hidden rounded-2xl border border-border/70 bg-card px-5 py-4 shadow-lg sm:block">
-            <p className="font-serif text-2xl text-foreground">No rules</p>
+            <p className="font-serif text-2xl text-foreground">No Mandates</p>
             <p className="text-sm text-muted-foreground">just curiosity</p>
           </div>
         </div>

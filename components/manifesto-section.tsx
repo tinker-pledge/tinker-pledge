@@ -9,7 +9,7 @@ const principles = [
   },
   {
     title: "Freedom is the active ingredient",
-    body: "People who are free to experiment, experiment more. Remove the approvals, the mandated tool, the usage reports — and curiosity does the rest.",
+    body: "People who are free to experiment, experiment more. Give them trusted starting points, keep the policy lightweight, and let curiosity do the rest.",
   },
   {
     title: "The breakthroughs are a side effect",
@@ -73,15 +73,15 @@ export function ManifestoSection() {
         </article>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Button type="button" size="lg" className="rounded-full px-7" onClick={handlePrint}>
+          <Button type="button" size="lg" className="rounded-full px-7 print:hidden" onClick={handlePrint}>
             Print or save as PDF
           </Button>
           <Button
             type="button"
             size="lg"
             variant="outline"
-            className="rounded-full px-7"
-            render={<a href="#proposal" />}
+            className="rounded-full px-7 print:hidden"
+            render={<a href="/proposal" />}
             nativeButton={false}
           >
             Generate a proposal instead

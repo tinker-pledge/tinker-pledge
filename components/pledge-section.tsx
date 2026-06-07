@@ -1,27 +1,21 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Button } from "@/components/ui/button"
-
-const SHARE_URL = "https://thetinkerpledge.com"
-const PLEDGE_LINE = "the freedom to tinker is how people get fluent — so the breakthroughs take care of themselves."
+import { buildLinkedInShareUrl, buildPledgeShareText, buildXShareUrl, SHARE_URL } from "@/lib/pledge-share"
 
 export function PledgeSection() {
   const [name, setName] = useState("")
   const [copied, setCopied] = useState(false)
   const [canNativeShare, setCanNativeShare] = useState(false)
 
-  // Detect native share support on the client without fetching in an effect.
-  if (typeof window !== "undefined" && !canNativeShare && typeof navigator !== "undefined" && !!navigator.share) {
-    setCanNativeShare(true)
-  }
+  useEffect(() => {
+    setCanNativeShare(typeof navigator !== "undefined" && !!navigator.share)
+  }, [])
 
   const firstName = name.trim().split(/\s+/)[0] || ""
 
-  const shareText = useMemo(() => {
-    const who = firstName ? `I'm ${firstName}, and I'm taking the Tinker Pledge: ` : "I'm taking the Tinker Pledge: "
-    return `${who}${PLEDGE_LINE}`
-  }, [firstName])
+  const shareText = useMemo(() => buildPledgeShareText(firstName), [firstName])
 
   async function handleNativeShare() {
     try {
@@ -45,16 +39,13 @@ export function PledgeSection() {
     }
   }
 
-  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(
-    SHARE_URL,
-  )}`
-  const liHref = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SHARE_URL)}`
+  const xHref = buildXShareUrl(shareText)
+  const liHref = buildLinkedInShareUrl()
 
   return (
     <section id="pledge" className="border-t border-border/60 bg-background">
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          {/* Left: invitation */}
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-primary">Add your voice</p>
             <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
@@ -79,7 +70,6 @@ export function PledgeSection() {
             </div>
           </div>
 
-          {/* Right: pledge card + share */}
           <div className="rounded-3xl border border-border/70 bg-secondary/40 p-8 sm:p-10">
             <div className="flex items-center gap-2.5">
               <span className="flex size-7 items-center justify-center rounded-full bg-primary text-primary-foreground">
@@ -130,7 +120,10 @@ export function PledgeSection() {
             </div>
 
             <p className="mt-5 text-sm text-muted-foreground">
-              Signed it in your heart? <a href="#proposal" className="text-primary underline-offset-4 hover:underline">Now bring it to your team.</a>
+              Signed it in your heart?{" "}
+              <a href="/proposal" className="text-primary underline-offset-4 hover:underline">
+                Now bring it to your team.
+              </a>
             </p>
           </div>
         </div>
