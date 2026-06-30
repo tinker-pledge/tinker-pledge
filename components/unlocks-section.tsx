@@ -52,7 +52,7 @@ export function UnlocksSection() {
           {unlocks.map((u) => (
             <div
               key={u.title}
-              className="flex flex-col gap-4 rounded-3xl border border-border/70 bg-card p-8 transition-shadow hover:shadow-[0_20px_50px_-30px_rgba(120,80,50,0.4)]"
+              className="flex flex-col gap-4 rounded-3xl border border-border/70 bg-card p-8 transition-shadow hover:shadow-[0_20px_50px_-30px_rgba(63,38,36,0.38)]"
             >
               <span className="flex size-12 items-center justify-center rounded-2xl bg-accent text-primary">
                 <u.icon className="size-6" strokeWidth={1.75} />

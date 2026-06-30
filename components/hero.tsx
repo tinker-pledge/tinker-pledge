@@ -45,7 +45,7 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="overflow-hidden rounded-[2rem] border border-border/70 shadow-[0_30px_80px_-30px_rgba(120,80,50,0.35)]">
+          <div className="overflow-hidden rounded-[2rem] border border-border/70 shadow-[0_30px_80px_-30px_rgba(63,38,36,0.34)]">
             <Image
               src="/images/hero-warm.png"
               alt="A person working calmly at a sunlit desk with a warm mug of tea"

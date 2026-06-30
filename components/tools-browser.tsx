@@ -53,7 +53,7 @@ export function ToolsBrowser() {
   }, [activeCategory, query])
 
   return (
-    <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-[0_20px_60px_-45px_rgba(120,80,50,0.45)] sm:p-6">
+    <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-[0_20px_60px_-45px_rgba(63,38,36,0.42)] sm:p-6">
       <div className="flex flex-col gap-4 border-b border-border/70 pb-5">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>

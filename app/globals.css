@@ -50,73 +50,105 @@
 }
 
 :root {
-  /* Warm, human palette: cream background, soft ink text, vivid orange accent (from palette) */
-  --background: oklch(0.985 0.012 80);
-  --foreground: oklch(0.31 0.02 50);
-  --card: oklch(0.995 0.008 85);
-  --card-foreground: oklch(0.31 0.02 50);
-  --popover: oklch(0.995 0.008 85);
-  --popover-foreground: oklch(0.31 0.02 50);
-  --primary: oklch(0.668 0.185 41.5);
-  --primary-foreground: oklch(0.99 0.01 80);
-  --secondary: oklch(0.95 0.02 75);
-  --secondary-foreground: oklch(0.36 0.03 50);
-  --muted: oklch(0.95 0.018 75);
-  --muted-foreground: oklch(0.54 0.02 55);
-  --accent: oklch(0.93 0.045 55);
-  --accent-foreground: oklch(0.5 0.17 35);
-  --destructive: oklch(0.577 0.18 27);
-  --border: oklch(0.9 0.018 70);
-  --input: oklch(0.9 0.018 70);
-  --ring: oklch(0.668 0.185 41.5);
-  --chart-1: oklch(0.668 0.185 41.5);
-  --chart-2: oklch(0.72 0.09 75);
-  --chart-3: oklch(0.6 0.07 130);
-  --chart-4: oklch(0.55 0.06 230);
-  --chart-5: oklch(0.5 0.08 30);
+  /* Palette story:
+     - Sun paper is the quiet peach light from the references; it keeps the site warm and personal.
+     - Fired clay carries action and craft, so every primary button feels tangible rather than corporate.
+     - Dusk mist separates calm sections without turning the site into a marketing gradient.
+     - Sage straw adds the grounded, earthy note for badges and icon wells.
+     - Lake shadow keeps text human and legible, like the dark shoreline in the sunset photo. */
+  --palette-sun-paper: oklch(0.972 0.017 52);
+  --palette-warm-paper: oklch(0.986 0.012 72);
+  --palette-lake-shadow: oklch(0.265 0.032 27);
+  --palette-fired-clay: oklch(0.535 0.13 33);
+  --palette-clay-foreground: oklch(0.986 0.012 72);
+  --palette-dusk-mist: oklch(0.91 0.02 338);
+  --palette-dusk-ink: oklch(0.305 0.03 19);
+  --palette-oat-rest: oklch(0.925 0.025 52);
+  --palette-weathered-ink: oklch(0.455 0.032 18);
+  --palette-sage-straw: oklch(0.935 0.032 96);
+  --palette-sage-ink: oklch(0.32 0.055 62);
+  --palette-clay-border: oklch(0.84 0.029 34);
+  --palette-ember-rose: oklch(0.715 0.096 15);
+  --palette-water-blue: oklch(0.54 0.043 235);
+  --palette-golden-hour: oklch(0.76 0.112 78);
+
+  --background: var(--palette-sun-paper);
+  --foreground: var(--palette-lake-shadow);
+  --card: var(--palette-warm-paper);
+  --card-foreground: var(--palette-lake-shadow);
+  --popover: var(--palette-warm-paper);
+  --popover-foreground: var(--palette-lake-shadow);
+  --primary: var(--palette-fired-clay);
+  --primary-foreground: var(--palette-clay-foreground);
+  --secondary: var(--palette-dusk-mist);
+  --secondary-foreground: var(--palette-dusk-ink);
+  --muted: var(--palette-oat-rest);
+  --muted-foreground: var(--palette-weathered-ink);
+  --accent: var(--palette-sage-straw);
+  --accent-foreground: var(--palette-sage-ink);
+  --destructive: oklch(0.501 0.178 28.7);
+  --border: var(--palette-clay-border);
+  --input: var(--palette-clay-border);
+  --ring: var(--palette-fired-clay);
+  --chart-1: var(--palette-fired-clay);
+  --chart-2: var(--palette-ember-rose);
+  --chart-3: var(--palette-sage-straw);
+  --chart-4: var(--palette-water-blue);
+  --chart-5: var(--palette-golden-hour);
   --radius: 1rem;
-  --sidebar: oklch(0.985 0.012 80);
-  --sidebar-foreground: oklch(0.31 0.02 50);
-  --sidebar-primary: oklch(0.668 0.185 41.5);
-  --sidebar-primary-foreground: oklch(0.99 0.01 80);
-  --sidebar-accent: oklch(0.93 0.045 55);
-  --sidebar-accent-foreground: oklch(0.5 0.17 35);
-  --sidebar-border: oklch(0.9 0.018 70);
-  --sidebar-ring: oklch(0.668 0.185 41.5);
+  --sidebar: var(--palette-sun-paper);
+  --sidebar-foreground: var(--palette-lake-shadow);
+  --sidebar-primary: var(--palette-fired-clay);
+  --sidebar-primary-foreground: var(--palette-clay-foreground);
+  --sidebar-accent: var(--palette-sage-straw);
+  --sidebar-accent-foreground: var(--palette-sage-ink);
+  --sidebar-border: var(--palette-clay-border);
+  --sidebar-ring: var(--palette-fired-clay);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --palette-night-water: oklch(0.19 0.024 340);
+  --palette-night-card: oklch(0.225 0.025 25);
+  --palette-night-paper: oklch(0.924 0.022 50);
+  --palette-ember-clay: oklch(0.745 0.13 34);
+  --palette-ember-ink: oklch(0.217 0.04 26);
+  --palette-dusk-plum: oklch(0.304 0.029 346);
+  --palette-oat-dark: oklch(0.281 0.021 14);
+  --palette-oat-muted: oklch(0.76 0.033 35);
+  --palette-sage-shadow: oklch(0.335 0.04 92);
+  --palette-night-border: oklch(0.358 0.034 27);
+
+  --background: var(--palette-night-water);
+  --foreground: var(--palette-night-paper);
+  --card: var(--palette-night-card);
+  --card-foreground: var(--palette-night-paper);
+  --popover: var(--palette-night-card);
+  --popover-foreground: var(--palette-night-paper);
+  --primary: var(--palette-ember-clay);
+  --primary-foreground: var(--palette-ember-ink);
+  --secondary: var(--palette-dusk-plum);
+  --secondary-foreground: var(--palette-night-paper);
+  --muted: var(--palette-oat-dark);
+  --muted-foreground: var(--palette-oat-muted);
+  --accent: var(--palette-sage-shadow);
+  --accent-foreground: var(--palette-night-paper);
+  --destructive: oklch(0.704 0.191 22.2);
+  --border: var(--palette-night-border);
+  --input: var(--palette-night-border);
+  --ring: var(--palette-ember-clay);
+  --chart-1: var(--palette-ember-clay);
+  --chart-2: var(--palette-ember-rose);
+  --chart-3: var(--palette-sage-straw);
+  --chart-4: var(--palette-water-blue);
+  --chart-5: var(--palette-golden-hour);
+  --sidebar: var(--palette-night-card);
+  --sidebar-foreground: var(--palette-night-paper);
+  --sidebar-primary: var(--palette-ember-clay);
+  --sidebar-primary-foreground: var(--palette-ember-ink);
+  --sidebar-accent: var(--palette-sage-shadow);
+  --sidebar-accent-foreground: var(--palette-night-paper);
+  --sidebar-border: var(--palette-night-border);
+  --sidebar-ring: var(--palette-ember-clay);
 }
 
 @layer base {
