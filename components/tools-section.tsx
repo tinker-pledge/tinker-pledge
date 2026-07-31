@@ -4,18 +4,18 @@ import { ToolsBrowser } from "@/components/tools-browser"
 const principles = [
   {
     icon: Sparkles,
-    title: "Familiar first",
-    body: "Start with names people recognize.",
+    title: "Familiar tools first",
+    body: "Give people an approachable place to begin.",
   },
   {
     icon: Users,
-    title: "Employee-led additions",
-    body: "Let usage show what belongs next.",
+    title: "A path for requests",
+    body: "Let employees suggest additions as needs emerge.",
   },
   {
     icon: ShieldCheck,
-    title: "Clear data boundary",
-    body: "Personal tools stay for personal practice.",
+    title: "A firm data boundary",
+    body: "Company data stays out unless a tool is explicitly approved.",
   },
 ]
 
@@ -27,11 +27,11 @@ export function ToolsSection() {
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.2em] text-primary">Starter tools</p>
             <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-              A browsable list, not a giant directory.
+              Start with a focused, familiar set of tools.
             </h2>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-              Keep the page compact and the policy flexible. The catalog is a launch default people can browse, search,
-              and improve over time.
+              A curated list gives employees a clear starting point without turning the policy into a fixed catalog.
+              Keep it searchable, invite requests, and review it over time.
             </p>
           </div>
 
@@ -54,9 +54,9 @@ export function ToolsSection() {
                   <Lightbulb className="size-4" strokeWidth={1.75} />
                 </span>
                 <div>
-                  <h3 className="font-medium text-foreground">Review quarterly</h3>
+                  <h3 className="font-medium text-foreground">Review regularly</h3>
                   <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
-                    Keep the budget stable while the list evolves.
+                    Update the list as tools and needs change.
                   </p>
                 </div>
               </div>

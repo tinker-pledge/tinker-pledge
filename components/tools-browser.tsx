@@ -30,7 +30,7 @@ export function ToolsBrowser() {
 
   const activeDescription =
     activeCategory === "all"
-      ? "Browse the starter list by category, or search for a familiar name or use case."
+      ? "Browse by category, or search for a familiar name or personal use case."
       : categories.find((category) => category.id === activeCategory)?.description
 
   const filteredTools = useMemo(() => {
@@ -142,9 +142,9 @@ export function ToolsBrowser() {
           </div>
         ) : (
           <div className="py-12 text-center">
-            <p className="font-serif text-xl text-foreground">No matches yet.</p>
+            <p className="font-serif text-xl text-foreground">No tools match that search.</p>
             <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Try a broader search, or treat this as a sign to add an employee-suggested tool during review.
+              Try a broader term. Employees can also suggest tools for the next review.
             </p>
           </div>
         )}

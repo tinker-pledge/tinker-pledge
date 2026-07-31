@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 type Tone = "warm" | "direct"
 
-const sizeOptions = ["Just me / a few of us", "Under 50", "50–250", "250–1,000", "1,000+"]
+const sizeOptions = ["Pilot or small team", "Fewer than 50", "50–250", "250–1,000", "1,000+"]
 
 function buildProposal({
   name,
@@ -24,35 +24,53 @@ function buildProposal({
 }) {
   const who = company.trim() || "our company"
   const signer = name.trim() || "[Your name]"
-  const amount = budget.trim() || "a personal AI budget"
-  const place = locality.trim() ? ` (adjusted for ${locality.trim()})` : ""
-  const scale = size && size !== sizeOptions[0] ? ` Across a team of ${size.toLowerCase()}, ` : " "
+  const enteredBudget = budget
+    .trim()
+    .replace(/\s*(?:\/\s*(?:mo|month)|per\s+month|monthly)\.?$/i, "")
+  const monthlyCap = enteredBudget
+    ? `${enteredBudget} per person each month`
+    : "a monthly amount we set per person"
+  const budgetCap = enteredBudget
+    ? `A monthly per-person cap of ${enteredBudget}.`
+    : "A monthly per-person cap that fits our budget."
+  const locationNote = locality.trim() ? `, calibrated for ${locality.trim()}` : ""
+  const scale =
+    size === sizeOptions[0]
+      ? "A small pilot would let us test the reimbursement process, clarify questions, and improve the policy before a broader launch."
+      : `For a team of ${size.toLowerCase()}, a fixed per-person cap would keep the budget predictable while giving everyone the same starting point.`
 
   const opener =
     tone === "warm"
-      ? `I want to propose something small that I think could matter a lot to the people here.`
-      : `I'd like to propose a low-cost, high-leverage benefit: a personal AI budget.`
+      ? "I'd like to propose a small, practical benefit that could help more people here build confidence and judgment with AI."
+      : "I'd like to propose a personal AI budget: a bounded, practical learning benefit for employees."
 
-  return `Subject: A proposal — The Tinker Pledge
+  return `Subject: Proposal: a personal AI budget
 
 Hi team,
 
 ${opener}
 
-The idea: give every person at ${who} ${amount}${place} to spend on consumer AI tools they can use in their own lives. We can start with a curated list of familiar options, keep reimbursement lightweight, and avoid usage reports.
+The idea is simple: reimburse employees at ${who} for personal AI tools they choose and use in their own lives, up to ${monthlyCap}${locationNote}. We would begin with a curated starter list, use a lightweight reimbursement process, and provide a clear path for requesting other tools.
 
-Why this, and why now:
+Why consider it:
 
-Home computers gave people room to learn by using them: writing a letter, planning a trip, making a budget, or following a curiosity. AI fluency develops the same way — through repeated use on problems that give someone a reason to come back.
+Home computers gave people room to learn by using them: writing a letter, planning a trip, making a budget, or following a curiosity. AI fluency develops similarly. Formal training can introduce the tools; repeated, low-stakes practice helps people learn what to ask, when to question an answer, and where a tool is useful.
 
-So this isn't "buy a tool to make people more productive." It's "make continued, voluntary practice possible."${scale}the spend stays capped and the policy can stay lightweight. The point is access and repetition, not a large platform rollout.
+Suggested guardrails:
+• Personal tools are for personal practice and public information.
+• Company, customer, and other confidential data stay out unless a tool is explicitly approved for that use.
+• No prompt reviews or individual usage monitoring.
+• Finance or payroll confirms the appropriate reimbursement and tax treatment before launch.
 
-What I'm asking for:
-• A per-person monthly budget (we choose the number that fits us).
-• Added as a light reimbursement.
-• A curated starter list, with room to add tools as people find what works.
+Suggested starting point:
+• ${budgetCap}
+• Reimbursement against a curated starter list.
+• A named owner and a clear process for tool requests.
+• A quarterly review of participation, questions, and policy gaps.
 
-I'm happy to own the rollout and keep it lightweight. I think it would say something real about how we see the people here: as whole people, not just job titles.
+${scale}
+
+If this seems worth exploring, I'm happy to help shape a pilot and draft the initial policy for review.
 
 Thanks for considering it,
 ${signer}`
@@ -102,13 +120,13 @@ export function ProposalGenerator() {
     <section id="proposal" className="border-t border-border/60 bg-secondary/40">
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary">Make it real</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-primary">Proposal generator</p>
           <h1 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
-            Turn the idea into a proposal you can send today.
+            Draft a clear internal proposal.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Add a few details and we&apos;ll draft a warm, ready-to-send note for your People team. Nothing leaves your
-            browser.
+            Enter a few details to generate an editable note for your manager, People team, finance partner, or security
+            reviewer. Your entries stay in this browser.
           </p>
         </div>
 
@@ -164,25 +182,25 @@ export function ProposalGenerator() {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label htmlFor="pg-budget" className={labelClass}>
-                    Monthly budget per person
+                    Monthly amount per person
                   </label>
                   <input
                     id="pg-budget"
                     value={budget}
                     onChange={(e) => setBudget(e.target.value)}
-                    placeholder="e.g. $150/mo"
+                    placeholder="e.g. $30"
                     className={inputClass}
                   />
                 </div>
                 <div>
                   <label htmlFor="pg-locality" className={labelClass}>
-                    Locality <span className="font-normal text-muted-foreground">(optional)</span>
+                    Location or region <span className="font-normal text-muted-foreground">(optional)</span>
                   </label>
                   <input
                     id="pg-locality"
                     value={locality}
                     onChange={(e) => setLocality(e.target.value)}
-                    placeholder="cost of living"
+                    placeholder="e.g. United Kingdom"
                     className={inputClass}
                   />
                 </div>
@@ -219,13 +237,13 @@ export function ProposalGenerator() {
           {/* Preview */}
           <div className="flex flex-col rounded-2xl border border-border/70 bg-background p-6 sm:p-8">
             <div className="mb-4 flex items-center justify-between">
-              <span className="text-sm font-medium text-muted-foreground">Your proposal</span>
+              <span className="text-sm font-medium text-muted-foreground">Proposal draft</span>
               <div className="flex gap-2">
                 <Button type="button" size="sm" variant="outline" className="rounded-full" onClick={handleCopy}>
                   {copied ? "Copied" : "Copy"}
                 </Button>
                 <Button type="button" size="sm" className="rounded-full" onClick={handleDownload}>
-                  Download
+                  Download .txt
                 </Button>
               </div>
             </div>

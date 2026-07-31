@@ -2,9 +2,9 @@ import { ProposalGenerator } from "@/components/proposal-generator"
 import { createPageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createPageMetadata({
-  title: "Generate a Proposal | The Tinker Pledge",
+  title: "Draft a Proposal | The Tinker Pledge",
   description:
-    "Create a ready-to-send proposal for bringing a personal AI budget to your company.",
+    "Create an editable proposal for bringing a personal AI budget to your company.",
   path: "/proposal",
 })
 

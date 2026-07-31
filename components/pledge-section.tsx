@@ -125,7 +125,7 @@ export function PledgeSection() {
             <p className="mt-5 text-sm text-muted-foreground">
               Want to make it practical?{" "}
               <a href="/proposal" className="text-primary underline-offset-4 hover:underline">
-                Create a short proposal for your team.
+                Draft a proposal for your team.
               </a>
             </p>
           </div>

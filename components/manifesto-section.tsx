@@ -17,7 +17,7 @@ const principles = [
   },
   {
     title: "The boundary stays clear",
-    body: "Personal tools are for personal practice unless an employer explicitly approves them for company information.",
+    body: "Personal tools are for personal practice. Company, customer, and other confidential information stays out unless an employer explicitly approves the tool and the use.",
   },
 ]
 
@@ -54,8 +54,8 @@ export function ManifestoSection() {
               <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-primary">A pledge to tinker</p>
             </div>
             <p className="max-w-4xl text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-3xl lg:col-span-8">
-              We give our people access to AI tools for personal use, so they can build fluency through repeated,
-              low-stakes practice.
+              We give our people a personal AI budget for tools they use in their own lives, so they can build fluency
+              through repeated, low-stakes practice.
             </p>
           </header>
 

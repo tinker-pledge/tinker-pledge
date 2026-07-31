@@ -5,7 +5,7 @@ import { createPageMetadata } from "@/lib/site-metadata"
 export const metadata = createPageMetadata({
   title: "The Pledge | The Tinker Pledge",
   description:
-    "A one-page argument for giving people the freedom to build AI fluency in their own lives.",
+    "A one-page case for helping people build AI fluency through personal, low-stakes practice.",
   path: "/manifesto",
 })
 
