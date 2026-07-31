@@ -49,7 +49,7 @@ export function SiteFooter() {
               rel="noopener noreferrer"
               className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
             >
-              Shrek
+              Abhi
             </a>
           </p>
           <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
