@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ToolsSection } from "@/components/tools-section"
+import { DEFAULT_OG_IMAGE } from "@/lib/og"
 
 export const metadata: Metadata = {
   title: "How It Works | The Tinker Pledge",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
     title: "How It Works | The Tinker Pledge",
     description:
       "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",

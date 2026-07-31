@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { authorIds, getAuthor, isAuthorId } from '@/content/authors'
 import { getPostsByAuthor } from '@/lib/blog/posts'
+import { DEFAULT_OG_IMAGE } from '@/lib/og'
 import { SITE_NAME, absoluteUrl, formatPostDate } from '@/lib/site'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -35,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url,
       title,
       description: `${author.name} — ${author.role}.`,
+      images: [DEFAULT_OG_IMAGE],
     },
     twitter: { card: 'summary_large_image', title, description: `${author.name} — ${author.role}.` },
   }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { AuthorByline } from '@/components/blog/author-byline'
 import { getAllPosts } from '@/lib/blog/posts'
+import { DEFAULT_OG_IMAGE } from '@/lib/og'
 
 export const metadata: Metadata = {
   title: 'Blog | The Tinker Pledge',
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     title: 'Blog | The Tinker Pledge',
     description:
       'Writing about personal AI budgets, building fluency through low-stakes use, and what changes when people are free to experiment.',
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',

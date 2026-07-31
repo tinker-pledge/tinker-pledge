@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { ManifestoSection } from "@/components/manifesto-section"
 import { PledgeSection } from "@/components/pledge-section"
+import { DEFAULT_OG_IMAGE } from "@/lib/og"
 
 export const metadata: Metadata = {
   title: "Manifesto | The Tinker Pledge",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     title: "Manifesto | The Tinker Pledge",
     description:
       "A one-page argument for giving people the freedom to build AI fluency in their own lives.",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
