@@ -1,9 +1,9 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Fraunces } from 'next/font/google'
-import { BuildingBanner } from '@/components/building-banner'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
+import { createPageMetadata } from '@/lib/site-metadata'
 import './globals.css'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
@@ -19,27 +19,12 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tinkerpledge.org'),
-  title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
-  description:
-    'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
-  generator: 'v0.app',
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
+  ...createPageMetadata({
+    title: 'The Tinker Pledge | Learn AI by doing',
     description:
-      'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them.',
-    url: '/',
-    siteName: 'The Tinker Pledge',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'The Tinker Pledge',
-    description:
-      'Give every person a budget to use AI in their own life, and let fluency come back to work.',
-  },
+      'Start with a hands-on workshop, keep practicing through the Tinker Pledge, and follow the forthcoming podcast.',
+    path: '/',
+  }),
   icons: {
     icon: [
       {
@@ -71,9 +56,13 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         <div className="min-h-screen bg-background">
-          <BuildingBanner />
+          <a className="skip-link" href="#main-content">
+            Skip to content
+          </a>
           <SiteHeader />
-          {children}
+          <div id="main-content" tabIndex={-1}>
+            {children}
+          </div>
           <SiteFooter />
         </div>
         {process.env.NODE_ENV === 'production' && <Analytics />}

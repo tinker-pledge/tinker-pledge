@@ -1,11 +1,12 @@
-import type { Metadata } from "next"
 import { ProposalGenerator } from "@/components/proposal-generator"
+import { createPageMetadata } from "@/lib/site-metadata"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Generate a Proposal | The Tinker Pledge",
   description:
     "Create a ready-to-send proposal for bringing a personal AI budget to your company.",
-}
+  path: "/proposal",
+})
 
 export default function ProposalPage() {
   return (

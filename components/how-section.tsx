@@ -24,7 +24,7 @@ export function HowSection() {
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
           <div className="md:sticky md:top-28 md:self-start">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">How it works</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-primary">How the pledge works</p>
             <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
               Simple enough to launch today.
             </h2>

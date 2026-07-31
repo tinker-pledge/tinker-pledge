@@ -1,12 +1,14 @@
 import type { CSSProperties } from "react"
-import type { Metadata } from "next"
 import { Contrast, Layers, Moon, Palette, Sprout, Type } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { createPageMetadata } from "@/lib/site-metadata"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palette Test | The Tinker Pledge",
   description: "A working page for testing the Tinker Pledge color palette, semantic tokens, and UI pairings.",
-}
+  path: "/palette",
+  noIndex: true,
+})
 
 type Token = {
   name: string
@@ -359,7 +361,7 @@ function ComponentSamples() {
           <label className="block">
             <span className="mb-1.5 block text-sm font-medium text-foreground">Input surface</span>
             <input
-              className="h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground/70 outline-none transition-colors focus:border-primary"
+              className="h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary"
               placeholder="e.g. monthly budget"
             />
           </label>

@@ -1,46 +1,94 @@
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/60 bg-background print:hidden">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row">
-        <a href="/" className="flex items-center gap-2.5">
-          <span className="flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <span className="font-serif text-lg leading-none">T</span>
-          </span>
-          <span className="font-serif text-lg tracking-tight text-foreground">The Tinker Pledge</span>
-        </a>
-        <div className="flex flex-col items-center gap-1 sm:items-end">
-          <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
-            A benefit for the humans behind the work. &copy; {new Date().getFullYear()} The Tinker Pledge.
-          </p>
-          <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
+    <footer className="border-t border-white/15 bg-[oklch(0.205_0.028_330)] text-white print:hidden">
+      <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
+        <div className="grid gap-10 md:grid-cols-12 md:items-start">
+          <div className="md:col-span-5">
+            <a href="/" className="flex items-center gap-3" aria-label="The Tinker Pledge home">
+              <span className="grid size-7 grid-cols-2 gap-[3px]" aria-hidden="true">
+                <span className="bg-[oklch(0.74_0.13_31)]" />
+                <span className="border border-white/35" />
+                <span className="border border-white/35" />
+                <span className="bg-white" />
+              </span>
+              <span className="text-[0.95rem] font-semibold tracking-[-0.02em]">Tinker Pledge</span>
+            </a>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
+              Start with one real problem. Keep practicing. Compare notes with other people doing the same.
+            </p>
+          </div>
+
+          <nav aria-label="Project navigation" className="md:col-span-2 md:col-start-7">
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-white/35">The project</p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-white/60">
+              <a href="/workshops" className="transition-colors hover:text-white">
+                Workshop
+              </a>
+              <a href="/manifesto" className="transition-colors hover:text-white">
+                The pledge
+              </a>
+              <a href="/podcast" className="transition-colors hover:text-white">
+                Podcast
+              </a>
+            </div>
+          </nav>
+
+          <nav aria-label="Ways to work with us" className="md:col-span-3 md:col-start-10">
+            <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-white/35">Work with us</p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-white/60">
+              <a href="/workplace" className="transition-colors hover:text-white">
+                Bring the workshop to your team
+              </a>
+              <a href="/how-it-works" className="transition-colors hover:text-white">
+                Practical pledge guide
+              </a>
+              <a
+                href="mailto:abhi@tinkerpledge.org"
+                className="transition-colors hover:text-white"
+              >
+                abhi@tinkerpledge.org
+              </a>
+              <a
+                href="mailto:eva@tinkerpledge.org"
+                className="transition-colors hover:text-white"
+              >
+                eva@tinkerpledge.org
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-xs leading-relaxed text-white/45 sm:flex-row sm:items-center sm:justify-between">
+          <p>
             {"Made by "}
             <a
-              href="https://x.com/evadoraz"
+              href="https://evadora.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+              className="font-medium text-white underline-offset-4 transition-colors hover:underline"
             >
               Eva
             </a>
-            {" & "}
+            {" and "}
             <a
-              href="https://x.com/ShrekOverflow"
+              href="https://shrekoverflow.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+              className="font-medium text-white underline-offset-4 transition-colors hover:underline"
             >
-              Shrek
+              Abhi
             </a>
+            {"."}
           </p>
-          <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
-            {"Follow the project at "}
+          <p>
+            &copy; {new Date().getFullYear()} The Tinker Pledge.{" "}
             <a
-              href="https://x.com/tinkerpledge"
+              href="https://github.com/tinker-pledge/tinker-pledge"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-foreground underline-offset-4 transition-colors hover:text-primary hover:underline"
+              className="font-medium text-white underline-offset-4 transition-colors hover:underline"
             >
-              @tinkerpledge
+              Open source
             </a>
             {"."}
           </p>

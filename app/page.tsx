@@ -1,19 +1,15 @@
 import { Hero } from "@/components/hero"
-import { HypothesisSection } from "@/components/hypothesis-section"
-import { HowSection } from "@/components/how-section"
-import { BusinessCaseSection } from "@/components/business-case-section"
-import { SharePledgeSection } from "@/components/share-pledge-section"
-import { CtaSection } from "@/components/cta-section"
+import { WorkshopSection } from "@/components/workshop-section"
+import { HomePledgeSection } from "@/components/home-pledge-section"
+import { HomePodcastSection } from "@/components/home-podcast-section"
 
 export default function Page() {
   return (
     <main>
       <Hero />
-      <HypothesisSection />
-      <HowSection />
-      <BusinessCaseSection />
-      <SharePledgeSection />
-      <CtaSection />
+      <WorkshopSection />
+      <HomePledgeSection />
+      <HomePodcastSection />
     </main>
   )
 }

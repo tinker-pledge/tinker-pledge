@@ -60,12 +60,12 @@ export function ToolsBrowser() {
             <h3 className="font-serif text-2xl font-light text-foreground">Browse the starter list</h3>
             <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted-foreground">{activeDescription}</p>
           </div>
-          <p className="shrink-0 text-sm text-muted-foreground">
+          <p aria-live="polite" className="shrink-0 text-sm text-muted-foreground">
             {filteredTools.length} {filteredTools.length === 1 ? "tool" : "tools"}
           </p>
         </div>
 
-        <label className="flex h-11 items-center gap-3 rounded-2xl border border-border/70 bg-background px-4 text-sm">
+        <label className="flex h-11 items-center gap-3 rounded-2xl border border-border/70 bg-background px-4 text-sm transition focus-within:border-primary focus-within:ring-2 focus-within:ring-ring/30">
           <Search className="size-4 shrink-0 text-muted-foreground" strokeWidth={1.75} />
           <span className="sr-only">Search starter tools</span>
           <input
@@ -76,12 +76,17 @@ export function ToolsBrowser() {
           />
         </label>
 
-        <div className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
+        <div
+          role="group"
+          aria-label="Filter tools by category"
+          className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1"
+        >
           <button
             type="button"
             onClick={() => setActiveCategory("all")}
+            aria-pressed={activeCategory === "all"}
             className={cn(
-              "h-9 shrink-0 rounded-full border px-4 text-sm transition-colors",
+              "h-10 shrink-0 rounded-full border px-4 text-sm transition-colors",
               activeCategory === "all"
                 ? "border-primary bg-primary text-primary-foreground"
                 : "border-border/70 bg-background text-muted-foreground hover:text-foreground",
@@ -94,8 +99,9 @@ export function ToolsBrowser() {
               key={category.id}
               type="button"
               onClick={() => setActiveCategory(category.id)}
+              aria-pressed={activeCategory === category.id}
               className={cn(
-                "h-9 shrink-0 rounded-full border px-4 text-sm transition-colors",
+                "h-10 shrink-0 rounded-full border px-4 text-sm transition-colors",
                 activeCategory === category.id
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border/70 bg-background text-muted-foreground hover:text-foreground",

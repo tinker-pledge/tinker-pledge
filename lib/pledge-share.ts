@@ -1,5 +1,6 @@
 export const SHARE_URL = "https://tinkerpledge.org"
-export const PLEDGE_LINE = "the freedom to tinker is how people get fluent — so the breakthroughs take care of themselves."
+export const PLEDGE_LINE =
+  "people build AI fluency when they have the freedom to practice on problems that matter to them."
 const X_HANDLE = "@tinkerpledge"
 
 export function buildPledgeShareText(firstName = "") {

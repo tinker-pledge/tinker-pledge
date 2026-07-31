@@ -24,7 +24,7 @@ function buildProposal({
 }) {
   const who = company.trim() || "our company"
   const signer = name.trim() || "[Your name]"
-  const amount = budget.trim() ? `${budget.trim()}` : "a monthly amount we set"
+  const amount = budget.trim() || "a personal AI budget"
   const place = locality.trim() ? ` (adjusted for ${locality.trim()})` : ""
   const scale = size && size !== sizeOptions[0] ? ` Across a team of ${size.toLowerCase()}, ` : " "
 
@@ -39,13 +39,13 @@ Hi team,
 
 ${opener}
 
-The idea: give every person at ${who} ${amount} each month${place} to spend on consumer AI tools they can use in their own lives. We can start with a curated list of trusted options, keep reimbursement lightweight, and avoid usage reports.
+The idea: give every person at ${who} ${amount}${place} to spend on consumer AI tools they can use in their own lives. We can start with a curated list of familiar options, keep reimbursement lightweight, and avoid usage reports.
 
 Why this, and why now:
 
-The most valuable things people ever did with computers weren't taught in a training room. They were learned at home, by tinkering — and that fluency quietly walked into work with us. AI is at exactly that moment. People get good at it through thousands of small, low-stakes reps: planning a trip, drafting a hard message, settling a curious question. People who are free to experiment, experiment more.
+Home computers gave people room to learn by using them: writing a letter, planning a trip, making a budget, or following a curiosity. AI fluency develops the same way — through repeated use on problems that give someone a reason to come back.
 
-So this isn't "buy a tool to make people more productive." It's "give people the freedom to get fluent in their own lives, and let the work benefit take care of itself."${scale}the cost is modest, the rollout takes a day, and the value scales with how much people actually use it — not with what we spend.
+So this isn't "buy a tool to make people more productive." It's "make continued, voluntary practice possible."${scale}the spend stays capped and the policy can stay lightweight. The point is access and repetition, not a large platform rollout.
 
 What I'm asking for:
 • A per-person monthly budget (we choose the number that fits us).
@@ -95,7 +95,7 @@ export function ProposalGenerator() {
   }
 
   const inputClass =
-    "h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground/70 outline-none transition-colors focus:border-primary"
+    "h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary"
   const labelClass = "mb-1.5 block text-sm font-medium text-foreground"
 
   return (
@@ -103,9 +103,9 @@ export function ProposalGenerator() {
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-primary">Make it real</p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
+          <h1 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
             Turn the idea into a proposal you can send today.
-          </h2>
+          </h1>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Add a few details and we&apos;ll draft a warm, ready-to-send note for your People team. Nothing leaves your
             browser.
@@ -188,8 +188,8 @@ export function ProposalGenerator() {
                 </div>
               </div>
 
-              <div>
-                <span className={labelClass}>Tone</span>
+              <fieldset>
+                <legend className={labelClass}>Tone</legend>
                 <div className="flex gap-2">
                   {(
                     [
@@ -212,7 +212,7 @@ export function ProposalGenerator() {
                     </button>
                   ))}
                 </div>
-              </div>
+              </fieldset>
             </div>
           </div>
 

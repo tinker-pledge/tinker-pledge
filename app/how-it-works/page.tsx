@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import {
   CalendarDays,
   CircleDollarSign,
@@ -11,12 +10,14 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ToolsSection } from "@/components/tools-section"
+import { createPageMetadata } from "@/lib/site-metadata"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "How It Works | The Tinker Pledge",
   description:
     "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
-}
+  path: "/how-it-works",
+})
 
 const budgetNotes = [
   {
@@ -111,13 +112,13 @@ export default function HowItWorksPage() {
                 Generate your proposal
               </Button>
               <Button
-                render={<a href="/#case" />}
+                render={<a href="/manifesto" />}
                 nativeButton={false}
                 size="lg"
                 variant="outline"
                 className="rounded-full px-7"
               >
-                Read the business case
+                Read the pledge
               </Button>
             </div>
           </div>
@@ -216,7 +217,7 @@ export default function HowItWorksPage() {
             <h2 className="mt-5 text-balance font-serif text-3xl font-light leading-tight sm:text-4xl">
               Frame it differently for each reviewer.
             </h2>
-            <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/80">
+            <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/90">
               The same pledge has different approval questions. Answer those directly instead of making every reviewer
               infer the part they care about.
             </p>
@@ -229,7 +230,7 @@ export default function HowItWorksPage() {
                 className="rounded-2xl border border-primary-foreground/20 bg-primary-foreground/10 p-6"
               >
                 <h3 className="font-serif text-xl text-primary-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">{item.body}</p>
+                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/90">{item.body}</p>
               </div>
             ))}
           </div>
