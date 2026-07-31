@@ -202,3 +202,117 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+@layer components {
+  /*
+    Long-form content styling for rendered markdown. Every selector is wrapped in
+    :where() so specificity is zero — a utility class on a wrapping element always wins.
+    Values are lifted from the conventions already used across the hand-written sections
+    so posts read as part of the same site rather than as a bolted-on blog.
+  */
+  .prose-tinker {
+    @apply text-[1.05rem] leading-relaxed text-muted-foreground;
+  }
+
+  .prose-tinker :where(h2) {
+    @apply mt-14 mb-4 scroll-mt-24 text-balance text-3xl font-medium leading-tight tracking-[-0.03em] text-foreground;
+  }
+  .prose-tinker :where(h3) {
+    @apply mt-10 mb-3 scroll-mt-24 text-balance text-xl font-medium tracking-[-0.02em] text-foreground;
+  }
+  .prose-tinker :where(h4) {
+    @apply mt-8 mb-2 scroll-mt-24 text-lg font-medium text-foreground;
+  }
+  .prose-tinker :where(h2, h3, h4):first-child {
+    @apply mt-0;
+  }
+
+  .prose-tinker :where(p) {
+    @apply mt-5 text-pretty leading-relaxed;
+  }
+
+  .prose-tinker :where(a) {
+    @apply font-medium text-primary underline underline-offset-4 transition-colors hover:text-foreground focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+
+  .prose-tinker :where(strong) {
+    @apply font-medium text-foreground;
+  }
+  .prose-tinker :where(em) {
+    @apply italic;
+  }
+
+  .prose-tinker :where(ul) {
+    @apply mt-5 list-disc space-y-2 pl-6 marker:text-primary;
+  }
+  .prose-tinker :where(ol) {
+    @apply mt-5 list-decimal space-y-2 pl-6 marker:text-muted-foreground;
+  }
+  .prose-tinker :where(li > ul, li > ol) {
+    @apply mt-2;
+  }
+  .prose-tinker :where(li) {
+    @apply leading-relaxed;
+  }
+
+  .prose-tinker :where(blockquote) {
+    @apply mt-8 border-l-2 border-primary pl-6 text-pretty text-xl font-medium leading-relaxed tracking-[-0.02em] text-foreground;
+  }
+  .prose-tinker :where(blockquote p) {
+    @apply mt-0;
+  }
+
+  .prose-tinker :where(hr) {
+    @apply mt-12 border-t border-border/60;
+  }
+
+  .prose-tinker :where(code) {
+    @apply rounded-sm bg-muted px-1.5 py-0.5 font-mono text-[0.85em] text-foreground;
+  }
+  .prose-tinker :where(pre) {
+    @apply mt-6 overflow-x-auto border border-border bg-card p-5 font-mono text-sm leading-relaxed text-foreground;
+  }
+  .prose-tinker :where(pre code) {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .prose-tinker :where(table) {
+    @apply mt-8 w-full border-collapse text-left text-sm;
+  }
+  .prose-tinker :where(th) {
+    @apply border-b border-border px-3 py-2 font-medium text-foreground;
+  }
+  .prose-tinker :where(td) {
+    @apply border-b border-border/60 px-3 py-2 align-top;
+  }
+
+  .prose-tinker :where(img) {
+    @apply mt-8 border border-border;
+  }
+  .prose-tinker :where(figcaption) {
+    @apply mt-2 text-sm text-muted-foreground;
+  }
+
+  /*
+    Heading anchors from rehype-autolink-headings. Decorative: aria-hidden and
+    tabindex="-1" are set by the plugin, so these are invisible to screen readers
+    and out of the tab order. Revealed on hover of the heading.
+  */
+  .prose-tinker :where(.heading-anchor) {
+    @apply -ml-5 inline-block w-5 text-primary no-underline opacity-0 transition-opacity;
+  }
+  .prose-tinker :where(h2, h3, h4):hover .heading-anchor {
+    @apply opacity-100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -30,6 +30,9 @@ export function SiteFooter() {
               <a href="/podcast" className="transition-colors hover:text-white">
                 Podcast
               </a>
+              <a href="/blog" className="transition-colors hover:text-white">
+                Blog
+              </a>
             </div>
           </nav>
 

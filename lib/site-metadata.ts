@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { DEFAULT_OG_IMAGE } from "@/lib/og"
 
 type PageMetadataOptions = {
   title: string
@@ -25,9 +26,10 @@ export function createPageMetadata({
       url: path,
       siteName: "The Tinker Pledge",
       type: "website",
+      images: [DEFAULT_OG_IMAGE],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
     },

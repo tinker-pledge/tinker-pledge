@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Fraunces } from 'next/font/google'
 import { SiteFooter } from '@/components/site-footer'
@@ -25,6 +26,12 @@ export const metadata: Metadata = {
       'Start with a hands-on workshop, keep practicing through the Tinker Pledge, and follow the forthcoming podcast.',
     path: '/',
   }),
+  alternates: {
+    canonical: '/',
+    types: {
+      'application/rss+xml': [{ url: '/feed.xml', title: 'The Tinker Pledge' }],
+    },
+  },
   icons: {
     icon: [
       {
@@ -65,7 +72,12 @@ export default function RootLayout({
           </div>
           <SiteFooter />
         </div>
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   )

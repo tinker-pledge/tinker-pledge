@@ -11,6 +11,7 @@ const navLinks = [
   { label: "The pledge", href: "/#pledge" },
   { label: "Podcast", href: "/#podcast" },
   { label: "For teams", href: "/workplace" },
+  { label: "Blog", href: "/blog" },
 ]
 
 export function SiteHeader() {

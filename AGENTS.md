@@ -36,6 +36,16 @@
 - Do not add exact pricing, plan names, or privacy claims unless they have just been verified from current primary sources.
 - Keep categories search-friendly and avoid duplicating categories unless the tool list is large enough to need it.
 
+## Blog Content
+
+- Posts are markdown files at `content/blog/<slug>.md`. The filename is the URL slug and must be lowercase kebab-case.
+- Required frontmatter: `title`, `description`, `publishedAt` (YYYY-MM-DD), `authors` (array of ids from `content/authors.ts`).
+- Optional frontmatter: `updatedAt`, `tags`, `draft`.
+- Post bodies start at `##`. The `h1` is generated from `title` — never write one in the body.
+- Raw HTML in markdown is dropped by the renderer. Markdown and GFM only.
+- An unknown author id, a missing field, or a malformed date fails the build and names the file.
+- Drafts (`draft: true`) are excluded from `/blog`, the sitemap, the feed, and static params, but still render at their URL in `next dev`.
+
 ## UI Conventions
 
 - Match the existing restrained, warm design language.
