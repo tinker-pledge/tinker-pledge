@@ -5,7 +5,7 @@ import { PledgeSection } from "@/components/pledge-section"
 export const metadata: Metadata = {
   title: "Manifesto | The Tinker Pledge",
   description:
-    "A one-page argument for giving people the freedom to build AI fluency in their own lives.",
+    "A one-page case for helping people build AI fluency through personal, low-stakes practice.",
 }
 
 export default function ManifestoPage() {

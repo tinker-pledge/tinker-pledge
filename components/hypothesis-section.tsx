@@ -2,35 +2,35 @@ export function HypothesisSection() {
   return (
     <section id="hypothesis" className="border-t border-border/60 bg-secondary/40">
       <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
-        <p className="text-sm uppercase tracking-[0.2em] text-primary">The whole idea</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-primary">The hypothesis</p>
         <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-          The home computer taught us this already.
+          We learned to use computers by using them.
         </h2>
 
         <div className="mt-8 flex flex-col gap-6 text-pretty text-lg leading-relaxed text-muted-foreground">
           <p>
-            Most of the amazing things people do with computers weren&apos;t taught in a training room. They started at
-            home, on the shared computer, late at night, with nobody watching. People tinkered because it was theirs.
-            Documents, email, the web: we got fluent by playing, and that fluency quietly walked into work with us.
+            Much of what people know about computers did not begin in a training room. It grew through everyday use:
+            writing documents, sending email, exploring the web, and solving small problems at home. People had room
+            to experiment, and the fluency they built came with them to work.
           </p>
           <p>
-            AI is at the same moment. The skill of using it well, knowing what to ask, when to trust it, how to catch
-            it when it&apos;s wrong, isn&apos;t learned in a mandatory workshop. It&apos;s learned in thousands of small,
-            low-stakes reps. Planning dinner. Settling a silly argument. Drafting a tough text.
+            AI fluency develops the same way. Knowing what to ask, when to trust an answer, and how to spot a mistake
+            takes repeated, low-stakes practice: planning a meal, comparing options for a trip, or drafting a difficult
+            message.
           </p>
           <p className="font-serif text-2xl font-light leading-snug text-foreground">
-            People who are empowered and free to experiment will experiment more. The breakthroughs aren&apos;t the
-            plan — they&apos;re the side effect.
+            When people are free to experiment, they practice more. Useful ideas emerge along the way, rather than on
+            command.
           </p>
           <p>
-            So this isn&apos;t really &ldquo;give people AI so they get better at work.&rdquo; It&apos;s &ldquo;give
-            people AI for their whole life, and let the work benefit take care of itself.&rdquo; That&apos;s the bet.
-            It&apos;s a kind one.
+            The proposal is not &ldquo;buy AI to make everyone more productive.&rdquo; It is &ldquo;support personal
+            exploration, and let people bring the judgment they develop back to work.&rdquo; That is the bet — and it
+            starts with trust.
           </p>
           <p>
-            It belongs in the same family as phone reimbursements, gym memberships, learning budgets, and travel
-            stipends: a small benefit that helps people participate on their own terms. Only this time, the thing
-            they&apos;re getting fluent in may be the most transformative technology of our time.
+            A personal AI budget belongs alongside learning budgets and other benefits that support the whole person.
+            It is a modest, practical way to help employees engage with a consequential new technology on their own
+            terms.
           </p>
         </div>
       </div>

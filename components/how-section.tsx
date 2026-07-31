@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button"
 const steps = [
   {
     number: "01",
-    title: "Set a budget that fits your company",
-    body: "Pick an amount that makes sense for your size and locality, then add it as a simple reimbursement against a curated starter list of AI tools.",
+    title: "Choose a budget and a clear default",
+    body: "Set an amount that fits your company and location, then reimburse personal subscriptions from a curated starter list.",
   },
   {
     number: "02",
-    title: "They choose what actually helps",
-    body: "A writing assistant, a research tool, a coding copilot, a tool for learning a language at night. Start with known options, then expand as people find what works.",
+    title: "People choose what fits their lives",
+    body: "A writing assistant, a research tool, a coding copilot, or help learning a language. Start with familiar options, then expand the list as people find what works.",
   },
   {
     number: "03",
-    title: "The benefit follows the human",
-    body: "It works for the developer, the designer, the recruiter, and the parent planning dinner after a long day. Everyone, not just the technical few.",
+    title: "Make it available across the company",
+    body: "Offer the same opportunity to developers, designers, recruiters, operators, and everyone else — not only the most technical teams.",
   },
 ]
 
@@ -26,10 +26,11 @@ export function HowSection() {
           <div className="md:sticky md:top-28 md:self-start">
             <p className="text-sm uppercase tracking-[0.2em] text-primary">How it works</p>
             <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-              Simple enough to launch today.
+              A lightweight benefit with clear boundaries.
             </h2>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-              No new platform to buy. No long rollout. Just a small, trusting gesture that people will feel right away.
+              No new platform or lengthy rollout. Start with a straightforward reimbursement policy, a curated tool
+              list, and a clear rule for company data.
             </p>
             <Button
               render={<a href="/how-it-works" />}
@@ -37,11 +38,11 @@ export function HowSection() {
               variant="outline"
               className="mt-7 rounded-full"
             >
-              See the rollout details
+              Explore the rollout guide
             </Button>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Includes a starter list with familiar tools like ChatGPT, Claude, Gemini, Perplexity, Cursor, GitHub
-              Copilot, v0, and creative AI apps.
+              The guide includes a searchable starter list with familiar tools such as ChatGPT, Claude, Gemini,
+              Perplexity, Cursor, GitHub Copilot, v0, and creative AI apps.
             </p>
             <a
               href="/how-it-works#tools"

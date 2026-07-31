@@ -38,7 +38,7 @@ export function SiteHeader() {
 
         <div className="hidden lg:block">
           <Button render={<a href="/proposal" />} nativeButton={false} className="rounded-full">
-            Bring it to your team
+            Draft a proposal
           </Button>
         </div>
 
@@ -69,7 +69,7 @@ export function SiteHeader() {
               nativeButton={false}
               className="mt-2 rounded-full"
             >
-              Bring it to your team
+              Draft a proposal
             </Button>
           </nav>
         </div>

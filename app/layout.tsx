@@ -19,17 +19,17 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tinkerpledge.org'),
-  title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
+  title: 'The Tinker Pledge — Give People the Freedom to Tinker',
   description:
-    'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them. People who are free to experiment, experiment more.',
+    'A practical proposal for employers: fund a personal AI budget through simple reimbursement so people can build fluency through low-stakes use in their own lives.',
   generator: 'v0.app',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'The Tinker Pledge — Give Your Teams the Freedom to Tinker',
+    title: 'The Tinker Pledge — Give People the Freedom to Tinker',
     description:
-      'Give every person a budget to use AI in their own life. The more they play, the more fluent they become — and that fluency comes to work with them.',
+      'Give people a personal AI budget for low-stakes use in their own lives, and give them room to build practical fluency.',
     url: '/',
     siteName: 'The Tinker Pledge',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Tinker Pledge',
     description:
-      'Give every person a budget to use AI in their own life, and let fluency come back to work.',
+      'A people-first proposal for building AI fluency through everyday practice.',
   },
   icons: {
     icon: [

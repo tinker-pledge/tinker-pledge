@@ -52,8 +52,8 @@ export function PledgeSection() {
               Take the Tinker Pledge.
             </h2>
             <p className="mt-4 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
-              No sign-ups, no inbox, no fine print. Just say it out loud: you believe people should have the freedom to
-              tinker. Then pass it to the person who can make it real.
+              There is no sign-up and no public roster. Add your name if you like, then share the pledge with someone
+              who can help bring a personal AI budget to your workplace.
             </p>
 
             <div className="mt-7 max-w-sm">
@@ -81,13 +81,13 @@ export function PledgeSection() {
             <p className="mt-6 text-balance font-serif text-2xl font-light leading-snug text-foreground sm:text-[1.75rem]">
               {firstName ? (
                 <>
-                  <span className="text-primary">{firstName}</span> believes the freedom to tinker is how people get
-                  fluent — so the breakthroughs take care of themselves.
+                  <span className="text-primary">{firstName}</span> believes that the freedom to tinker helps people
+                  build AI fluency — one low-stakes experiment at a time.
                 </>
               ) : (
                 <>
-                  I believe the freedom to tinker is how people get fluent — so the{" "}
-                  <span className="text-primary">breakthroughs take care of themselves.</span>
+                  I believe the freedom to tinker helps people build AI fluency —{" "}
+                  <span className="text-primary">one low-stakes experiment at a time.</span>
                 </>
               )}
             </p>
@@ -120,9 +120,9 @@ export function PledgeSection() {
             </div>
 
             <p className="mt-5 text-sm text-muted-foreground">
-              Signed it in your heart?{" "}
+              Ready to make it practical?{" "}
               <a href="/proposal" className="text-primary underline-offset-4 hover:underline">
-                Now bring it to your team.
+                Draft a proposal for your team.
               </a>
             </p>
           </div>

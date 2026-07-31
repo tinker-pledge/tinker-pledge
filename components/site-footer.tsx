@@ -10,7 +10,7 @@ export function SiteFooter() {
         </a>
         <div className="flex flex-col items-center gap-1 sm:items-end">
           <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
-            A benefit for the humans behind the work. &copy; {new Date().getFullYear()} The Tinker Pledge.
+            A people-first approach to building AI fluency. &copy; {new Date().getFullYear()} The Tinker Pledge.
           </p>
           <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
             {"Made by "}

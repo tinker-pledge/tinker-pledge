@@ -9,8 +9,8 @@ export function BuildingBanner() {
             <Hammer className="size-4" strokeWidth={1.75} />
           </span>
           <p className="leading-relaxed text-primary-foreground/90">
-            We&apos;re building this in the open right now. The starter tool list is live, and the policy examples are
-            still being polished.
+            The Tinker Pledge is being built in the open. The starter tool list is live; policy examples are still in
+            progress.
           </p>
         </div>
         <a
@@ -19,7 +19,7 @@ export function BuildingBanner() {
           rel="noopener noreferrer"
           className="shrink-0 font-medium text-primary-foreground underline-offset-4 hover:underline sm:pl-4"
         >
-          Join the convo
+          Contribute on GitHub
         </a>
       </div>
     </div>

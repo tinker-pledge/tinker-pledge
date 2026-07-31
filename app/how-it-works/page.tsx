@@ -21,18 +21,18 @@ export const metadata: Metadata = {
 const budgetNotes = [
   {
     icon: CircleDollarSign,
-    title: "Pick a simple monthly amount",
-    body: "Start with a number your company can explain in one sentence. It can be small; the point is repeated personal use, not a flashy perk.",
+    title: "Choose a clear monthly allowance",
+    body: "Set a per-person cap that fits your budget and explain it plainly. The goal is repeated personal practice, not an attention-grabbing perk.",
   },
   {
     icon: Receipt,
-    title: "Use lightweight reimbursement",
-    body: "Treat it like a recurring benefit with a simple reimbursement path and a curated starter list. Keep exceptions possible, but make the default easy.",
+    title: "Keep reimbursement lightweight",
+    body: "Use a simple reimbursement process and make a curated starter list the default. Name an owner who can review requests for other tools.",
   },
   {
     icon: Users,
-    title: "Offer it broadly",
-    body: "AI fluency is not only for technical teams. The benefit is strongest when operations, recruiting, design, sales, support, and leadership all get reps.",
+    title: "Offer the benefit broadly",
+    body: "Make the benefit available to operations, recruiting, design, sales, support, and leadership — not only technical teams.",
   },
 ]
 
@@ -40,16 +40,16 @@ const guardrails = [
   {
     icon: LockKeyhole,
     title: "Keep company data out",
-    body: "Make the boundary explicit: personal tools are for personal use, public information, and low-risk experimentation unless a tool is approved for company data.",
+    body: "Personal tools are for personal practice and public information. Unless a tool is explicitly approved, employees should never enter company, customer, or other confidential data.",
   },
   {
     icon: ShieldCheck,
-    title: "Do not turn it into surveillance",
-    body: "No usage reports, prompt reviews, or productivity scorekeeping. The company funds fluency; people keep their private life private.",
+    title: "Protect employee privacy",
+    body: "Do not require usage reports, review prompts, or score individual productivity. The company funds the benefit; employees keep their personal use private.",
   },
   {
     icon: Scale,
-    title: "Check payroll and tax treatment",
+    title: "Confirm payroll and tax treatment",
     body: "Review the benefit with your finance or payroll partner before launch. Different companies and locations may need different handling.",
   },
 ]
@@ -57,38 +57,38 @@ const guardrails = [
 const rollout = [
   {
     step: "01",
-    title: "Name the budget and owner",
-    body: "Choose a monthly amount, decide who owns reimbursement, and write the one-paragraph policy.",
+    title: "Choose the budget and owner",
+    body: "Set the monthly allowance, assign responsibility for reimbursement and tool requests, and draft a concise policy.",
   },
   {
     step: "02",
     title: "Publish the tool list and boundaries",
-    body: "Share the starter list, what the budget is for, what data is off-limits, and where to ask questions if someone wants to use something else.",
+    body: "Share what the budget covers, which tools are on the starter list, what data is off-limits, and where employees can ask questions.",
   },
   {
     step: "03",
-    title: "Launch without a mandatory class",
-    body: "Offer examples and optional office hours, but let people start with their own lives. That is where the reps come from.",
+    title: "Offer support without a mandate",
+    body: "Provide examples and optional office hours, then let people begin with uses that matter to them. Voluntary practice is the point.",
   },
   {
     step: "04",
-    title: "Review the signal quarterly",
-    body: "Look for adoption, stories, support needs, and policy confusion. Adjust the budget or guidance without adding bureaucracy.",
+    title: "Review and refine quarterly",
+    body: "Review participation, questions, and policy gaps without monitoring anyone's personal use. Adjust the budget or guidance as needed.",
   },
 ]
 
 const audiences = [
   {
     title: "People teams",
-    body: "Position it as a trust-forward learning benefit that reaches the whole person, not a narrow productivity mandate.",
+    body: "Frame it as a trust-based learning benefit for the whole workforce, not a narrow productivity mandate.",
   },
   {
     title: "Finance",
-    body: "Keep the spend capped per person and review it quarterly. The upside comes from voluntary use, not a large platform commitment.",
+    body: "Use a fixed per-person cap and review the program quarterly. The proposal does not require a company-wide platform commitment.",
   },
   {
     title: "Security",
-    body: "Separate personal experimentation from company-data workflows. Clear boundaries matter more than pretending people will not experiment.",
+    body: "Keep personal experimentation separate from company-data workflows. Explicit rules and a clear escalation path make that boundary easier to follow.",
   },
 ]
 
@@ -100,15 +100,15 @@ export default function HowItWorksPage() {
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.2em] text-primary">How it works</p>
             <h1 className="mt-4 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl md:text-6xl">
-              A personal AI budget, with enough structure to launch safely.
+              Launch a personal AI budget with clear, practical guardrails.
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              The Tinker Pledge should feel simple to employees and legible to the people approving it. Set the budget,
-              define the boundaries, and keep the policy light enough that curiosity still does the work.
+              The Tinker Pledge should be easy for employees to use and straightforward for reviewers to approve.
+              Choose a budget, define the boundaries, and keep the process light enough for curiosity to do the work.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button render={<a href="/proposal" />} nativeButton={false} size="lg" className="rounded-full px-7">
-                Generate your proposal
+                Draft a proposal
               </Button>
               <Button
                 render={<a href="/#case" />}
@@ -130,11 +130,11 @@ export default function HowItWorksPage() {
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-primary">Budget design</p>
               <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                Make the benefit easy to understand.
+                Design a benefit people can understand.
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                The best version is boring to administer and generous in spirit. People should know what they can spend,
-                how they get reimbursed, and what is outside the line.
+                A clear policy answers three questions: what is covered, how reimbursement works, and which uses fall
+                outside the policy.
               </p>
             </div>
 
@@ -158,7 +158,7 @@ export default function HowItWorksPage() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm uppercase tracking-[0.2em] text-primary">Guardrails</p>
             <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-              Give freedom without making the policy vague.
+              Protect privacy and company data.
             </h2>
           </div>
 
@@ -184,11 +184,11 @@ export default function HowItWorksPage() {
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-primary">Rollout</p>
               <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-                Launch it in weeks, then improve it from signal.
+                Launch with a clear default, then refine it.
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                Avoid turning the launch into a platform selection project. Start with a clear budget and policy, then
-                adjust once people show you what they actually use.
+                Do not turn the launch into a platform-selection project. Start with a clear budget, policy, and tool
+                list, then adjust as participation and questions reveal what people need.
               </p>
             </div>
 
@@ -214,11 +214,11 @@ export default function HowItWorksPage() {
               <ClipboardCheck className="size-6" strokeWidth={1.75} />
             </span>
             <h2 className="mt-5 text-balance font-serif text-3xl font-light leading-tight sm:text-4xl">
-              Frame it differently for each reviewer.
+              Address each reviewer&apos;s priorities.
             </h2>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/80">
-              The same pledge has different approval questions. Answer those directly instead of making every reviewer
-              infer the part they care about.
+              A single proposal will prompt different questions. Make the budget, process, privacy boundary, and owner
+              explicit so each reviewer can evaluate the details that matter to them.
             </p>
           </div>
 
@@ -240,14 +240,14 @@ export default function HowItWorksPage() {
         <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-24">
           <CalendarDays className="mx-auto size-9 text-primary" strokeWidth={1.75} />
           <h2 className="mt-5 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-            Ready to turn this into the first internal note?
+            Ready to draft the internal proposal?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Use the proposal generator to turn these choices into something a manager, People lead, or finance partner
-            can react to.
+            Use the proposal generator to create an editable draft for a manager, People lead, finance partner, or
+            security reviewer.
           </p>
           <Button render={<a href="/proposal" />} nativeButton={false} size="lg" className="mt-8 rounded-full px-7">
-            Generate your proposal
+            Draft a proposal
           </Button>
         </div>
       </section>

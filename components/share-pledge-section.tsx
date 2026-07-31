@@ -50,10 +50,10 @@ export function SharePledgeSection() {
             <p className="text-sm uppercase tracking-[0.2em] text-primary">Share the pledge</p>
           </div>
           <h2 className="mt-4 text-balance font-serif text-2xl font-light leading-tight text-foreground sm:text-3xl">
-            Help the idea reach someone who can say yes.
+            Share the idea with someone who can move it forward.
           </h2>
           <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-            The fastest path may be one person forwarding the belief before the proposal.
+            A short note can open the conversation before a formal proposal is ready.
           </p>
         </div>
 
