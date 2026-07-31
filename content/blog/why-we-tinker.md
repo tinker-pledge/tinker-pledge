@@ -4,6 +4,7 @@ description: The case for giving people a small budget to use AI in their own li
 publishedAt: '2026-07-29'
 authors: [eva]
 tags: [fluency, budgets]
+draft: true
 ---
 
 ## The gap we kept noticing
