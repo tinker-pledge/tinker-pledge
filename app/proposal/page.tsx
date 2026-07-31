@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function ProposalPage() {
   return (
-    <main>
+    <main id="main-content">
       <ProposalGenerator />
     </main>
   )

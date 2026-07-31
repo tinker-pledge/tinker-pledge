@@ -9,6 +9,7 @@ const navLinks = [
   { label: "How it works", href: "/how-it-works" },
   { label: "Business case", href: "/#case" },
   { label: "Manifesto", href: "/manifesto" },
+  { label: "Blog", href: "/blog" },
 ]
 
 export function SiteHeader() {
@@ -24,7 +25,7 @@ export function SiteHeader() {
           <span className="font-serif text-lg tracking-tight text-foreground">The Tinker Pledge</span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -43,17 +44,20 @@ export function SiteHeader() {
         </div>
 
         <button
+          type="button"
           className="text-foreground lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-border/60 bg-background px-6 py-4 lg:hidden">
-          <nav className="flex flex-col gap-4">
+        <div id="mobile-menu" className="border-t border-border/60 bg-background px-6 py-4 lg:hidden">
+          <nav aria-label="Mobile" className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}

@@ -31,9 +31,9 @@ export function ManifestoSection() {
       <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-primary">Share the belief</p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
+          <h1 className="mt-4 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl">
             The Tinker Pledge, on one page.
-          </h2>
+          </h1>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             People forward documents, not landing pages. Here&apos;s the whole argument, typeset to share or print.
           </p>
@@ -45,7 +45,7 @@ export function ManifestoSection() {
             <span className="inline-flex size-10 items-center justify-center rounded-full bg-primary font-serif text-xl text-primary-foreground">
               T
             </span>
-            <h3 className="mt-4 font-serif text-2xl font-light text-foreground sm:text-3xl">A Pledge to Tinker</h3>
+            <h2 className="mt-4 font-serif text-2xl font-light text-foreground sm:text-3xl">A Pledge to Tinker</h2>
             <p className="mt-2 text-pretty text-muted-foreground">
               We give our people the freedom to use AI in their own lives — and trust that fluency to follow them
               everywhere.
@@ -57,7 +57,7 @@ export function ManifestoSection() {
               <div key={p.title} className="flex gap-4">
                 <span className="font-serif text-2xl font-light leading-none text-primary">{`0${i + 1}`}</span>
                 <div>
-                  <h4 className="font-serif text-lg text-foreground">{p.title}</h4>
+                  <h3 className="font-serif text-lg text-foreground">{p.title}</h3>
                   <p className="mt-1 text-pretty leading-relaxed text-muted-foreground">{p.body}</p>
                 </div>
               </div>

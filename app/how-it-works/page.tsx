@@ -111,7 +111,7 @@ const audiences = [
 
 export default function HowItWorksPage() {
   return (
-    <main>
+    <main id="main-content">
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
           <div className="max-w-3xl">

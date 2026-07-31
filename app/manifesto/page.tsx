@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function ManifestoPage() {
   return (
-    <main>
+    <main id="main-content">
       <ManifestoSection />
       <PledgeSection />
     </main>

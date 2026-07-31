@@ -390,7 +390,7 @@ function ComponentSamples() {
 
 export default function PalettePage() {
   return (
-    <main>
+    <main id="main-content">
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
           <div className="max-w-3xl">

@@ -8,6 +8,26 @@ export function SiteFooter() {
           </span>
           <span className="font-serif text-lg tracking-tight text-foreground">The Tinker Pledge</span>
         </a>
+        <nav aria-label="Footer" className="flex items-center gap-6 text-sm">
+          <a
+            href="/blog"
+            className="text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
+            Blog
+          </a>
+          <a
+            href="/how-it-works"
+            className="text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
+            How it works
+          </a>
+          <a
+            href="/manifesto"
+            className="text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
+            Manifesto
+          </a>
+        </nav>
         <div className="flex flex-col items-center gap-1 sm:items-end">
           <p className="text-pretty text-center text-sm text-muted-foreground sm:text-right">
             A benefit for the humans behind the work. &copy; {new Date().getFullYear()} The Tinker Pledge.

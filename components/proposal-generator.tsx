@@ -103,9 +103,9 @@ export function ProposalGenerator() {
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-primary">Make it real</p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
+          <h1 className="mt-4 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl">
             Turn the idea into a proposal you can send today.
-          </h2>
+          </h1>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
             Add a few details and we&apos;ll draft a warm, ready-to-send note for your People team. Nothing leaves your
             browser.
