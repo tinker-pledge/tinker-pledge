@@ -79,7 +79,7 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
       <article className="border-t border-border/60 bg-background">
-        <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-4xl px-6 py-20 md:py-28">
           <p className="text-sm uppercase tracking-[0.2em] text-primary">Blog</p>
           <h1 className="mt-4 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl">
             {post.title}

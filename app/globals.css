@@ -171,7 +171,7 @@
     so posts read as part of the same site rather than as a bolted-on blog.
   */
   .prose-tinker {
-    @apply text-base leading-relaxed text-muted-foreground;
+    @apply text-lg leading-relaxed text-muted-foreground;
   }
 
   .prose-tinker :where(h2) {
