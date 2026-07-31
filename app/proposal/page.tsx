@@ -11,6 +11,24 @@ export const metadata = createPageMetadata({
 export default function ProposalPage() {
   return (
     <main>
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-8">
+              <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">Make it real</p>
+              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-medium leading-[0.9] tracking-[-0.065em] text-foreground">
+                Turn the idea into a proposal you can send today.
+              </h1>
+            </div>
+            <div className="flex flex-col justify-end lg:col-span-4 lg:pb-2">
+              <p className="max-w-md text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
+                Add a few details and we&apos;ll draft a warm, ready-to-send note for your People team. Nothing leaves your
+                browser.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       <ProposalGenerator />
     </main>
   )
