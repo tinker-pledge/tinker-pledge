@@ -16,6 +16,21 @@ export const metadata: Metadata = {
   title: "How It Works | The Tinker Pledge",
   description:
     "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
+  alternates: { canonical: "/how-it-works" },
+  openGraph: {
+    type: "website",
+    siteName: "The Tinker Pledge",
+    url: "/how-it-works",
+    title: "How It Works | The Tinker Pledge",
+    description:
+      "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How It Works | The Tinker Pledge",
+    description:
+      "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
+  },
 }
 
 const budgetNotes = [

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button"
 export const metadata: Metadata = {
   title: "Palette Test | The Tinker Pledge",
   description: "A working page for testing the Tinker Pledge color palette, semantic tokens, and UI pairings.",
+  alternates: { canonical: "/palette" },
+  robots: { index: false, follow: false },
 }
 
 type Token = {
