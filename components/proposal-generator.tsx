@@ -99,22 +99,16 @@ export function ProposalGenerator() {
   const labelClass = "mb-1.5 block text-sm font-medium text-foreground"
 
   return (
-    <section id="proposal" className="border-t border-border/60 bg-secondary/40">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary">Make it real</p>
-          <h1 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
-            Turn the idea into a proposal you can send today.
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Add a few details and we&apos;ll draft a warm, ready-to-send note for your People team. Nothing leaves your
-            browser.
-          </p>
+    <section id="proposal" className="border-b border-border bg-secondary/45">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="mb-8 flex items-center gap-4">
+          <span className="font-mono text-xs text-primary">01</span>
+          <span className="h-px w-10 bg-border" />
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Build the draft</p>
         </div>
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          {/* Form */}
-          <div className="rounded-2xl border border-border/70 bg-background p-6 sm:p-8">
+        <div className="grid border-y border-border bg-card lg:grid-cols-12">
+          <div className="border-b border-border p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-10">
             <div className="flex flex-col gap-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -216,10 +210,9 @@ export function ProposalGenerator() {
             </div>
           </div>
 
-          {/* Preview */}
-          <div className="flex flex-col rounded-2xl border border-border/70 bg-background p-6 sm:p-8">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="text-sm font-medium text-muted-foreground">Your proposal</span>
+          <div className="flex min-w-0 flex-col p-6 sm:p-8 lg:col-span-7 lg:p-10">
+            <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">Your proposal</span>
               <div className="flex gap-2">
                 <Button type="button" size="sm" variant="outline" className="rounded-full" onClick={handleCopy}>
                   {copied ? "Copied" : "Copy"}
@@ -229,7 +222,7 @@ export function ProposalGenerator() {
                 </Button>
               </div>
             </div>
-            <pre className="flex-1 whitespace-pre-wrap rounded-xl bg-secondary/60 p-5 font-sans text-sm leading-relaxed text-foreground">
+            <pre className="min-h-[28rem] flex-1 whitespace-pre-wrap rounded-xl border border-border/70 bg-background p-5 font-sans text-sm leading-relaxed text-foreground sm:p-6">
               {proposal}
             </pre>
           </div>
