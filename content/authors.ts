@@ -15,22 +15,23 @@ export type Author = {
   links: AuthorLinks
 }
 
-// TODO(human-input): replace name, role, bio, and links with real copy before these
-// pages are made public. An author page that is a name and one link is thin content.
+// Bios were drafted from each author's own site and still need their sign-off — they
+// render as visible copy and as the Person JSON-LD description. `role` is the role on
+// this site rather than the day job, which is in the bio; that way it doesn't go stale.
 export const authors = {
   eva: {
     id: 'eva',
-    name: 'Eva',
+    name: 'Eva Zheng',
     role: 'Co-creator, The Tinker Pledge',
-    bio: 'PLACEHOLDER — one paragraph about Eva.',
-    links: { x: 'https://x.com/evadoraz' },
+    bio: 'Community Lead at Vapi, working on AI voice infrastructure, and a board director at Hacker Fund. Early employee at Notion, co-founder of Cal Hacks at UC Berkeley. The through-line: when AI reshapes the economy over the next decade, which systems are actually built so that ordinary people benefit?',
+    links: { website: 'https://evadora.xyz', x: 'https://x.com/evadoraz' },
   },
   abhi: {
     id: 'abhi',
     name: 'Abhi',
     role: 'Co-creator, The Tinker Pledge',
-    bio: 'PLACEHOLDER — one paragraph about Abhi.',
-    links: { x: 'https://x.com/ShrekOverflow' },
+    bio: 'Product Architect at Auth0, working on what identity looks like for AI-era applications — treating agents as first-class principals alongside users and applications, with their own credentials, lifecycle, and policy. Nearly a decade across OAuth, OIDC, and developer-facing security primitives, plus independent engineering research on the side.',
+    links: { website: 'https://shrekoverflow.dev', x: 'https://x.com/ShrekOverflow' },
   },
 } as const satisfies Record<string, Author>
 
