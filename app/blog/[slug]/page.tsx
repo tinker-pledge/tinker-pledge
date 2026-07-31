@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { AuthorByline } from '@/components/blog/author-byline'
+import { NewsletterSignup } from '@/components/blog/newsletter-signup'
 import { getPost, getPostSlugs } from '@/lib/blog/posts'
 import { SITE_NAME, absoluteUrl } from '@/lib/site'
 
@@ -90,6 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
             className="mt-6"
           />
           <div className="prose-tinker mt-12" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <NewsletterSignup className="mt-16" />
           <p className="mt-16 border-t border-border/60 pt-8 text-sm">
             <a
               href="/blog"

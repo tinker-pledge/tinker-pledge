@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { AuthorByline } from '@/components/blog/author-byline'
+import { NewsletterSignup } from '@/components/blog/newsletter-signup'
 import { getAllPosts } from '@/lib/blog/posts'
 import { DEFAULT_OG_IMAGE } from '@/lib/og'
 
@@ -62,6 +63,8 @@ export default function BlogIndexPage() {
               ))}
             </ul>
           )}
+
+          <NewsletterSignup className="mt-16" />
 
           <p className="mt-12 text-sm text-muted-foreground">
             {'Prefer a reader? '}

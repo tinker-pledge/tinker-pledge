@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono, Fraunces } from 'next/font/google'
 import { BuildingBanner } from '@/components/building-banner'
@@ -83,7 +84,12 @@ export default function RootLayout({
           {children}
           <SiteFooter />
         </div>
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   )
