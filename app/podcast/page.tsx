@@ -32,8 +32,8 @@ export default function PodcastPage() {
                 Conversations after the first try.
               </h1>
               <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-white/65 sm:text-xl">
-                Eva will sit down with people who are teaching, adopting, questioning, and building with AI.
-                The point is not to smooth out the uncertainty. It is to make it discussable.
+                Each episode, Eva will talk with someone outside tech who tried AI in their own life. Some kept going,
+                some went back to doing it by hand. Listen to their journey and see what you can bring to your own.
               </p>
             </div>
 
@@ -92,8 +92,10 @@ export default function PodcastPage() {
               A host who started with the same questions you have.
             </h2>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Eva is a community builder who brings people together around emerging technology. She will host the
-              show and shape conversations about what people learn by trying AI in real life.
+              Eva went to her first hackathon in high school without knowing how to code. She kept showing up, started
+              a media and technology company, and built a career around helping people meet technology that&apos;s new
+              to them. On this show, she&apos;ll listen to your journey, asking questions that may leave you with more
+              insight and reflections than you&apos;d expect.
             </p>
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <Button
