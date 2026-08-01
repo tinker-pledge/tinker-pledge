@@ -1,9 +1,11 @@
 export const ANN_ARBOR_WORKSHOP = {
   city: "Ann Arbor",
   region: "Michigan",
-  date: "August 11, 2026",
-  day: "11",
+  date: "August 10, 2026",
+  day: "10",
   monthYear: "August 2026",
+  compactDate: "Aug 10",
+  monthDay: "August 10",
   href: "https://luma.com/qwbhwslj",
   title: "Get the most out of Claude Cowork & Codex",
 }

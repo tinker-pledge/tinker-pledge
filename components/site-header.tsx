@@ -8,9 +8,8 @@ import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
 
 const navLinks = [
   { label: "Workshop", href: "/#workshop" },
-  { label: "The pledge", href: "/#pledge" },
+  { label: "Pledge", href: "/#pledge" },
   { label: "Podcast", href: "/#podcast" },
-  { label: "For teams", href: "/workplace" },
   { label: "Blog", href: "/blog" },
 ]
 
@@ -71,7 +70,7 @@ export function SiteHeader() {
             nativeButton={false}
             className="h-10 rounded-full px-5"
           >
-            Ann Arbor · Aug 11
+            Ann Arbor · {ANN_ARBOR_WORKSHOP.compactDate}
             <ArrowUpRight className="size-3.5" />
           </Button>
         </div>
@@ -114,7 +113,7 @@ export function SiteHeader() {
               nativeButton={false}
               className="mt-5 h-12 rounded-full"
             >
-              Ann Arbor · August 11
+              Ann Arbor · {ANN_ARBOR_WORKSHOP.monthDay}
               <ArrowUpRight className="size-4" />
             </Button>
           </nav>

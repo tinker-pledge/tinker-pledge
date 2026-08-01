@@ -92,8 +92,8 @@ export default function PodcastPage() {
               A community builder who knows how to keep the room open.
             </h2>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              Eva works in developer relations at Vapi, alongside developers building voice AI. She will host the
-              show and shape its conversations as the project develops.
+              Eva is a community builder who brings people together around emerging technology. She will host the
+              show and shape conversations about what people learn by trying AI in real life.
             </p>
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <Button

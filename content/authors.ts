@@ -23,7 +23,7 @@ export const authors = {
     id: 'eva',
     name: 'Eva',
     role: 'Co-creator, The Tinker Pledge',
-    bio: 'Community Lead at Vapi, working on AI voice infrastructure, and a board director at Hacker Fund. Early employee at Notion, co-founder of Cal Hacks at UC Berkeley. The through-line: when AI reshapes the economy over the next decade, which systems are actually built so that ordinary people benefit?',
+    bio: 'Eva is a community builder who brings people together around emerging technology. She leads community at Vapi, serves on the board of Hacker Fund, was an early employee at Notion, and co-founded Cal Hacks at UC Berkeley. Her work asks how new systems can be built so ordinary people benefit.',
     links: { website: 'https://evadora.xyz', x: 'https://x.com/evadoraz' },
   },
   abhi: {
