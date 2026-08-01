@@ -1,71 +1,59 @@
-import { Lightbulb, ShieldCheck, Sparkles, Users } from "lucide-react"
 import { ToolsBrowser } from "@/components/tools-browser"
 
 const principles = [
   {
-    icon: Sparkles,
+    number: "01",
     title: "Familiar first",
     body: "Start with names people recognize.",
   },
   {
-    icon: Users,
+    number: "02",
     title: "Employee-led additions",
     body: "Let usage show what belongs next.",
   },
   {
-    icon: ShieldCheck,
+    number: "03",
     title: "Clear data boundary",
     body: "Personal tools stay for personal practice.",
+  },
+  {
+    number: "04",
+    title: "Review quarterly",
+    body: "Keep the budget stable while the list evolves.",
   },
 ]
 
 export function ToolsSection() {
   return (
-    <section id="tools" className="border-y border-border/60 bg-secondary/40">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <div>
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">Starter tools</p>
-            <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-              A browsable list, not a giant directory.
-            </h2>
-            <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+    <section id="tools" className="border-b border-border bg-background">
+      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">03 · Starter tools</p>
+            <p className="mt-4 max-w-sm text-pretty text-lg leading-relaxed text-muted-foreground">
               Keep the page compact and the policy flexible. The catalog is a launch default people can browse, search,
               and improve over time.
             </p>
           </div>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {principles.map((principle) => (
-              <div key={principle.title} className="flex gap-3 rounded-2xl border border-border/70 bg-background p-5">
-                <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
-                  <principle.icon className="size-4" strokeWidth={1.75} />
-                </span>
-                <div>
-                  <h3 className="font-medium text-foreground">{principle.title}</h3>
-                  <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">{principle.body}</p>
-                </div>
-              </div>
-            ))}
-
-            <div className="rounded-2xl border border-border/70 bg-background p-5">
-              <div className="flex gap-3">
-                <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-xl bg-accent text-primary">
-                  <Lightbulb className="size-4" strokeWidth={1.75} />
-                </span>
-                <div>
-                  <h3 className="font-medium text-foreground">Review quarterly</h3>
-                  <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
-                    Keep the budget stable while the list evolves.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="lg:col-span-8">
+            <h2 className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              A browsable list, not a giant directory.
+            </h2>
           </div>
+        </div>
 
-          <div className="mt-10">
-            <ToolsBrowser />
-          </div>
+        <div className="mt-12 grid border-t border-border md:grid-cols-2 lg:grid-cols-4">
+          {principles.map((principle) => (
+            <article key={principle.title} className="border-b border-border py-8 md:border-r md:px-7 md:odd:pl-0 md:even:border-r-0 lg:border-b-0 lg:odd:pl-7 lg:even:border-r lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0">
+              <span className="font-mono text-xs text-primary">{principle.number}</span>
+              <h3 className="mt-8 font-medium text-foreground">{principle.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{principle.body}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-16 border-t border-border pt-10 sm:mt-20 sm:pt-12">
+          <ToolsBrowser />
         </div>
       </div>
     </section>

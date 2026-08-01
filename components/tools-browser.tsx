@@ -53,14 +53,14 @@ export function ToolsBrowser() {
   }, [activeCategory, query])
 
   return (
-    <div className="rounded-3xl border border-border/70 bg-card p-5 shadow-[0_20px_60px_-45px_rgba(63,38,36,0.42)] sm:p-6">
-      <div className="flex flex-col gap-4 border-b border-border/70 pb-5">
+    <div className="border-y border-border bg-card">
+      <div className="flex flex-col gap-4 border-b border-border px-5 py-6 sm:px-7 sm:py-8">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h3 className="font-serif text-2xl font-light text-foreground">Browse the starter list</h3>
+            <h3 className="text-2xl font-medium tracking-[-0.025em] text-foreground">Browse the starter list</h3>
             <p className="mt-1 max-w-xl text-sm leading-relaxed text-muted-foreground">{activeDescription}</p>
           </div>
-          <p aria-live="polite" className="shrink-0 text-sm text-muted-foreground">
+          <p aria-live="polite" className="shrink-0 font-mono text-xs text-muted-foreground">
             {filteredTools.length} {filteredTools.length === 1 ? "tool" : "tools"}
           </p>
         </div>
@@ -113,7 +113,7 @@ export function ToolsBrowser() {
         </div>
       </div>
 
-      <div className="max-h-[27rem] overflow-y-auto pr-1">
+      <div className="max-h-[27rem] overflow-y-auto px-5 sm:px-7">
         {filteredTools.length > 0 ? (
           <div className="divide-y divide-border/70">
             {filteredTools.map((tool) => (
@@ -142,7 +142,7 @@ export function ToolsBrowser() {
           </div>
         ) : (
           <div className="py-12 text-center">
-            <p className="font-serif text-xl text-foreground">No matches yet.</p>
+            <p className="text-xl font-medium tracking-[-0.02em] text-foreground">No matches yet.</p>
             <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Try a broader search, or treat this as a sign to add an employee-suggested tool during review.
             </p>
