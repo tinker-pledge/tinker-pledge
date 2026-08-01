@@ -22,8 +22,8 @@ export function HomePodcastSection() {
               What did you try—and what happened next?
             </h2>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-white/65 sm:text-xl">
-              Talking through what you tried can turn a private experiment into something other people can learn
-              from. Eva wants to hear what worked, what failed, and what changed for you.
+              You already have the story. Someone still at the point where you started is listening for it. We want
+              to hear what you doubted, what surprised you, and what you&apos;d change if you started over.
             </p>
           </div>
 

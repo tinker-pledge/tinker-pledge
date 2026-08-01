@@ -24,12 +24,13 @@ export function HomePledgeSection() {
         <div className="mt-16 grid border-t border-border pt-10 lg:mt-24 lg:grid-cols-12 lg:gap-8 lg:pt-12">
           <div className="lg:col-span-7">
             <p className="max-w-3xl text-pretty text-2xl leading-snug tracking-[-0.025em] text-foreground sm:text-3xl">
-              Home computers created room to mess around: write a letter, make a budget, learn a language, follow a
-              curiosity. That ordinary access is how computer fluency spread.
+              The home computer arrived with no curriculum. People wrote letters they could fix without retyping the
+              page, and budgets that redid themselves when one number changed. This ordinary access is how computer
+              fluency spread.
             </p>
             <p className="mt-7 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              The Tinker Pledge asks employers to reimburse personal AI tools so people can practice on their own
-              problems, in their own time. Useful habits do not need to begin as a company rollout.
+              The Tinker Pledge asks employers to reimburse the AI tools people use in their own life, the way
+              they&apos;d reimburse a phone bill. People who are free to experiment, experiment more.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button

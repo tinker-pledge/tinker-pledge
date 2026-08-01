@@ -38,12 +38,17 @@ export function WorkshopSection() {
               Workshop
             </h2>
             <p className="mt-8 max-w-lg text-pretty text-2xl leading-snug tracking-[-0.02em] text-foreground/95 sm:text-3xl">
-              Bring the thing you are stuck on. We&apos;ll work on it with you.
+              Bring the task you keep doing by hand.
             </p>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-foreground/65">
-              This hands-on workshop is for small business owners, operators, freelancers, and service providers.
-              Bring one real task, learn when to use chat versus an agent, and leave with a reusable workflow. No
-              coding experience needed.
+              You already use AI. Some weeks that&apos;s a quick email, some weeks something bigger. It hands back a
+              plan, and the doing still lands on you, so the same job is back on your desk next week, and the week
+              after.
+            </p>
+            <p className="mt-4 max-w-md text-pretty leading-relaxed text-foreground/65">
+              Whether you opened ChatGPT last week or already have a few automations running, you&apos;ll leave our
+              workshops with an agent that works through the night without you checking on it. No coding experience
+              needed.
             </p>
           </div>
 

@@ -18,7 +18,7 @@ export function Hero() {
               href="#workshop"
               className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
             >
-              <span className="font-mono text-xs text-primary">01</span>
+              <span className="mt-1 font-mono text-xs text-primary">01</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Workshop</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
@@ -31,7 +31,7 @@ export function Hero() {
               href="#pledge"
               className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6"
             >
-              <span className="font-mono text-xs text-primary">02</span>
+              <span className="mt-1 font-mono text-xs text-primary">02</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">The pledge</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
@@ -44,7 +44,7 @@ export function Hero() {
               href="#podcast"
               className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:px-6 md:last:pr-0"
             >
-              <span className="font-mono text-xs text-primary">03</span>
+              <span className="mt-1 font-mono text-xs text-primary">03</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Podcast</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
