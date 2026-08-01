@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { createPageMetadata } from "@/lib/site-metadata"
 
@@ -97,13 +97,13 @@ export default function PodcastPage() {
             </p>
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <Button
-                render={<a href="mailto:eva@tinkerpledge.org?subject=Tinker%20Pledge%20podcast" />}
+                render={<a href="/contact#podcast" />}
                 nativeButton={false}
                 size="lg"
                 className="h-12 rounded-full px-7"
               >
-                <Mail className="size-4" />
-                Email Eva about the podcast
+                Talk with us about the podcast
+                <ArrowRight className="size-4" />
               </Button>
               <a
                 href="https://evadora.xyz"

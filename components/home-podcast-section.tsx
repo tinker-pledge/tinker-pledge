@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const questions = [
@@ -79,11 +79,11 @@ export function HomePodcastSection() {
               <ArrowRight className="size-4 transition-transform group-hover/button:translate-x-0.5" />
             </Button>
             <a
-              href="mailto:eva@tinkerpledge.org?subject=Tinker%20Pledge%20podcast"
+              href="/contact#podcast"
               className="mt-6 inline-flex items-center gap-2 text-sm text-white/65 underline decoration-white/25 underline-offset-4 hover:text-white"
             >
-              <Mail className="size-4" />
-              eva@tinkerpledge.org
+              Talk with us about the podcast
+              <ArrowRight className="size-4" />
             </a>
           </div>
         </div>

@@ -55,9 +55,7 @@ export default function WorkplacePage() {
                 side by side.
               </p>
               <Button
-                render={
-                  <a href="mailto:abhi@tinkerpledge.org?cc=eva@tinkerpledge.org&subject=Workshop%20for%20our%20team" />
-                }
+                render={<a href="/contact#workshops" />}
                 nativeButton={false}
                 size="lg"
                 className="mt-8 h-12 w-fit rounded-full px-7"
@@ -150,15 +148,13 @@ export default function WorkplacePage() {
           </div>
           <div className="lg:col-span-4 lg:text-right">
             <Button
-              render={
-                <a href="mailto:abhi@tinkerpledge.org?cc=eva@tinkerpledge.org&subject=Workshop%20for%20our%20team" />
-              }
+              render={<a href="/contact#workshops" />}
               nativeButton={false}
               size="lg"
               variant="secondary"
               className="h-12 rounded-full px-7"
             >
-              Email Abhi and Eva
+              Ask about a team workshop
               <ArrowRight className="size-4" />
             </Button>
           </div>

@@ -45,17 +45,8 @@ export function SiteFooter() {
               <a href="/how-it-works" className="transition-colors hover:text-white">
                 Practical pledge guide
               </a>
-              <a
-                href="mailto:abhi@tinkerpledge.org"
-                className="transition-colors hover:text-white"
-              >
-                abhi@tinkerpledge.org
-              </a>
-              <a
-                href="mailto:eva@tinkerpledge.org"
-                className="transition-colors hover:text-white"
-              >
-                eva@tinkerpledge.org
+              <a href="/contact" className="transition-colors hover:text-white">
+                Contact the team
               </a>
             </div>
           </nav>
