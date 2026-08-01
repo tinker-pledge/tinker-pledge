@@ -22,8 +22,8 @@ export function HomePodcastSection() {
               What did you try—and what happened next?
             </h2>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-white/65 sm:text-xl">
-              Eva is developing a podcast about how people are actually living with AI: what they are
-              learning, questioning, keeping, and refusing.
+              Talking through what you tried can turn a private experiment into something other people can learn
+              from. Eva wants to hear what worked, what failed, and what changed for you.
             </p>
           </div>
 

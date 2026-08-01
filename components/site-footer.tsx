@@ -14,7 +14,7 @@ export function SiteFooter() {
               <span className="text-[0.95rem] font-semibold tracking-[-0.02em]">Tinker Pledge</span>
             </a>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/55">
-              Start with one real problem. Keep practicing. Compare notes with other people doing the same.
+              The tools keep changing. Practice is what sticks.
             </p>
           </div>
 

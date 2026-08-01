@@ -12,9 +12,6 @@ export function HomePledgeSection() {
               <span className="h-px w-10 bg-border" />
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">The pledge</p>
             </div>
-            <p className="mt-8 max-w-xs text-pretty text-lg leading-relaxed text-muted-foreground">
-              A workshop can create the first useful try. The pledge makes room for the next hundred.
-            </p>
           </div>
 
           <div className="lg:col-span-8">

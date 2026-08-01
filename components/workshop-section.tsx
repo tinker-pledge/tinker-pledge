@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ANN_ARBOR_WORKSHOP, NYC_WORKSHOP } from "@/data/workshops"
+import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
 
 const roomNotes = [
   {
@@ -41,8 +41,9 @@ export function WorkshopSection() {
               Bring the thing you are stuck on. We&apos;ll work on it with you.
             </p>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-background/65">
-              This is our public working session for owners, operators, freelancers, and anyone ready to try.
-              Bring your own laptop. No coding required.
+              This hands-on workshop is for small business owners, operators, freelancers, and service providers.
+              Bring one real task, learn when to use chat versus an agent, and leave with a reusable workflow. No
+              coding experience needed.
             </p>
           </div>
 
@@ -130,11 +131,6 @@ export function WorkshopSection() {
             ))}
           </ol>
         </div>
-
-        <p className="mt-12 border-t border-background/15 pt-5 text-xs leading-relaxed text-background/45">
-          The workshop began in {NYC_WORKSHOP.city} with community partner {NYC_WORKSHOP.partner}. The next room opens in{" "}
-          {ANN_ARBOR_WORKSHOP.city} on {ANN_ARBOR_WORKSHOP.date}.
-        </p>
       </div>
     </section>
   )

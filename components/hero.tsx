@@ -6,39 +6,9 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-5 pb-0 pt-14 sm:px-8 sm:pt-20 lg:px-10 lg:pt-24">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-8">
-            <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">
-              A community project about learning by doing
-            </p>
-            <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,8vw,7.6rem)] font-medium leading-[0.88] tracking-[-0.065em] text-foreground">
+            <h1 className="max-w-5xl text-balance text-[clamp(3.5rem,8vw,7.6rem)] font-medium leading-[0.88] tracking-[-0.065em] text-foreground">
               Start with the work in front of you.
             </h1>
-          </div>
-
-          <div className="flex flex-col justify-end lg:col-span-4 lg:pb-2">
-            <p className="max-w-md text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              The tools keep changing. Practice is what sticks. We help people begin, keep going, and compare notes.
-            </p>
-            <p className="mt-7 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Led by{" "}
-              <a
-                href="https://shrekoverflow.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-foreground underline decoration-border underline-offset-4 hover:text-primary"
-              >
-                Abhi
-              </a>
-              {", who worked on AI agent identity and security as a product architect at Auth0, and "}
-              <a
-                href="https://evadora.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-foreground underline decoration-border underline-offset-4 hover:text-primary"
-              >
-                Eva
-              </a>
-              {", who works in developer relations at Vapi."}
-            </p>
           </div>
         </div>
 
