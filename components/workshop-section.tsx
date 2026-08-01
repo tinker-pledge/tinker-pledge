@@ -6,8 +6,8 @@ import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
 const roomNotes = [
   {
     number: "01",
-    title: "Open the real task",
-    body: "Not a canned exercise. Bring the document, decision, backlog, or workflow that is actually slowing you down.",
+    title: "Start from your real work",
+    body: "Bring one thing: a vendor email, a messy CSV, an interview rubric, a weekly report, family chores scheduling, a task you still do by hand.",
   },
   {
     number: "02",
@@ -16,31 +16,31 @@ const roomNotes = [
   },
   {
     number: "03",
-    title: "Leave with the work",
-    body: "Keep what you made and a short record of what worked well enough to try again.",
+    title: "Leave with it running",
+    body: "Your files, your agents, your skills. Open your laptop at home and feel confident about tackling a bigger, more complex task.",
   },
 ]
 
 export function WorkshopSection() {
   return (
-    <section id="workshop" className="scroll-mt-20 bg-foreground text-background">
+    <section id="workshop" className="scroll-mt-20 bg-[var(--palette-ember-rose)] text-foreground">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-4">
               <span className="font-mono text-xs text-primary">01</span>
-              <span className="h-px w-10 bg-background/25" />
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-background/65">
+              <span className="h-px w-10 bg-foreground/25" />
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-foreground/65">
                 Hands-on public workshop
               </p>
             </div>
             <h2 className="mt-8 text-[clamp(3.5rem,7vw,6.5rem)] font-medium leading-[0.9] tracking-[-0.06em]">
               Workshop
             </h2>
-            <p className="mt-8 max-w-lg text-pretty text-2xl leading-snug tracking-[-0.02em] text-background/95 sm:text-3xl">
+            <p className="mt-8 max-w-lg text-pretty text-2xl leading-snug tracking-[-0.02em] text-foreground/95 sm:text-3xl">
               Bring the thing you are stuck on. We&apos;ll work on it with you.
             </p>
-            <p className="mt-6 max-w-md text-pretty leading-relaxed text-background/65">
+            <p className="mt-6 max-w-md text-pretty leading-relaxed text-foreground/65">
               This hands-on workshop is for small business owners, operators, freelancers, and service providers.
               Bring one real task, learn when to use chat versus an agent, and leave with a reusable workflow. No
               coding experience needed.
@@ -61,13 +61,13 @@ export function WorkshopSection() {
                 Laptop open · task in front of you
               </div>
             </div>
-            <figcaption className="mt-2 text-right text-[0.68rem] text-background/45">
+            <figcaption className="mt-2 text-right text-[0.68rem] text-foreground/45">
               Photo:{" "}
               <a
                 href="https://www.pexels.com/photo/person-using-a-laptop-on-a-table-7429471/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-background"
+                className="underline underline-offset-2 hover:text-foreground"
               >
                 cottonbro studio / Pexels
               </a>
@@ -75,13 +75,13 @@ export function WorkshopSection() {
           </figure>
         </div>
 
-        <div className="mt-20 border-y border-background/20 lg:mt-28">
+        <div className="mt-20 border-y border-foreground/20 lg:mt-28">
           <div className="grid lg:grid-cols-[1.1fr_1fr_auto] lg:items-stretch">
-            <div className="border-b border-background/20 py-7 lg:border-b-0 lg:border-r lg:py-8 lg:pr-8">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-background/50">Next room</p>
+            <div className="border-b border-foreground/20 py-7 lg:border-b-0 lg:border-r lg:py-8 lg:pr-8">
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-foreground/50">Next room</p>
               <p className="mt-3 text-2xl font-medium tracking-[-0.025em]">{ANN_ARBOR_WORKSHOP.title}</p>
             </div>
-            <div className="grid gap-3 border-b border-background/20 py-7 text-sm text-background/75 sm:grid-cols-2 lg:border-b-0 lg:border-r lg:px-8 lg:py-8">
+            <div className="grid gap-3 border-b border-foreground/20 py-7 text-sm text-foreground/75 sm:grid-cols-2 lg:border-b-0 lg:border-r lg:px-8 lg:py-8">
               <span className="inline-flex items-center gap-2">
                 <MapPin className="size-4 text-primary" strokeWidth={1.8} />
                 {ANN_ARBOR_WORKSHOP.city}, {ANN_ARBOR_WORKSHOP.region}
@@ -109,24 +109,24 @@ export function WorkshopSection() {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-[0.8fr_2.2fr] lg:gap-12">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-background/50">In the room</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-foreground/50">In the room</p>
             <a
               href="/workshops"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-background underline decoration-background/30 underline-offset-4 hover:decoration-background"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
             >
               Full workshop details
               <ArrowRight className="size-4" />
             </a>
           </div>
-          <ol className="grid border-t border-background/20 md:grid-cols-3">
+          <ol className="grid border-t border-foreground/20 md:grid-cols-3">
             {roomNotes.map((note) => (
               <li
                 key={note.number}
-                className="border-b border-background/20 py-7 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                className="border-b border-foreground/20 py-7 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
                 <span className="font-mono text-xs text-primary">{note.number}</span>
                 <h3 className="mt-8 text-xl font-medium tracking-[-0.02em]">{note.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-background/60">{note.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/60">{note.body}</p>
               </li>
             ))}
           </ol>

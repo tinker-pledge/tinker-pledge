@@ -22,7 +22,7 @@ export function Hero() {
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Workshop</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
-                  Bring one real problem.
+                  Bring one real task. Leave knowing how to build the thing that runs the next hundred.
                 </span>
               </span>
               <ArrowDown className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-y-1 md:hidden" />
@@ -35,7 +35,7 @@ export function Hero() {
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">The pledge</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
-                  Keep the tools in reach.
+                  Give everyone a budget to tinker with AI. We wrote the proposal for you.
                 </span>
               </span>
               <ArrowDown className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-y-1 md:hidden" />
@@ -48,7 +48,8 @@ export function Hero() {
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Podcast</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
-                  Hear how other people are learning.
+                  Every episode, one person outside tech tells the whole story. What they doubted, what surprised them,
+                  what they&apos;d change if they started over.
                 </span>
               </span>
               <ArrowDown className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-y-1 md:hidden" />
