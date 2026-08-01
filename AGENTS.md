@@ -8,7 +8,7 @@
   - `/` is the short persuasive homepage.
   - `/how-it-works` is the practical launch guide, including the starter tools list.
   - `/proposal` hosts the proposal generator.
-  - `/manifesto` hosts the manifesto and fuller pledge/share widget.
+  - `/pledge` hosts the manifesto and fuller pledge/share widget.
 - Public share URLs should use `https://tinkerpledge.org`.
 - The open-source repo is `https://github.com/tinker-pledge/tinker-pledge`.
 
@@ -65,5 +65,5 @@
 ## Editing Notes
 
 - Preserve unrelated worktree changes. This repo is being edited live.
-- Keep copy changes narrow and consistent across homepage, proposal generator, manifesto, and how-it-works pages.
+- Keep copy changes narrow and consistent across homepage, proposal generator, Pledge, and how-it-works pages.
 - When adding new public-facing claims about tools, pricing, policies, or tax/payroll handling, verify them first or keep the copy intentionally general.

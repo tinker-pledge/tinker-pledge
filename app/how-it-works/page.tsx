@@ -99,7 +99,7 @@ export default function HowItWorksPage() {
                 <Button render={<a href="/proposal" />} nativeButton={false} size="lg" className="rounded-full px-7">
                   Generate your proposal
                 </Button>
-                <Button render={<a href="/manifesto" />} nativeButton={false} size="lg" variant="outline" className="rounded-full px-7">
+                <Button render={<a href="/pledge" />} nativeButton={false} size="lg" variant="outline" className="rounded-full px-7">
                   Read the pledge
                 </Button>
               </div>

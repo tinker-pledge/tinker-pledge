@@ -6,10 +6,10 @@ export const metadata = createPageMetadata({
   title: "The Pledge | The Tinker Pledge",
   description:
     "A one-page argument for giving people the freedom to build AI fluency in their own lives.",
-  path: "/manifesto",
+  path: "/pledge",
 })
 
-export default function ManifestoPage() {
+export default function PledgePage() {
   return (
     <main>
       <ManifestoSection />

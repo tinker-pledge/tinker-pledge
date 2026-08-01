@@ -24,7 +24,7 @@ export function SiteFooter() {
               <a href="/workshops" className="transition-colors hover:text-white">
                 Workshop
               </a>
-              <a href="/manifesto" className="transition-colors hover:text-white">
+              <a href="/pledge" className="transition-colors hover:text-white">
                 The pledge
               </a>
               <a href="/podcast" className="transition-colors hover:text-white">

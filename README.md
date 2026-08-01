@@ -68,7 +68,7 @@ Note: `pnpm build` may need network access because the app uses `next/font` with
 - `app/podcast/page.tsx`: podcast direction and host context.
 - `app/how-it-works/page.tsx`: implementation guide and starter tools section.
 - `app/proposal/page.tsx`: proposal generator.
-- `app/manifesto/page.tsx`: one-page pledge and sharing.
+- `app/pledge/page.tsx`: one-page pledge and sharing.
 - `app/palette/page.tsx`: palette testing page for color roles, pairings, and UI samples.
 - `data/workshops.ts`: shared workshop dates, locations, and event links.
 - `data/starter-tools.json`: starter tool catalog.
