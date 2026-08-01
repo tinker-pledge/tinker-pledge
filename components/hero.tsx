@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
@@ -15,7 +15,7 @@ export function Hero() {
         <nav aria-label="Explore the project" className="mt-16 border-t border-border sm:mt-24 lg:mt-28">
           <div className="grid md:grid-cols-3">
             <a
-              href="#workshop"
+              href="/workshops"
               className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
             >
               <span className="font-mono text-xs text-primary">01</span>
@@ -25,10 +25,10 @@ export function Hero() {
                   Bring one real task. Leave knowing how to build the thing that runs the next hundred.
                 </span>
               </span>
-              <ArrowDown className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-y-1 md:hidden" />
+              <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />
             </a>
             <a
-              href="#pledge"
+              href="/pledge"
               className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6"
             >
               <span className="font-mono text-xs text-primary">02</span>
@@ -38,10 +38,10 @@ export function Hero() {
                   Give everyone a budget to tinker with AI. We wrote the proposal for you.
                 </span>
               </span>
-              <ArrowDown className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-y-1 md:hidden" />
+              <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />
             </a>
             <a
-              href="#podcast"
+              href="/podcast"
               className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:px-6 md:last:pr-0"
             >
               <span className="font-mono text-xs text-primary">03</span>
@@ -52,7 +52,7 @@ export function Hero() {
                   what they&apos;d change if they started over.
                 </span>
               </span>
-              <ArrowDown className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-y-1 md:hidden" />
+              <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />
             </a>
           </div>
         </nav>
