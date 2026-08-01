@@ -89,7 +89,7 @@ export default function PodcastPage() {
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
             <h2 className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
-              A community builder who knows how to keep the room open.
+              A host who started with the same questions you have.
             </h2>
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
               Eva is a community builder who brings people together around emerging technology. She will host the
