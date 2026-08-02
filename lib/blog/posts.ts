@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
-import { isAuthorId, getAuthor, type Author, type AuthorId } from '@/content/authors'
+import { isAuthorId, getAuthor, type Author } from '@/content/authors'
 import { renderMarkdown } from '@/lib/blog/render'
 
 const CONTENT_DIR = path.join(process.cwd(), 'content', 'blog')
@@ -68,7 +68,7 @@ function validate(file: string, slug: string, data: Record<string, unknown>): Po
     if (typeof id !== 'string' || !isAuthorId(id)) {
       fail(file, `unknown author id ${JSON.stringify(id)} — add them to content/authors.ts first`)
     }
-    return getAuthor(id as AuthorId)
+    return getAuthor(id)
   })
 
   const rawTags = data.tags ?? []
@@ -129,10 +129,6 @@ export function getAllPosts(): PostMeta[] {
     .sort((a, b) => (a.publishedAt === b.publishedAt
       ? a.slug.localeCompare(b.slug)
       : b.publishedAt.localeCompare(a.publishedAt)))
-}
-
-export function getPostsByAuthor(id: AuthorId): PostMeta[] {
-  return getAllPosts().filter((p) => p.authors.some((a) => a.id === id))
 }
 
 export function getPostSlugs(): string[] {

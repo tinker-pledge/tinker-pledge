@@ -5,6 +5,11 @@ export const primaryNavigation = [
   { label: "Blog", href: "/blog" },
 ] as const
 
+export const footerProjectNavigation = [
+  ...primaryNavigation,
+  { label: "About", href: "/about" },
+] as const
+
 export function isCurrentNavigationPath(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`)
 }

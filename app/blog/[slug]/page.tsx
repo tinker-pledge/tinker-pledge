@@ -59,7 +59,6 @@ export default async function BlogPostPage({ params }: Props) {
     author: post.authors.map((a) => ({
       '@type': 'Person',
       name: a.name,
-      url: absoluteUrl(`/authors/${a.id}`),
     })),
     publisher: {
       '@type': 'Organization',

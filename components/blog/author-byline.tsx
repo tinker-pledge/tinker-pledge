@@ -17,12 +17,7 @@ export function AuthorByline({ authors, publishedAt, updatedAt, className }: Aut
         {authors.map((author, i) => (
           <span key={author.id}>
             {i > 0 && (i === authors.length - 1 ? ' and ' : ', ')}
-            <a
-              href={`/authors/${author.id}`}
-              className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-            >
-              {author.name}
-            </a>
+            <span className="font-medium text-foreground">{author.name}</span>
           </span>
         ))}
       </span>

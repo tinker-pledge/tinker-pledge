@@ -1,4 +1,4 @@
-import { primaryNavigation } from "@/lib/navigation"
+import { footerProjectNavigation } from "@/lib/navigation"
 
 export function SiteFooter() {
   return (
@@ -23,7 +23,7 @@ export function SiteFooter() {
           <nav aria-label="Project navigation" className="md:col-span-2 md:col-start-7">
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-white/35">The project</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/60">
-              {primaryNavigation.map((link) => (
+              {footerProjectNavigation.map((link) => (
                 <a key={link.href} href={link.href} className="transition-colors hover:text-white">
                   {link.label}
                 </a>
