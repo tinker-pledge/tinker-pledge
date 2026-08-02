@@ -106,9 +106,7 @@ export default function PodcastPage() {
                 <ArrowRight className="size-4" />
               </Button>
               <a
-                href="https://evadora.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/about#eva"
                 className="inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-border underline-offset-4 hover:text-primary"
               >
                 About Eva
