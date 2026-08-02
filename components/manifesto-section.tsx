@@ -30,17 +30,7 @@ export function ManifestoSection() {
     <section id="manifesto" className="border-b border-border bg-background">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-4">
-            <div className="flex items-center gap-4">
-              <span className="h-px w-10 bg-border" />
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">The pledge</p>
-            </div>
-            <p className="mt-8 max-w-xs text-pretty text-lg leading-relaxed text-muted-foreground">
-              The workshop creates a first try. This is the case for keeping the tools in reach afterward.
-            </p>
-          </div>
-
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 lg:col-start-5">
             <h1 className="max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-medium leading-[0.93] tracking-[-0.06em] text-foreground">
               Give people enough room to try again.
             </h1>
