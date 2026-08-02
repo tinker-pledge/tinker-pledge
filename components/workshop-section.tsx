@@ -23,7 +23,10 @@ const roomNotes = [
 
 export function WorkshopSection() {
   return (
-    <section id="workshop" className="scroll-mt-20 bg-[var(--palette-ember-rose)] text-foreground">
+    <section
+      id="workshop"
+      className="scroll-mt-20 bg-[linear-gradient(135deg,var(--palette-golden-hour)_0%,var(--palette-ember-rose)_52%,var(--palette-dusk-mist)_100%)] text-foreground"
+    >
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
