@@ -1,3 +1,5 @@
+import { footerProjectNavigation } from "@/lib/navigation"
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-white/15 bg-[oklch(0.205_0.028_330)] text-white print:hidden">
@@ -21,18 +23,11 @@ export function SiteFooter() {
           <nav aria-label="Project navigation" className="md:col-span-2 md:col-start-7">
             <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-white/35">The project</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/60">
-              <a href="/workshops" className="transition-colors hover:text-white">
-                Workshop
-              </a>
-              <a href="/manifesto" className="transition-colors hover:text-white">
-                The pledge
-              </a>
-              <a href="/podcast" className="transition-colors hover:text-white">
-                Podcast
-              </a>
-              <a href="/blog" className="transition-colors hover:text-white">
-                Blog
-              </a>
+              {footerProjectNavigation.map((link) => (
+                <a key={link.href} href={link.href} className="transition-colors hover:text-white">
+                  {link.label}
+                </a>
+              ))}
             </div>
           </nav>
 

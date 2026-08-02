@@ -13,6 +13,7 @@ Live site: [tinkerpledge.org](https://tinkerpledge.org)
 This is being built in the open. The current site includes:
 
 - A short homepage connecting the three projects.
+- An About page explaining the project's origin and introducing its co-creators.
 - A workshops page with upcoming and past events.
 - A page for bringing a workshop to a small or midsize business.
 - A transparent holding page for the podcast in development.
@@ -63,12 +64,13 @@ Note: `pnpm build` may need network access because the app uses `next/font` with
 ## Project Structure
 
 - `app/page.tsx`: homepage flow.
+- `app/about/page.tsx`: project origin and registry-backed co-creator introductions.
 - `app/workshops/page.tsx`: public workshops and event details.
 - `app/workplace/page.tsx`: paid workplace workshop format.
 - `app/podcast/page.tsx`: podcast direction and host context.
 - `app/how-it-works/page.tsx`: implementation guide and starter tools section.
 - `app/proposal/page.tsx`: proposal generator.
-- `app/manifesto/page.tsx`: one-page pledge and sharing.
+- `app/pledge/page.tsx`: one-page pledge and sharing.
 - `app/palette/page.tsx`: palette testing page for color roles, pairings, and UI samples.
 - `data/workshops.ts`: shared workshop dates, locations, and event links.
 - `data/starter-tools.json`: starter tool catalog.

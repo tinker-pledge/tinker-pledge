@@ -8,7 +8,10 @@
   - `/` is the short persuasive homepage.
   - `/how-it-works` is the practical launch guide, including the starter tools list.
   - `/proposal` hosts the proposal generator.
-  - `/manifesto` hosts the manifesto and fuller pledge/share widget.
+  - `/pledge` hosts the manifesto and fuller pledge/share widget.
+  - `/about` explains the project origin and introduces Eva and Abhi side by side.
+- Creator presentation on `/about` comes from `content/authors.ts`; do not duplicate names, roles, bios, or profile links in the route.
+- Individual public author profile routes are not part of the route model; keep blog attribution registry-backed without linking to `/authors/*`.
 - Public share URLs should use `https://tinkerpledge.org`.
 - The open-source repo is `https://github.com/tinker-pledge/tinker-pledge`.
 
@@ -65,5 +68,5 @@
 ## Editing Notes
 
 - Preserve unrelated worktree changes. This repo is being edited live.
-- Keep copy changes narrow and consistent across homepage, proposal generator, manifesto, and how-it-works pages.
+- Keep copy changes narrow and consistent across homepage, proposal generator, Pledge, and how-it-works pages.
 - When adding new public-facing claims about tools, pricing, policies, or tax/payroll handling, verify them first or keep the copy intentionally general.

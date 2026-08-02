@@ -6,18 +6,18 @@ export type AuthorLinks = {
 }
 
 export type Author = {
-  /** URL segment: /authors/<id> */
+  /** Stable key used by blog frontmatter and registry consumers. */
   id: string
   name: string
   role: string
-  /** One paragraph. Rendered on the author page and used as the Person JSON-LD description. */
+  /** One paragraph. Rendered on the About page. */
   bio: string
   links: AuthorLinks
 }
 
 // Bios were drafted from each author's own site and still need their sign-off — they
-// render as visible copy and as the Person JSON-LD description. `role` is the role on
-// this site rather than the day job, which is in the bio; that way it doesn't go stale.
+// render as visible copy on /about. `role` is the role on this site rather than the day
+// job, which is in the bio; that way it doesn't go stale.
 export const authors = {
   eva: {
     id: 'eva',

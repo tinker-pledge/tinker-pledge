@@ -34,7 +34,7 @@ export function HomePledgeSection() {
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button
-                render={<a href="/manifesto" />}
+                render={<a href="/pledge" />}
                 nativeButton={false}
                 size="lg"
                 className="h-12 rounded-full px-7"

@@ -5,13 +5,7 @@ import { usePathname } from "next/navigation"
 import { ArrowUpRight, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
-
-const navLinks = [
-  { label: "Workshop", href: "/#workshop" },
-  { label: "Pledge", href: "/#pledge" },
-  { label: "Podcast", href: "/#podcast" },
-  { label: "Blog", href: "/blog" },
-]
+import { isCurrentNavigationPath, primaryNavigation } from "@/lib/navigation"
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
@@ -46,11 +40,11 @@ export function SiteHeader() {
         </a>
 
         <nav aria-label="Primary navigation" className="hidden items-center gap-7 lg:flex">
-          {navLinks.map((link) => (
+          {primaryNavigation.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              aria-current={pathname === link.href ? "page" : undefined}
+              aria-current={isCurrentNavigationPath(pathname, link.href) ? "page" : undefined}
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
@@ -90,12 +84,12 @@ export function SiteHeader() {
       {open && (
         <div id="mobile-navigation" className="border-t border-border bg-background px-5 py-5 sm:px-8 lg:hidden">
           <nav aria-label="Mobile navigation" className="flex flex-col">
-            {navLinks.map((link) => (
+            {primaryNavigation.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                aria-current={pathname === link.href ? "page" : undefined}
+                aria-current={isCurrentNavigationPath(pathname, link.href) ? "page" : undefined}
                 className="flex min-h-12 items-center border-b border-border text-base text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}

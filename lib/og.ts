@@ -37,7 +37,7 @@ export const OG_SIZE = { width: 1200, height: 630 }
  * The file-convention `app/opengraph-image.tsx` only attaches itself to `openGraph`
  * automatically when a route inherits the root's metadata object wholesale. Any
  * route below the root that declares its own `openGraph` (required because
- * metadata merging is shallow — see app/manifesto/page.tsx et al.) replaces that
+ * metadata merging is shallow — see app/pledge/page.tsx et al.) replaces that
  * association and ends up with no og:image at all. Those routes must list this
  * explicitly under `openGraph.images`.
  */
