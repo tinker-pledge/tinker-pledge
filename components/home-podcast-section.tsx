@@ -16,7 +16,7 @@ export function HomePodcastSection() {
             <div className="flex items-center gap-4">
               <span className="font-mono text-xs text-[oklch(0.74_0.13_31)]">03</span>
               <span className="h-px w-10 bg-white/20" />
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/55">Podcast · Coming soon</p>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/55">Share your lessons</p>
             </div>
             <h2 className="mt-9 max-w-4xl text-balance text-[clamp(3rem,6.5vw,6.5rem)] font-medium leading-[0.92] tracking-[-0.06em]">
               What did you try—and what happened next?
@@ -58,7 +58,7 @@ export function HomePodcastSection() {
 
         <div className="mt-16 grid border-t border-white/18 pt-10 lg:mt-24 lg:grid-cols-12 lg:gap-8 lg:pt-12">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/45 lg:col-span-3">
-            Questions worth recording
+            Questions worth sharing
           </p>
           <ol className="mt-8 divide-y divide-white/15 border-y border-white/15 lg:col-span-6 lg:mt-0">
             {questions.map((question, index) => (

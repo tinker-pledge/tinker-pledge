@@ -48,8 +48,7 @@ export function Hero() {
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Podcast</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
-                  Every episode, one person outside tech tells the whole story. What they doubted, what surprised them,
-                  what they&apos;d change if they started over.
+                  One person outside tech shares what they doubted, what surprised them, and what they&apos;d change.
                 </span>
               </span>
               <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />

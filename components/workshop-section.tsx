@@ -34,7 +34,7 @@ export function WorkshopSection() {
               <span className="font-mono text-xs text-primary">01</span>
               <span className="h-px w-10 bg-foreground/25" />
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-foreground/65">
-                Hands-on public workshop
+                Hands-on sessions
               </p>
             </div>
             <h2 className="mt-8 text-[clamp(3.5rem,7vw,6.5rem)] font-medium leading-[0.9] tracking-[-0.06em]">
@@ -86,7 +86,7 @@ export function WorkshopSection() {
         <div className="mt-20 border-y border-foreground/20 lg:mt-28">
           <div className="grid lg:grid-cols-[1.1fr_1fr_auto] lg:items-stretch">
             <div className="border-b border-foreground/20 py-7 lg:border-b-0 lg:border-r lg:py-8 lg:pr-8">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-foreground/50">Next room</p>
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-foreground/50">Next workshop</p>
               <p className="mt-3 text-2xl font-medium tracking-[-0.025em]">{ANN_ARBOR_WORKSHOP.title}</p>
             </div>
             <div className="grid gap-3 border-b border-foreground/20 py-7 text-sm text-foreground/75 sm:grid-cols-2 lg:border-b-0 lg:border-r lg:px-8 lg:py-8">

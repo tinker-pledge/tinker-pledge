@@ -32,7 +32,6 @@ export function ManifestoSection() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4">
-              <span className="font-mono text-xs text-primary">02</span>
               <span className="h-px w-10 bg-border" />
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">The pledge</p>
             </div>
@@ -49,13 +48,9 @@ export function ManifestoSection() {
         </div>
 
         <article className="mt-16 border-y border-border bg-card sm:mt-24">
-          <header className="grid gap-8 border-b border-border p-7 sm:p-10 lg:grid-cols-12 lg:p-12">
-            <div className="lg:col-span-3">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-primary">A pledge to tinker</p>
-            </div>
-            <p className="max-w-4xl text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-3xl lg:col-span-8">
-              We give our people access to AI tools for personal use, so they can build fluency through repeated,
-              low-stakes practice.
+          <header className="border-b border-border p-7 sm:p-10 lg:p-12">
+            <p className="max-w-4xl text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-3xl">
+              Give your team access to AI at work and in their own life. Experimentation builds fluency.
             </p>
           </header>
 
