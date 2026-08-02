@@ -94,8 +94,8 @@ export default function PodcastPage() {
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
               Eva went to her first hackathon in high school without knowing how to code. She kept showing up, started
               a media and technology company, and built a career around helping people meet technology that&apos;s new
-              to them. On this show, she&apos;ll listen to your journey, asking questions that may leave you with more
-              insight and reflections than you&apos;d expect.
+              to them. On this show, she&apos;s keen to learn about your journey: what you doubted, what surprised you,
+              and what you&apos;d change if you started over.
             </p>
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
               <Button

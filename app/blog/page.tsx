@@ -35,7 +35,6 @@ export default function BlogIndexPage() {
           <header className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
               <div className="flex items-center gap-4">
-                <span className="font-mono text-xs text-primary">04</span>
                 <span className="h-px w-10 bg-border" />
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Field notes</p>
               </div>
@@ -57,12 +56,9 @@ export default function BlogIndexPage() {
             </p>
           ) : (
             <ul className="mt-16 divide-y divide-border border-y border-border sm:mt-24">
-              {posts.map((post, index) => (
+              {posts.map((post) => (
                 <li key={post.slug} className="grid gap-5 py-8 sm:py-10 lg:grid-cols-12 lg:gap-8">
-                  <span className="font-mono text-xs text-primary lg:col-span-1">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div className="lg:col-span-6">
+                  <div className="lg:col-span-7">
                     <h2 className="text-2xl font-medium tracking-[-0.025em] text-foreground sm:text-3xl">
                       <a
                         href={`/blog/${post.slug}`}
