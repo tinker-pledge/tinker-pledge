@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/podcast"), changeFrequency: "monthly", priority: 0.7 },
     { url: absoluteUrl("/about"), changeFrequency: "yearly", priority: 0.6 },
     { url: absoluteUrl("/contact"), changeFrequency: "yearly", priority: 0.5 },
+    { url: absoluteUrl("/privacy"), changeFrequency: "yearly", priority: 0.3 },
     { url: absoluteUrl("/how-it-works"), changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/proposal"), changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/blog"), lastModified: latest, changeFrequency: "weekly", priority: 0.9 },

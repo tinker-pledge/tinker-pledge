@@ -79,6 +79,13 @@ export function SiteFooter() {
             >
               Open source
             </a>
+            {". "}
+            <a
+              href="/privacy"
+              className="font-medium text-white underline-offset-4 transition-colors hover:underline"
+            >
+              Privacy
+            </a>
             {"."}
           </p>
         </div>

@@ -44,11 +44,15 @@ export function NewsletterSignup({ className }: { className?: string }) {
         </Button>
       </form>
 
-      {/* TODO(human-input): this is the first place the site collects personal data and
-          there is no privacy policy page. Confirm the wording, and whether a real policy
-          and double opt-in are required, before this is public. */}
       <p className="mt-3 text-sm text-muted-foreground">
-        We use your address only to send new posts. Unsubscribe any time.
+        We use your address only to send new posts. Unsubscribe any time. Read our{' '}
+        <a
+          href="/privacy"
+          className="font-medium text-foreground underline decoration-border underline-offset-4 hover:text-primary"
+        >
+          privacy policy
+        </a>
+        .
       </p>
     </section>
   )
