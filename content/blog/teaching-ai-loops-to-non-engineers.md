@@ -1,6 +1,6 @@
 ---
 title: Teaching AI loops to non-engineers, and what broke
-description: Notes from our first AI loops workshop in NYC — the five building blocks that don't change, the shift from answers to outcomes, and the parts we got wrong.
+description: At our first New York City workshop, we taught non-engineers five building blocks for moving from AI answers to outcomes. Here’s what worked, what broke, and what we’ll change next.
 publishedAt: '2026-07-30'
 authors: [eva, abhi]
 tags: [workshops, fluency]
