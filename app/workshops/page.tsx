@@ -86,14 +86,12 @@ export default function WorkshopsPage() {
           </div>
 
           <div className="tinker-card mt-9 grid overflow-hidden border border-border-card bg-card lg:grid-cols-12">
-            <div className="border-b border-border-card px-7 py-7 lg:col-span-2 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
+            <div className="border-b border-border-card px-7 py-7 lg:col-span-3 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
               <p className="font-mono text-5xl font-normal tracking-[-0.055em] text-foreground">{ANN_ARBOR_WORKSHOP.day}</p>
               <p className="tinker-meta-label mt-2 text-muted-foreground">
                 {ANN_ARBOR_WORKSHOP.monthYear}
               </p>
-            </div>
-            <div className="border-b border-border-card px-7 py-7 lg:col-span-7 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
-              <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
+              <div className="mt-7 flex flex-col gap-3 text-sm text-muted-foreground">
                 <span className="inline-flex items-center gap-2">
                   <MapPin className="size-4 text-primary" strokeWidth={1.8} />
                   {ANN_ARBOR_WORKSHOP.city}, {ANN_ARBOR_WORKSHOP.region}
@@ -107,7 +105,9 @@ export default function WorkshopsPage() {
                 <span aria-hidden="true" className="tinker-badge__dot" />
                 Open registration
               </p>
-              <h2 className="mt-8 max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
+            </div>
+            <div className="border-b border-border-card px-7 py-7 lg:col-span-6 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
+              <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 {ANN_ARBOR_WORKSHOP.title}
               </h2>
               <p className="mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
@@ -115,7 +115,7 @@ export default function WorkshopsPage() {
                 reusable. Space stays limited so the room can stay hands-on.
               </p>
             </div>
-            <div className="flex flex-col items-start justify-between px-7 py-7 lg:col-span-3 lg:px-9 lg:py-9">
+            <div className="flex flex-col items-start px-7 py-7 lg:col-span-3 lg:px-9 lg:py-9">
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Bring your laptop and the thing you want to move forward.
               </p>

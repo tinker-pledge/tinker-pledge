@@ -64,7 +64,7 @@ export function HomePodcastSection() {
         </div>
 
         <div className="mt-16 grid border-t border-[var(--palette-night-border)] pt-10 lg:mt-24 lg:grid-cols-12 lg:gap-8 lg:pt-12">
-          <p className="tinker-eyebrow text-[var(--palette-night-quiet)] lg:col-span-3">
+          <p className="tinker-eyebrow text-[var(--palette-night-quiet)] lg:col-span-3 lg:flex lg:h-12 lg:items-center lg:self-start">
             Questions worth sharing
           </p>
           <ol className="mt-8 divide-y divide-[var(--palette-night-border)] border-y border-[var(--palette-night-border)] lg:col-span-6 lg:mt-0">
