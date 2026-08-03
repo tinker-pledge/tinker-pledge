@@ -81,7 +81,7 @@ A dark production-note chapter with:
 - Geist Sans carries the main hierarchy; Geist Mono is reserved for numbers, status, dates, and small labels.
 - No feature-card grids on the primary flow.
 - Borders create rhythm and alignment; rounded shapes are mostly reserved for actions.
-- Warm paper, ink, clay, and a dark aubergine chapter create clear changes in pace without gradients or glow.
+- Warm paper, a dark Golden Hour Workshop chapter, and a deeper aubergine Podcast chapter create clear route associations without changing the layout.
 - Large type is used once per chapter, with smaller text kept to readable 40–65 character lines.
 - Desktop sections use 80–144px of vertical space according to content density; mobile sections use 56–80px.
 

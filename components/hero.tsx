@@ -18,7 +18,7 @@ export function Hero() {
               href="/workshops"
               className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
             >
-              <span className="tinker-sequence mt-1">01</span>
+              <span className="tinker-sequence mt-1 text-[var(--route-workshop-accessory-ink)]">01</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Workshop</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
@@ -31,7 +31,7 @@ export function Hero() {
               href="/pledge"
               className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6"
             >
-              <span className="tinker-sequence mt-1">02</span>
+              <span className="tinker-sequence mt-1 text-[var(--route-pledge-accessory-ink)]">02</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">The pledge</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
@@ -44,7 +44,7 @@ export function Hero() {
               href="/podcast"
               className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:px-6 md:last:pr-0"
             >
-              <span className="tinker-sequence mt-1">03</span>
+              <span className="tinker-sequence mt-1 text-[var(--route-podcast-accessory-ink)]">03</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Podcast</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">

@@ -66,7 +66,7 @@
      - Paper and ink carry the long reading surfaces.
      - Rust is reserved for actions and links on paper; ember orange behaves like light on dark ground.
      - Peach wash separates sections without becoming a decorative sunset gradient.
-     - Warm black gives the podcast and footer depth without reading like a software dashboard. */
+     - Warm black gives Workshop, Podcast, and the footer depth without reading like a software dashboard. */
   --palette-sun-paper: #fff6ee;
   --palette-warm-paper: #fffdfa;
   --palette-lake-shadow: #251715;
@@ -83,6 +83,7 @@
   --palette-ember-rose: #e39ea2;
   --palette-water-blue: #567384;
   --palette-golden-hour: #e8a93c;
+  --palette-golden-hour-ink: #765117;
   --palette-reading-violet: #574e70;
   --palette-daylight-gold: #ebc45f;
   --palette-daylight-ochre: #8a6a1e;
@@ -102,6 +103,16 @@
   --palette-sage-shadow: #3a2c28;
   --palette-night-border: #3a2c28;
 
+  /* Golden Hour is the Workshop route identity. Keep it separate from the
+     generic night and Podcast palettes so every Workshop surface can inherit
+     the same dark ground, warm text ladder, and gold action color. */
+  --palette-workshop-night: #17110f;
+  --palette-workshop-card: #211917;
+  --palette-workshop-paper: #f7eee6;
+  --palette-workshop-muted: #d6c6bb;
+  --palette-workshop-quiet: #a89388;
+  --palette-workshop-border: #3a2c28;
+
   --palette-podcast-night: #120e1f;
   --palette-podcast-card: #1f1832;
   --palette-podcast-paper: #f5ede4;
@@ -111,11 +122,12 @@
 
   /* Route accessories are punctuation, not general-purpose accent colors.
      Each primary route gets one eyebrow, one rule, and one active-nav marker. */
-  --route-workshop-accessory: var(--palette-ember-clay);
-  --route-workshop-accessory-ink: var(--palette-fired-clay);
+  --route-workshop-accessory: var(--palette-golden-hour);
+  --route-workshop-accessory-ink: var(--palette-golden-hour-ink);
   --route-pledge-accessory: var(--palette-daylight-gold);
   --route-pledge-accessory-ink: var(--palette-daylight-ochre);
   --route-podcast-accessory: var(--palette-ember-rose);
+  --route-podcast-accessory-ink: var(--palette-reading-violet);
   --route-blog-accessory: var(--palette-reading-violet);
 
   /* The Workshop is the one place where the sunset becomes a complete device:
@@ -295,9 +307,21 @@
 
 .surface-dark {
   --shadow-tint: 8 4 8;
+  --background: var(--palette-night-water);
+  --foreground: var(--palette-night-paper);
+  --card: var(--palette-night-card);
+  --card-foreground: var(--palette-night-paper);
+  --popover: var(--palette-night-card);
+  --popover-foreground: var(--palette-night-paper);
   --primary: var(--palette-ember-clay);
   --primary-foreground: var(--palette-ember-ink);
+  --secondary: var(--palette-dusk-plum);
+  --secondary-foreground: var(--palette-night-paper);
+  --muted: var(--palette-oat-dark);
   --muted-foreground: var(--palette-night-muted);
+  --accent: var(--palette-sage-shadow);
+  --accent-foreground: var(--palette-night-paper);
+  --border: var(--palette-night-border);
   --success: oklch(0.72 0.078 148);
   --success-surface: oklch(0.3 0.038 148);
   --success-foreground: var(--palette-night-paper);
@@ -313,6 +337,25 @@
   --state-selected: oklch(0.335 0.04 92 / 0.85);
 }
 
+.surface-workshop {
+  --palette-night-water: var(--palette-workshop-night);
+  --palette-night-card: var(--palette-workshop-card);
+  --palette-night-paper: var(--palette-workshop-paper);
+  --palette-night-muted: var(--palette-workshop-muted);
+  --palette-night-quiet: var(--palette-workshop-quiet);
+  --palette-night-border: var(--palette-workshop-border);
+  --primary: var(--palette-golden-hour);
+  --primary-foreground: var(--palette-workshop-night);
+  --route-workshop-accessory: var(--palette-golden-hour);
+  --route-workshop-accessory-ink: var(--palette-golden-hour);
+  --focus-offset: var(--palette-workshop-night);
+  --border-soft: color-mix(in oklab, var(--palette-workshop-border) 60%, transparent);
+  --border-card: color-mix(in oklab, var(--palette-workshop-border) 70%, transparent);
+  --state-hover: rgb(58 44 40 / 0.72);
+  --state-press: rgb(76 51 38 / 0.74);
+  --state-selected: rgb(82 61 34 / 0.88);
+}
+
 .surface-podcast {
   --palette-night-water: var(--palette-podcast-night);
   --palette-night-card: var(--palette-podcast-card);
@@ -320,6 +363,7 @@
   --palette-night-muted: var(--palette-podcast-muted);
   --palette-night-quiet: var(--palette-podcast-quiet);
   --palette-night-border: var(--palette-podcast-border);
+  --route-podcast-accessory-ink: var(--palette-ember-rose);
   --shadow-tint: 6 3 16;
   --focus-offset: var(--palette-podcast-night);
   --border-soft: color-mix(in oklab, var(--palette-podcast-border) 60%, transparent);

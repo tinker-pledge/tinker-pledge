@@ -3,14 +3,18 @@ import { Button } from "@/components/ui/button"
 
 export function HomePledgeSection() {
   return (
-    <section id="pledge" className="scroll-mt-20 border-b border-border bg-background">
+    <section id="pledge" className="relative scroll-mt-20 border-b border-border bg-background">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-pledge-horizon)]"
+      />
       <div className="tinker-container tinker-route-immersive">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4">
               <span className="tinker-sequence">02</span>
-              <span className="h-px w-10 bg-border" />
-              <p className="tinker-eyebrow text-muted-foreground">Build fluency</p>
+              <span className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
+              <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Build fluency</p>
             </div>
           </div>
 

@@ -6,23 +6,29 @@ The Tinker Pledge palette should feel warm, grounded, and humane. It should not 
 
 The current direction is **Ember field** from the Orbit sunset palette study. It is the smallest change from the original site: keep the warmth, remove the pink cast, and move the full-bleed dark surfaces toward warm black instead of plum.
 
-The light theme uses cream paper, warm-black ink, a rust action color, and a peach section wash. The dark theme uses a brown-black ground, a slightly lifted surface, and cream text. Podcast sections move one step deeper into violet-black, with their own card, body, metadata, and border tones. Orange behaves as light rather than furniture: it appears in type, a single rule, the Workshop orb, and the Workshop sun-fill action rather than as a generic flat button.
+The light theme uses cream paper, warm-black ink, a rust action color, and a peach section wash. Workshop owns the dark Golden Hour theme: brown-black ground, lifted warm-black cards, cream text, and gold actions. Podcast moves one step deeper into violet-black, with its own card, body, metadata, and border tones. Orange behaves as light rather than furniture: it appears in the Workshop horizon, orb, and sun-fill action rather than as a generic flat button.
 
-The Workshop is the only route with the full sunset apparatus. Its hero may contain one orb, one three-pixel horizon rule, and one sun-fill action above the fold. The Pledge borrows one quieter device: a single three-pixel daylight horizon at the top of its document surface, with no orb. The Podcast uses rose as punctuation and a paper action on its deeper dark ground. The Pledge uses a warm-black `ink` primary on its document surfaces; other paper routes keep the ordinary rust action.
+The Workshop is the only route with the full sunset apparatus. Its destination page and homepage preview both stay inside the dark Golden Hour scope. The destination hero may contain one orb, one three-pixel horizon rule, and one sun-fill action above the fold. The Pledge borrows one quieter device: a single three-pixel daylight horizon at the top of both its document surface and homepage preview, with no orb. The Podcast uses rose as punctuation and a paper action on its deeper dark ground. The Pledge uses a warm-black `ink` primary on its document surfaces; other paper routes keep the ordinary rust action.
+
+## Route Theme Invariant
+
+The route association travels with the route wherever it appears. Workshop is dark Golden Hour, Pledge is paper in Full Daylight, Podcast is violet-black After Dark, and Blog is paper with a reading-violet Next Morning marker. A homepage preview must use the same ground, text ladder, action family, and route punctuation as its destination. Navigation and compact route indexes repeat the association with one accessible marker rather than reproducing the full surface.
 
 ## Route Chrome
 
 The header and footer are the same warm black on every route. The logotype and geometry do not change; this constant frame is what allows the content surfaces to vary without making the site feel fragmented.
 
-The active primary-navigation item has two cues: a brighter paper label and a two-pixel accessory rule. Workshop uses ember, Pledge uses gold, Podcast uses rose, and Blog uses reading violet. On paper surfaces, accessible clay is the darker Workshop text color and ochre is the darker member of the Pledge gold family. The accessory color confirms the active state but never carries it by itself. Proposal and How It Works belong to the Pledge route family; Workplace belongs to Workshop. Those related paper routes repeat their family through the opening eyebrow and one short accessory hairline, while keeping the rest of the page on the shared paper system.
+The active primary-navigation item has two cues: a brighter paper label and a two-pixel accessory rule. Workshop uses Golden Hour gold, Pledge uses daylight gold, Podcast uses rose, and Blog uses reading violet. On paper surfaces, Golden Hour ink is the darker Workshop text color and ochre is the darker member of the Pledge gold family. The accessory color confirms the active state but never carries it by itself. Proposal and How It Works belong to the Pledge route family; Workplace belongs to Workshop. Those related paper routes repeat their family through the opening eyebrow and one short accessory hairline, while keeping the rest of the page on the shared paper system.
 
 Each primary route uses its accessory in exactly three roles: the opening eyebrow, one rule attached to that eyebrow or hero, and the active navigation marker. On the Pledge, that rule is the daylight horizon at the top of the route. Status dots use semantic status tokens; list numbers, links, and buttons use neutral or action tokens. Even when two tokens share a palette primitive, components consume the token for their job rather than borrowing a route accessory. This keeps route color from becoming decorative wallpaper.
 
-The homepage repeats this punctuation only for distinct route previews. The primary Workshop preview uses its clay-and-ember opening marker, and the Podcast preview uses rose on its after-dark surface. The Pledge preview stays neutral because it is presented as a supporting benefit of the Workshop rather than an equal first step. Sequence numbers stay on the shared data role instead of borrowing a route accessory.
+The homepage repeats each route association without changing the page structure. The Workshop preview uses the full dark Golden Hour scope. The Pledge preview repeats its daylight horizon and gold eyebrow. The Podcast preview uses rose on its after-dark surface. The compact route index uses only the accessible member of each family on its sequence number.
 
 The persistent action in the dark header uses a neutral outline. It stays visibly actionable without competing with the route-owned primary below it. Paper-filled actions remain available inside ordinary dark content, and sun-fill remains reserved for the Workshop hero.
 
 Use `surface-podcast` together with `surface-dark` on every content section of the Podcast route. It rebinds the shared night primitives inside that section, so the existing card, copy, border, focus, and interaction roles move together. Separate sections may keep their own dividers and spacing, but the route does not turn back to paper. The homepage uses the same scope only for its Podcast preview. This treatment does not add an orb or player. Those devices belong to a real published episode, not a coming-soon page.
+
+Use `surface-workshop` together with `surface-dark` around the complete Workshop destination and its homepage preview. It rebinds the shared dark primitives to Golden Hour and changes the semantic primary action to gold, so cards, dividers, buttons, labels, and focus offsets stay in the same world without component-level color fixes. The related Workplace route remains on paper and carries only the accessible Golden Hour marker.
 
 ## Typography Invariant
 
@@ -111,7 +117,7 @@ Orbit's non-text contrast audit is a build rule, not only palette documentation:
 
 ## Space And Measure
 
-Spacing follows a four-pixel base. Standard content sections use `tinker-section`: 80px on small screens and 112px from the first wide breakpoint. The paper support routes, the practical How It Works, Workplace, Proposal, and Pledge surfaces, the Blog index and article header, and the ordinary sections following the Workshops and Podcast heroes share this role. Paper route introductions use `tinker-route-intro`: 80px, then 112px, then 128px on large screens. The extra 16px belongs to the route-opening pause, not ordinary body sections. Immersive route previews use `tinker-route-immersive`: the same 80px and 112px base, then 144px on large screens. This includes the daylight Pledge preview and the after-dark Podcast surfaces. All three roles resolve through the shared `--section-y*` tokens. Compact CTA strips use 64–80px, while asymmetric media heroes keep their spacing explicit. Inside an idea, keep the heading and its first paragraph close—normally 16px. Between major ideas, leave 80–112px. Whitespace carries more of the hierarchy than extra borders or decorative color.
+Spacing follows a four-pixel base. Standard content sections use `tinker-section`: 80px on small screens and 112px from the first wide breakpoint. The paper support routes, the practical How It Works, Workplace, Proposal, and Pledge surfaces, the Blog index and article header, and the ordinary sections inside the Workshop and Podcast route scopes share this role. Paper route introductions use `tinker-route-intro`: 80px, then 112px, then 128px on large screens. The extra 16px belongs to the route-opening pause, not ordinary body sections. Immersive route previews use `tinker-route-immersive`: the same 80px and 112px base, then 144px on large screens. This includes the daylight Pledge preview and the after-dark Podcast surfaces. All three roles resolve through the shared `--section-y*` tokens. Compact CTA strips use 64–80px, while asymmetric media heroes keep their spacing explicit. Inside an idea, keep the heading and its first paragraph close—normally 16px. Between major ideas, leave 80–112px. Whitespace carries more of the hierarchy than extra borders or decorative color.
 
 Use 42rem for introductory prose, 48rem for general long-form reading, 56rem for wide display copy, and 64rem for form-heavy surfaces. The `tinker-reading-measure` helper enforces the 48rem column used by the privacy policy and supporting editorial blocks.
 
@@ -124,7 +130,7 @@ The outer page frame is 72rem with a consistent 24px gutter at every breakpoint.
 Palette primitives live in [app/globals.css](/Users/abe/tinker-pledge/app/globals.css) and are mapped into standard semantic tokens.
 
 - `--palette-sun-paper`: cream paper used as the global page ground.
-- `--palette-warm-paper`: a near-white sheet for cards and the workshop surface.
+- `--palette-warm-paper`: a near-white sheet for cards on paper routes.
 - `--palette-lake-shadow`: warm-black ink for primary text.
 - `--palette-fired-clay`: the rust action color. Use for buttons, selected states, brand marks, and active emphasis.
 - `--palette-dusk-mist`: peach wash for large sections and soft proposal surfaces.
@@ -136,14 +142,15 @@ Palette primitives live in [app/globals.css](/Users/abe/tinker-pledge/app/global
 - `--palette-moss-wash`: the low-chroma success surface used behind that mark.
 - `--palette-clay-border`: structural lines with warmth instead of gray.
 - `--palette-input-border`: the stronger field and outlined-control boundary; unlike decorative hairlines, it clears 3:1 against paper.
-- `--palette-ember-rose`, `--palette-water-blue`, `--palette-golden-hour`: chart and comparison colors.
+- `--palette-ember-rose`, `--palette-water-blue`, `--palette-golden-hour`: chart and comparison colors; Golden Hour also supplies the Workshop action and route marker.
+- `--palette-golden-hour-ink`: the accessible Golden Hour marker used when the Workshop family appears on paper.
 - `--palette-reading-violet`: the Blog's quiet route punctuation on paper.
 - `--palette-daylight-gold`: the bright Pledge rule and active-navigation marker.
 - `--palette-daylight-ochre`: the accessible Pledge eyebrow color on paper.
 
 Dark-mode primitives:
 
-- `--palette-night-water`: warm-black canvas used by the podcast, footer, and dark mode.
+- `--palette-night-water`: the shared warm-black canvas used by dark mode and the footer.
 - `--palette-night-card`: lifted brown-black card surface.
 - `--palette-night-paper`: cream text on dark backgrounds.
 - `--palette-ember-clay`: ember-orange light used for small type, rules, glows, and gradient stops on dark ground.
@@ -152,6 +159,7 @@ Dark-mode primitives:
 - `--palette-oat-dark`, `--palette-oat-muted`: muted dark surfaces and copy.
 - `--palette-sage-shadow`: dark-mode accent.
 - `--palette-night-border`: dark structural lines.
+- `--palette-workshop-night`, `--palette-workshop-card`, `--palette-workshop-paper`, `--palette-workshop-muted`, `--palette-workshop-quiet`, and `--palette-workshop-border`: the complete Golden Hour ladder for Workshop surfaces.
 - `--palette-podcast-night`: the deeper violet-black ground for Podcast sections.
 - `--palette-podcast-card`: the low-light violet card surface inside that ground.
 - `--palette-podcast-paper`, `--palette-podcast-muted`, `--palette-podcast-quiet`: the Podcast heading, body, and metadata ladder.
@@ -181,7 +189,7 @@ Use semantic tokens in components. Do not reach directly for palette primitives 
 
 ## Reference Image Guidance
 
-Ember field takes its cues from the last light after sunset: warm black under orange and rust. Paper sections stay close to white so the site remains approachable and practical. The dark ground is reserved for depth, especially the podcast and footer, rather than becoming the whole interface.
+Ember field takes its cues from the last light after sunset: warm black under orange, gold, and rust. Paper sections stay close to white so the site remains approachable and practical. Dark ground belongs to the Workshop's Golden Hour identity, the Podcast's deeper after-dark chapter, and the constant site frame rather than becoming the whole interface.
 
 Keep flat orange out of buttons, cards, and status dots. Large sections should use paper, peach wash, or warm black. Rose stays available for charts, the Podcast accessory, a 28px progress chip, and the bridge between rust and gold inside the Workshop gradients. It never becomes a full-bleed surface.
 

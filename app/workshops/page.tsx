@@ -31,8 +31,8 @@ const workshopSteps = [
 
 export default function WorkshopsPage() {
   return (
-    <main>
-      <section className="surface-dark relative overflow-hidden bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+    <main className="surface-dark surface-workshop bg-background text-foreground">
+      <section className="relative overflow-hidden bg-background text-foreground">
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-workshop-horizon)]"
@@ -91,7 +91,7 @@ export default function WorkshopsPage() {
                 href="https://www.pexels.com/photo/person-using-a-laptop-on-a-table-7429471/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-background"
+                className="underline underline-offset-2 hover:text-foreground"
               >
                 cottonbro studio / Pexels
               </a>
