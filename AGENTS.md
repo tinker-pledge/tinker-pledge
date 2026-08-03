@@ -69,6 +69,27 @@
 - Keep action-heavy experiences on their own pages instead of stuffing everything into the homepage.
 - Do not nest cards inside cards unless there is a clear repeated-item or tool-surface reason.
 
+## Route Color Associations
+
+- A route's color association travels with it everywhere it appears: destination page, homepage preview, active navigation marker, compact route index, and related support-route eyebrow. Do not give the same route a different visual identity in a different context.
+- **Workshop — Golden Hour**
+  - Dark warm-black ground, cream text, Golden Hour gold actions and markers, with ember used inside the horizon/orb/sun-fill apparatus.
+  - Use `surface-dark surface-workshop` for the complete `/workshops` page and the homepage Workshop section. Do not switch later Workshop sections back to paper.
+  - `/workplace` remains a paper support route and carries only the accessible Golden Hour ink marker; it does not become a full dark Workshop surface.
+- **Pledge — Full Daylight**
+  - Cream paper, warm-black ink, the daylight gold horizon, and accessible ochre labels. Primary document actions use the warm-black `ink` treatment.
+  - Repeat the daylight horizon and gold eyebrow on `/pledge` and the homepage Pledge section.
+  - `/how-it-works` and `/proposal` remain paper support routes and carry Pledge-family punctuation rather than a new theme.
+- **Podcast — After Dark**
+  - Violet-black ground, light paper text, rose punctuation, violet cards and borders, and paper primary actions.
+  - Use `surface-dark surface-podcast` across every section of `/podcast` and on the homepage Podcast section. Do not revert the destination page to paper between sections.
+- **Blog — Next Morning**
+  - Paper reading surfaces with reading-violet punctuation. Apply the same marker to the Blog index, article headers, active navigation, and any future Blog preview.
+  - Blog remains a reading surface; the violet association is punctuation, not a full-bleed violet background.
+- The homepage umbrella hero stays on neutral paper. Its compact route index repeats only the accessible marker from each route family.
+- The header and footer stay warm black on every route. Their constant frame should not inherit the current page's full surface theme.
+- Route scopes and palette tokens live in `app/globals.css`; the implementation contract and contrast notes live in `docs/palette.md`. Extend those shared scopes instead of adding one-off page colors.
+
 ## Development Commands
 
 - Install dependencies with `pnpm install --frozen-lockfile`.
