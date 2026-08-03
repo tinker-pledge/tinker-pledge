@@ -1,12 +1,14 @@
 import type { CSSProperties } from "react"
-import type { Metadata } from "next"
 import { Contrast, Layers, Moon, Palette, Sprout, Type } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { createPageMetadata } from "@/lib/site-metadata"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Palette Test | The Tinker Pledge",
   description: "A working page for testing the Tinker Pledge color palette, semantic tokens, and UI pairings.",
-}
+  path: "/palette",
+  noIndex: true,
+})
 
 type Token = {
   name: string
@@ -28,31 +30,31 @@ const sourceTokens: Token[] = [
     name: "Sun paper",
     token: "--palette-sun-paper",
     role: "Page ground",
-    meaning: "The peach light in the reference images. Warm, quiet, and personal.",
+    meaning: "The warm cream paper from Ember field. Light enough for long reading without turning stark white.",
   },
   {
     name: "Warm paper",
     token: "--palette-warm-paper",
     role: "Cards",
-    meaning: "A softer page sheet for content that should feel held, not boxed in.",
+    meaning: "A near-white sheet for cards on paper routes that should feel held, not boxed in.",
   },
   {
     name: "Lake shadow",
     token: "--palette-lake-shadow",
     role: "Text",
-    meaning: "Dark shoreline ink for calm contrast without harsh black.",
+    meaning: "Warm-black ink for calm contrast without introducing a cool software gray.",
   },
   {
     name: "Fired clay",
     token: "--palette-fired-clay",
     role: "Action",
-    meaning: "The handmade, earthy action color. It should feel crafted, not corporate.",
+    meaning: "The rust action color for buttons, links, and the one thing a reader should act on.",
   },
   {
     name: "Dusk mist",
     token: "--palette-dusk-mist",
     role: "Section wash",
-    meaning: "A lavender-pink evening layer for separating large sections gently.",
+    meaning: "A warm peach wash for separating large sections without bringing back the pink cast.",
   },
   {
     name: "Oat rest",
@@ -64,13 +66,43 @@ const sourceTokens: Token[] = [
     name: "Sage straw",
     token: "--palette-sage-straw",
     role: "Human signal",
-    meaning: "A grounded note for badges and icon wells so the system is not only peach and clay.",
+    meaning: "A pale straw note for badges and icon wells so the system is not only paper and rust.",
+  },
+  {
+    name: "Moss signal",
+    token: "--palette-moss-signal",
+    role: "Available",
+    meaning: "The small success mark used when an action worked or a registration is open.",
+  },
+  {
+    name: "Moss wash",
+    token: "--palette-moss-wash",
+    role: "Success surface",
+    meaning: "A low-chroma green wash for compact success and availability badges.",
   },
   {
     name: "Water blue",
     token: "--palette-water-blue",
     role: "Chart contrast",
     meaning: "The cool waterline in the sunset reference, reserved for comparison data.",
+  },
+  {
+    name: "Reading violet",
+    token: "--palette-reading-violet",
+    role: "Blog punctuation",
+    meaning: "A quiet violet for the Blog eyebrow and rule. It identifies the reading surface without asking for action.",
+  },
+  {
+    name: "Daylight gold",
+    token: "--palette-daylight-gold",
+    role: "Pledge rule",
+    meaning: "The bright member of the Pledge accessory pair, used for its rule on paper and active marker on warm black.",
+  },
+  {
+    name: "Daylight ochre",
+    token: "--palette-daylight-ochre",
+    role: "Pledge label",
+    meaning: "The darker member of the same family, used where the Pledge eyebrow carries text on paper.",
   },
 ]
 
@@ -96,7 +128,7 @@ const semanticTokens: Token[] = [
   {
     name: "Secondary",
     token: "--secondary",
-    role: "Dusk section",
+    role: "Warm section",
     meaning: "Large page bands and proposal surfaces that need softness and separation.",
   },
   {
@@ -112,6 +144,18 @@ const semanticTokens: Token[] = [
     meaning: "Small highlights, icon wells, and chips that should feel humane and grounded.",
   },
   {
+    name: "Success surface",
+    token: "--success-surface",
+    role: "Available or complete",
+    meaning: "A compact state surface for open registration and successful actions.",
+  },
+  {
+    name: "Progress surface",
+    token: "--alert-surface",
+    role: "Still in progress",
+    meaning: "A restrained rose wash for work that is not ready yet. It never expands beyond a status chip.",
+  },
+  {
     name: "Border",
     token: "--border",
     role: "Structure",
@@ -121,34 +165,34 @@ const semanticTokens: Token[] = [
     name: "Ring",
     token: "--ring",
     role: "Focus",
-    meaning: "Keyboard and field focus should inherit the same clay action signal as primary controls.",
+    meaning: "Clay marks focus on paper; paper marks focus on dark ground so the ring stays visible.",
   },
 ]
 
 const darkTokens: Token[] = [
   {
-    name: "Night water",
+    name: "Warm black",
     token: "--palette-night-water",
     role: "Dark canvas",
-    meaning: "The deep lake tone from the sunset image, used instead of neutral black.",
+    meaning: "The near-black Ember field ground used for the podcast, footer, and dark mode.",
   },
   {
-    name: "Night card",
+    name: "Ember surface",
     token: "--palette-night-card",
     role: "Dark cards",
-    meaning: "A warmer panel shade that keeps dark mode from feeling mechanical.",
+    meaning: "A lifted brown-black panel that keeps dark surfaces from feeling mechanical.",
   },
   {
-    name: "Night paper",
+    name: "Paper text",
     token: "--palette-night-paper",
     role: "Dark text",
-    meaning: "Soft paper text for long reading on dark surfaces.",
+    meaning: "Soft cream text for long reading on warm-black surfaces.",
   },
   {
-    name: "Ember clay",
+    name: "Ember orange",
     token: "--palette-ember-clay",
-    role: "Dark action",
-    meaning: "A brighter clay ember so primary controls still feel alive in dark mode.",
+    role: "Dark light",
+    meaning: "A gradient stop and small type signal on dark ground, not a generic flat control fill.",
   },
   {
     name: "Sage shadow",
@@ -163,43 +207,57 @@ const lightPairs: TokenPair[] = [
     name: "Body copy",
     foreground: "--foreground",
     background: "--background",
-    ratio: "14.20",
+    ratio: "16.23",
     use: "Long reading on the page canvas.",
   },
   {
     name: "Primary action",
     foreground: "--primary-foreground",
     background: "--primary",
-    ratio: "5.27",
+    ratio: "5.16",
     use: "Default buttons, selected chips, and banner copy.",
   },
   {
-    name: "Dusk section",
+    name: "Warm section",
     foreground: "--foreground",
     background: "--secondary",
-    ratio: "11.75",
+    ratio: "13.81",
     use: "Large section bands and proposal panels.",
   },
   {
     name: "Quiet copy",
     foreground: "--muted-foreground",
     background: "--muted",
-    ratio: "5.90",
+    ratio: "6.46",
     use: "Supporting paragraphs and lower-priority UI.",
   },
   {
     name: "Sage badge",
     foreground: "--accent-foreground",
     background: "--accent",
-    ratio: "10.64",
+    ratio: "9.87",
     use: "Badge text and icon-well labels.",
   },
   {
     name: "Clay on sage",
     foreground: "--primary",
     background: "--accent",
-    ratio: "4.55",
+    ratio: "4.57",
     use: "Lucide icons inside accent wells.",
+  },
+  {
+    name: "Success badge",
+    foreground: "--success-foreground",
+    background: "--success-surface",
+    ratio: "11.66",
+    use: "Open registration and successful copy feedback.",
+  },
+  {
+    name: "Progress badge",
+    foreground: "--alert-foreground",
+    background: "--alert-surface",
+    ratio: "8.38",
+    use: "Work that is explicitly still in development.",
   },
 ]
 
@@ -208,21 +266,21 @@ const darkPairs: TokenPair[] = [
     name: "Dark body",
     foreground: "--foreground",
     background: "--background",
-    ratio: "14.77",
+    ratio: "16.31",
     use: "Long reading in dark mode.",
   },
   {
     name: "Dark primary",
     foreground: "--primary-foreground",
     background: "--primary",
-    ratio: "7.40",
-    use: "Primary controls on dark surfaces.",
+    ratio: "16.31",
+    use: "The quiet paper pill used for ordinary controls on dark surfaces.",
   },
   {
     name: "Dark accent",
     foreground: "--accent-foreground",
     background: "--accent",
-    ratio: "9.52",
+    ratio: "11.67",
     use: "Dark-mode badge and icon-well copy.",
   },
 ]
@@ -250,15 +308,15 @@ function SwatchGrid({ tokens }: { tokens: Token[] }) {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {tokens.map((token) => (
-        <article key={token.token} className="overflow-hidden rounded-2xl border border-border/70 bg-card">
-          <div className="h-28 border-b border-border/70" style={tokenStyle(token.token)} />
+        <article key={token.token} className="overflow-hidden rounded-2xl border border-border-card bg-card">
+          <div className="h-28 border-b border-border-card" style={tokenStyle(token.token)} />
           <div className="p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-serif text-xl text-foreground">{token.name}</h3>
-                <p className="mt-1 text-xs uppercase tracking-[0.16em] text-primary">{token.role}</p>
+                <h3 className="font-heading text-xl text-foreground">{token.name}</h3>
+                <p className="tinker-meta-label mt-1 text-primary">{token.role}</p>
               </div>
-              <code className="rounded-full bg-muted px-2.5 py-1 text-xs text-muted-foreground">{token.token}</code>
+              <code className="tinker-badge bg-muted px-2.5 font-mono text-muted-foreground">{token.token}</code>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{token.meaning}</p>
           </div>
@@ -272,17 +330,17 @@ function PairGrid({ pairs }: { pairs: TokenPair[] }) {
   return (
     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
       {pairs.map((pair) => (
-        <article key={pair.name} className="overflow-hidden rounded-2xl border border-border/70 bg-card">
+        <article key={pair.name} className="overflow-hidden rounded-2xl border border-border-card bg-card">
           <div className="min-h-36 p-6" style={pairStyle(pair)}>
-            <p className="text-xs uppercase tracking-[0.18em] opacity-75">{pair.name}</p>
-            <p className="mt-4 font-serif text-3xl font-light leading-tight">People who tinker build fluency.</p>
+            <p className="tinker-meta-label opacity-75">{pair.name}</p>
+            <p className="mt-4 font-heading text-3xl font-light leading-tight">People who tinker build fluency.</p>
             <p className="mt-4 text-sm leading-relaxed opacity-80">{pair.use}</p>
           </div>
-          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border/70 p-4 text-sm">
+          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border-card p-4 text-sm">
             <span className="text-muted-foreground">
               {pair.foreground} on {pair.background}
             </span>
-            <span className="rounded-full bg-accent px-3 py-1 text-accent-foreground">{pair.ratio}:1</span>
+            <span className="tinker-badge font-mono">{pair.ratio}:1</span>
           </div>
         </article>
       ))}
@@ -292,13 +350,13 @@ function PairGrid({ pairs }: { pairs: TokenPair[] }) {
 
 function ChartPreview() {
   return (
-    <div className="rounded-2xl border border-border/70 bg-card p-6">
+    <div className="rounded-2xl border border-border-card bg-card p-6">
       <div className="flex items-center gap-3">
-        <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-primary">
+        <span className="tinker-icon-well size-10">
           <Layers className="size-5" strokeWidth={1.75} />
         </span>
         <div>
-          <h3 className="font-serif text-2xl text-foreground">Chart spread</h3>
+          <h3 className="font-heading text-2xl text-foreground">Chart spread</h3>
           <p className="text-sm text-muted-foreground">Use sparingly, but keep the set tied to the sunset source.</p>
         </div>
       </div>
@@ -306,7 +364,7 @@ function ChartPreview() {
         {chartTokens.map((token, index) => (
           <div key={token.token} className="flex flex-1 flex-col items-center gap-3">
             <div
-              className="w-full rounded-t-xl border border-border/50"
+              className="w-full rounded-t-xl border border-border-soft"
               style={{ ...tokenStyle(token.token), height: `${44 + index * 24}px` }}
             />
             <div className="text-center">
@@ -323,15 +381,15 @@ function ChartPreview() {
 function ComponentSamples() {
   return (
     <div className="grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-      <section className="rounded-2xl border border-border/70 bg-card p-6">
+      <section className="rounded-2xl border border-border-card bg-card p-6">
         <div className="flex items-center gap-3">
-          <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-primary">
+          <span className="tinker-icon-well size-10">
             <Type className="size-5" strokeWidth={1.75} />
           </span>
-          <h3 className="font-serif text-2xl text-foreground">Copy rhythm</h3>
+          <h3 className="font-heading text-2xl text-foreground">Copy rhythm</h3>
         </div>
-        <p className="mt-5 text-sm uppercase tracking-[0.18em] text-primary">Make it real</p>
-        <p className="mt-3 font-serif text-4xl font-light leading-tight text-foreground">
+        <p className="tinker-eyebrow mt-5">Make it real</p>
+        <p className="mt-3 font-heading text-4xl font-light leading-tight text-foreground">
           A benefit for the humans behind the work.
         </p>
         <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
@@ -348,28 +406,28 @@ function ComponentSamples() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-border/70 bg-secondary/45 p-6">
+      <section className="rounded-2xl border border-border-card bg-secondary/45 p-6">
         <div className="flex items-center gap-3">
-          <span className="flex size-10 items-center justify-center rounded-xl bg-accent text-primary">
+          <span className="tinker-icon-well size-10">
             <Sprout className="size-5" strokeWidth={1.75} />
           </span>
-          <h3 className="font-serif text-2xl text-foreground">Controls and panels</h3>
+          <h3 className="font-heading text-2xl text-foreground">Controls and panels</h3>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <label className="block">
-            <span className="mb-1.5 block text-sm font-medium text-foreground">Input surface</span>
+            <span className="tinker-label">Input surface</span>
             <input
-              className="h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground/70 outline-none transition-colors focus:border-primary"
+              className="tinker-field"
               placeholder="e.g. monthly budget"
             />
           </label>
           <div>
-            <p className="mb-1.5 text-sm font-medium text-foreground">Segmented state</p>
+            <p className="tinker-label">Segmented state</p>
             <div className="grid grid-cols-2 gap-2">
-              <button className="h-11 rounded-xl border border-primary bg-primary text-sm font-medium text-primary-foreground">
+              <button className="tinker-segmented-control border border-primary bg-primary text-sm font-medium text-primary-foreground">
                 Warm
               </button>
-              <button className="h-11 rounded-xl border border-border bg-card text-sm font-medium text-muted-foreground">
+              <button className="tinker-segmented-control border border-input bg-card text-sm font-medium text-muted-foreground">
                 Direct
               </button>
             </div>
@@ -389,16 +447,16 @@ function ComponentSamples() {
 export default function PalettePage() {
   return (
     <main>
-      <section className="border-b border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <section className="border-b border-border-soft bg-secondary/40">
+        <div className="tinker-container py-16 md:py-24">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3">
-              <span className="flex size-11 items-center justify-center rounded-2xl bg-accent text-primary">
+              <span className="tinker-icon-well size-11">
                 <Palette className="size-5" strokeWidth={1.75} />
               </span>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary">Palette test</p>
+              <p className="tinker-eyebrow">Palette test</p>
             </div>
-            <h1 className="mt-5 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-balance font-heading text-4xl font-light leading-tight text-foreground sm:text-5xl md:text-6xl">
               Test the Tinker Pledge colors where the product actually uses them.
             </h1>
             <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -410,11 +468,11 @@ export default function PalettePage() {
       </section>
 
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="tinker-container py-16 md:py-20">
           <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary">Source palette</p>
-              <h2 className="mt-3 font-serif text-3xl font-light text-foreground sm:text-4xl">Meaningful primitives</h2>
+              <p className="tinker-eyebrow">Source palette</p>
+              <h2 className="mt-3 font-heading text-3xl font-light text-foreground sm:text-4xl">Meaningful primitives</h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
               These are the named source colors. The semantic tokens below should map back to these meanings.
@@ -424,47 +482,47 @@ export default function PalettePage() {
         </div>
       </section>
 
-      <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <section className="border-y border-border-soft bg-secondary/40">
+        <div className="tinker-container py-16 md:py-20">
           <div className="mb-8">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">Semantic roles</p>
-            <h2 className="mt-3 font-serif text-3xl font-light text-foreground sm:text-4xl">How the app consumes color</h2>
+            <p className="tinker-eyebrow">Semantic roles</p>
+            <h2 className="mt-3 font-heading text-3xl font-light text-foreground sm:text-4xl">How the app consumes color</h2>
           </div>
           <SwatchGrid tokens={semanticTokens} />
         </div>
       </section>
 
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+        <div className="tinker-container py-16 md:py-20">
           <div className="mb-8 flex items-center gap-3">
-            <span className="flex size-11 items-center justify-center rounded-2xl bg-accent text-primary">
+            <span className="tinker-icon-well size-11">
               <Contrast className="size-5" strokeWidth={1.75} />
             </span>
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary">Contrast checks</p>
-              <h2 className="mt-2 font-serif text-3xl font-light text-foreground sm:text-4xl">Common pairings</h2>
+              <p className="tinker-eyebrow">Contrast checks</p>
+              <h2 className="mt-2 font-heading text-3xl font-light text-foreground sm:text-4xl">Common pairings</h2>
             </div>
           </div>
           <PairGrid pairs={lightPairs} />
         </div>
       </section>
 
-      <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto grid max-w-6xl gap-5 px-6 py-16 md:py-20">
+      <section className="border-y border-border-soft bg-secondary/40">
+        <div className="tinker-container grid gap-5 py-16 md:py-20">
           <ComponentSamples />
           <ChartPreview />
         </div>
       </section>
 
-      <section className="dark border-t border-border/60 bg-background text-foreground">
-        <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <section className="dark border-t border-border-soft bg-background text-foreground">
+        <div className="tinker-container py-16 md:py-20">
           <div className="mb-8 flex items-center gap-3">
-            <span className="flex size-11 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
+            <span className="tinker-icon-well size-11">
               <Moon className="size-5" strokeWidth={1.75} />
             </span>
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary">Dark preview</p>
-              <h2 className="mt-2 font-serif text-3xl font-light text-foreground sm:text-4xl">
+              <p className="tinker-eyebrow">Dark preview</p>
+              <h2 className="mt-2 font-heading text-3xl font-light text-foreground sm:text-4xl">
                 Same story after sunset
               </h2>
             </div>
@@ -472,6 +530,20 @@ export default function PalettePage() {
           <SwatchGrid tokens={darkTokens} />
           <div className="mt-8">
             <PairGrid pairs={darkPairs} />
+          </div>
+          <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-border pt-8">
+            <div aria-hidden="true" className="workshop-orb size-20">
+              <div className="workshop-orb__body" />
+            </div>
+            <Button variant="sun" size="lg" className="h-12 rounded-full px-7">
+              Workshop sun fill
+            </Button>
+            <Button size="lg" className="h-12 rounded-full px-7">
+              Everyday dark action
+            </Button>
+            <Button variant="darkOutline" size="lg" className="h-12 rounded-full px-7">
+              Header action
+            </Button>
           </div>
         </div>
       </section>

@@ -24,7 +24,7 @@ function buildProposal({
 }) {
   const who = company.trim() || "our company"
   const signer = name.trim() || "[Your name]"
-  const amount = budget.trim() ? `${budget.trim()}` : "a monthly amount we set"
+  const amount = budget.trim() || "a personal AI budget"
   const place = locality.trim() ? ` (adjusted for ${locality.trim()})` : ""
   const scale = size && size !== sizeOptions[0] ? ` Across a team of ${size.toLowerCase()}, ` : " "
 
@@ -39,13 +39,13 @@ Hi team,
 
 ${opener}
 
-The idea: give every person at ${who} ${amount} each month${place} to spend on consumer AI tools they can use in their own lives. We can start with a curated list of trusted options, keep reimbursement lightweight, and avoid usage reports.
+The idea: give every person at ${who} ${amount}${place} to spend on consumer AI tools they can use in their own lives. We can start with a curated list of familiar options, keep reimbursement lightweight, and avoid usage reports.
 
 Why this, and why now:
 
-The most valuable things people ever did with computers weren't taught in a training room. They were learned at home, by tinkering — and that fluency quietly walked into work with us. AI is at exactly that moment. People get good at it through thousands of small, low-stakes reps: planning a trip, drafting a hard message, settling a curious question. People who are free to experiment, experiment more.
+Home computers gave people room to learn by using them: writing a letter, planning a trip, making a budget, or following a curiosity. AI fluency develops the same way — through repeated use on problems that give someone a reason to come back.
 
-So this isn't "buy a tool to make people more productive." It's "give people the freedom to get fluent in their own lives, and let the work benefit take care of itself."${scale}the cost is modest, the rollout takes a day, and the value scales with how much people actually use it — not with what we spend.
+So this isn't "buy a tool to make people more productive." It's "make continued, voluntary practice possible."${scale}the spend stays capped and the policy can stay lightweight. The point is access and repetition, not a large platform rollout.
 
 What I'm asking for:
 • A per-person monthly budget (we choose the number that fits us).
@@ -94,27 +94,14 @@ export function ProposalGenerator() {
     URL.revokeObjectURL(url)
   }
 
-  const inputClass =
-    "h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground/70 outline-none transition-colors focus:border-primary"
-  const labelClass = "mb-1.5 block text-sm font-medium text-foreground"
+  const inputClass = "tinker-field"
+  const labelClass = "tinker-label"
 
   return (
-    <section id="proposal" className="border-t border-border/60 bg-secondary/40">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm uppercase tracking-[0.2em] text-primary">Make it real</p>
-          <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
-            Turn the idea into a proposal you can send today.
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Add a few details and we&apos;ll draft a warm, ready-to-send note for your People team. Nothing leaves your
-            browser.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          {/* Form */}
-          <div className="rounded-2xl border border-border/70 bg-background p-6 sm:p-8">
+    <section id="proposal" className="border-b border-border bg-secondary/45">
+      <div className="tinker-container tinker-section">
+        <div className="tinker-card grid overflow-hidden border border-border-card bg-card lg:grid-cols-12">
+          <div className="border-b border-border-card p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-10">
             <div className="flex flex-col gap-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -188,8 +175,8 @@ export function ProposalGenerator() {
                 </div>
               </div>
 
-              <div>
-                <span className={labelClass}>Tone</span>
+              <fieldset>
+                <legend className={labelClass}>Tone</legend>
                 <div className="flex gap-2">
                   {(
                     [
@@ -202,7 +189,7 @@ export function ProposalGenerator() {
                       type="button"
                       onClick={() => setTone(t.id)}
                       aria-pressed={tone === t.id}
-                      className={`h-10 flex-1 rounded-xl border text-sm font-medium transition-colors ${
+                      className={`tinker-choice-state tinker-segmented-control flex-1 border text-sm font-medium ${
                         tone === t.id
                           ? "border-primary bg-primary text-primary-foreground"
                           : "border-border bg-card text-muted-foreground hover:border-primary/50"
@@ -212,16 +199,23 @@ export function ProposalGenerator() {
                     </button>
                   ))}
                 </div>
-              </div>
+              </fieldset>
             </div>
           </div>
 
-          {/* Preview */}
-          <div className="flex flex-col rounded-2xl border border-border/70 bg-background p-6 sm:p-8">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="text-sm font-medium text-muted-foreground">Your proposal</span>
+          <div className="flex min-w-0 flex-col p-6 sm:p-8 lg:col-span-7 lg:p-10">
+            <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <span className="tinker-meta-label text-muted-foreground">Your proposal</span>
               <div className="flex gap-2">
-                <Button type="button" size="sm" variant="outline" className="rounded-full" onClick={handleCopy}>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  data-status={copied ? "success" : undefined}
+                  aria-live="polite"
+                  className="rounded-full"
+                  onClick={handleCopy}
+                >
                   {copied ? "Copied" : "Copy"}
                 </Button>
                 <Button type="button" size="sm" className="rounded-full" onClick={handleDownload}>
@@ -229,7 +223,7 @@ export function ProposalGenerator() {
                 </Button>
               </div>
             </div>
-            <pre className="flex-1 whitespace-pre-wrap rounded-xl bg-secondary/60 p-5 font-sans text-sm leading-relaxed text-foreground">
+            <pre className="min-h-[28rem] flex-1 whitespace-pre-wrap rounded-xl border border-border-card bg-background p-5 font-sans text-sm leading-relaxed text-foreground sm:p-6">
               {proposal}
             </pre>
           </div>

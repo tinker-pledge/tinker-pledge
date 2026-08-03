@@ -43,21 +43,20 @@ export function PledgeSection() {
   const liHref = buildLinkedInShareUrl()
 
   return (
-    <section id="pledge" className="border-t border-border/60 bg-background">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">Add your voice</p>
-            <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
+    <section id="pledge" className="bg-secondary/45">
+      <div className="tinker-container tinker-section">
+        <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <h2 className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
               Take the Tinker Pledge.
             </h2>
-            <p className="mt-4 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
-              No sign-ups, no inbox, no fine print. Just say it out loud: you believe people should have the freedom to
-              tinker. Then pass it to the person who can make it real.
+            <p className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
+              There is no registry to join. Add your first name if you want the share text to sound like you, then pass
+              the idea to someone who can make the benefit real.
             </p>
 
             <div className="mt-7 max-w-sm">
-              <label htmlFor="pledge-name" className="mb-1.5 block text-sm font-medium text-foreground">
+              <label htmlFor="pledge-name" className="tinker-label">
                 Your first name <span className="font-normal text-muted-foreground">(optional)</span>
               </label>
               <input
@@ -65,44 +64,47 @@ export function PledgeSection() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Jordan"
-                className="h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground/70 outline-none transition-colors focus:border-primary"
+                className="tinker-field bg-background"
               />
             </div>
           </div>
 
-          <div className="rounded-3xl border border-border/70 bg-secondary/40 p-8 sm:p-10">
-            <div className="flex items-center gap-2.5">
-              <span className="flex size-7 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <span className="font-serif text-sm leading-none">T</span>
+          <div className="tinker-card border border-border-card bg-background p-7 sm:p-10 lg:col-span-7 lg:col-start-6">
+            <div className="flex items-center gap-3">
+              <span className="grid size-7 grid-cols-2 gap-[3px]" aria-hidden="true">
+                <span className="bg-[var(--palette-golden-hour)]" />
+                <span className="border border-foreground/35" />
+                <span className="border border-foreground/35" />
+                <span className="bg-foreground" />
               </span>
-              <span className="text-sm font-medium text-muted-foreground">The Tinker Pledge</span>
+              <span className="text-sm font-semibold tracking-[-0.02em] text-foreground">Tinker Pledge</span>
             </div>
 
-            <p className="mt-6 text-balance font-serif text-2xl font-light leading-snug text-foreground sm:text-[1.75rem]">
+            <p className="mt-8 text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-3xl">
               {firstName ? (
                 <>
-                  <span className="text-primary">{firstName}</span> believes the freedom to tinker is how people get
-                  fluent — so the breakthroughs take care of themselves.
+                  <span className="text-primary">{firstName}</span> believes people build AI fluency when they have the
+                  freedom to practice on problems that matter to them.
                 </>
               ) : (
                 <>
-                  I believe the freedom to tinker is how people get fluent — so the{" "}
-                  <span className="text-primary">breakthroughs take care of themselves.</span>
+                  I believe people build AI fluency when they have the freedom to practice on{" "}
+                  <span className="text-primary">problems that matter to them.</span>
                 </>
               )}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-2.5">
+            <div className="mt-9 flex flex-wrap gap-2.5">
               {canNativeShare && (
-                <Button type="button" className="rounded-full" onClick={handleNativeShare}>
+                <Button type="button" variant="ink" className="h-10 rounded-full px-5" onClick={handleNativeShare}>
                   Share the pledge
                 </Button>
               )}
               <Button
                 render={<a href={xHref} target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
-                variant={canNativeShare ? "outline" : "default"}
-                className="rounded-full"
+                variant={canNativeShare ? "outline" : "ink"}
+                className="h-10 rounded-full px-5"
               >
                 Post on X
               </Button>
@@ -110,19 +112,26 @@ export function PledgeSection() {
                 render={<a href={liHref} target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
                 variant="outline"
-                className="rounded-full"
+                className="h-10 rounded-full px-5"
               >
                 Share on LinkedIn
               </Button>
-              <Button type="button" variant="outline" className="rounded-full" onClick={handleCopy}>
+              <Button
+                type="button"
+                variant="outline"
+                data-status={copied ? "success" : undefined}
+                aria-live="polite"
+                className="h-10 rounded-full px-5"
+                onClick={handleCopy}
+              >
                 {copied ? "Copied" : "Copy"}
               </Button>
             </div>
 
             <p className="mt-5 text-sm text-muted-foreground">
-              Signed it in your heart?{" "}
+              Want to make it practical?{" "}
               <a href="/proposal" className="text-primary underline-offset-4 hover:underline">
-                Now bring it to your team.
+                Create a short proposal for your team.
               </a>
             </p>
           </div>

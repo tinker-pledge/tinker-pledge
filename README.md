@@ -1,8 +1,10 @@
 # The Tinker Pledge
 
-The Tinker Pledge is an open-source project for making personal AI fluency a workplace benefit.
+The Tinker Pledge is an open-source community project for helping more people build real AI fluency through practice.
 
-The core idea: employers can reimburse a small personal AI budget so people build confidence through low-stakes use in their own lives. The work benefit follows from the fluency.
+The work starts with a public hands-on workshop: bring a real problem or workflow and work on it alongside
+Abhi and Eva. The employer pledge extends that practice by helping people keep experimenting with AI in their
+personal lives. A podcast about how people are actually living with AI is in development.
 
 Live site: [tinkerpledge.org](https://tinkerpledge.org)
 
@@ -10,11 +12,15 @@ Live site: [tinkerpledge.org](https://tinkerpledge.org)
 
 This is being built in the open. The current site includes:
 
-- A short homepage explaining the pledge.
+- A short homepage connecting the three projects.
+- An About page explaining the project's origin and introducing its co-creators.
+- A workshops page with upcoming and past events.
+- A page for bringing a workshop to a small or midsize business.
+- A transparent holding page for the podcast in development.
 - A practical "how it works" guide.
 - A starter AI tools list.
 - A proposal generator for bringing the idea to a workplace.
-- A manifesto and sharing flow.
+- A one-page pledge and sharing flow.
 
 The curated tool list and starter policy examples are still evolving.
 
@@ -58,11 +64,19 @@ Note: `pnpm build` may need network access because the app uses `next/font` with
 ## Project Structure
 
 - `app/page.tsx`: homepage flow.
+- `app/about/page.tsx`: project origin and registry-backed co-creator introductions.
+- `app/workshops/page.tsx`: public workshops and event details.
+- `app/workplace/page.tsx`: paid workplace workshop format.
+- `app/podcast/page.tsx`: podcast direction and host context.
 - `app/how-it-works/page.tsx`: implementation guide and starter tools section.
 - `app/proposal/page.tsx`: proposal generator.
-- `app/manifesto/page.tsx`: manifesto and pledge sharing.
+- `app/pledge/page.tsx`: one-page pledge and sharing.
+- `app/palette/page.tsx`: palette testing page for color roles, pairings, and UI samples.
+- `data/workshops.ts`: shared workshop dates, locations, and event links.
 - `data/starter-tools.json`: starter tool catalog.
 - `components/tools-section.tsx` and `components/tools-browser.tsx`: tools list UI.
+- `docs/palette.md`: palette rationale, token roles, reference guidance, and verification notes.
+- `docs/site-direction.md`: the three-chapter landing-page concept and the reference principles behind it.
 - `AGENTS.md`: project guidance for AI coding agents and contributors.
 
 ## Contributing Notes

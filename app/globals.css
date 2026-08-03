@@ -5,8 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-fraunces), 'Georgia', serif;
-  --font-serif: var(--font-fraunces), 'Georgia', serif;
+  --font-heading: var(--font-geist-sans), 'Geist Fallback';
   --font-sans: var(--font-geist-sans), 'Geist Fallback';
   --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
   --color-sidebar-ring: var(--sidebar-ring);
@@ -23,9 +22,19 @@
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
+  --color-focus-ring: var(--focus-ring);
+  --color-focus-offset: var(--focus-offset);
   --color-input: var(--input);
   --color-border: var(--border);
+  --color-border-card: var(--border-card);
+  --color-border-soft: var(--border-soft);
   --color-destructive: var(--destructive);
+  --color-success: var(--success);
+  --color-success-surface: var(--success-surface);
+  --color-success-foreground: var(--success-foreground);
+  --color-alert: var(--alert);
+  --color-alert-surface: var(--alert-surface);
+  --color-alert-foreground: var(--alert-foreground);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -47,30 +56,113 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --default-transition-duration: var(--duration-fast);
+  --default-transition-timing-function: var(--ease-standard);
 }
 
 :root {
   /* Palette story:
-     - Sun paper is the quiet peach light from the references; it keeps the site warm and personal.
-     - Fired clay carries action and craft, so every primary button feels tangible rather than corporate.
-     - Dusk mist separates calm sections without turning the site into a marketing gradient.
-     - Sage straw adds the grounded, earthy note for badges and icon wells.
-     - Lake shadow keeps text human and legible, like the dark shoreline in the sunset photo. */
-  --palette-sun-paper: oklch(0.972 0.017 52);
-  --palette-warm-paper: oklch(0.986 0.012 72);
-  --palette-lake-shadow: oklch(0.265 0.032 27);
-  --palette-fired-clay: oklch(0.535 0.13 33);
-  --palette-clay-foreground: oklch(0.986 0.012 72);
-  --palette-dusk-mist: oklch(0.91 0.02 338);
-  --palette-dusk-ink: oklch(0.305 0.03 19);
-  --palette-oat-rest: oklch(0.925 0.025 52);
-  --palette-weathered-ink: oklch(0.455 0.032 18);
-  --palette-sage-straw: oklch(0.935 0.032 96);
-  --palette-sage-ink: oklch(0.32 0.055 62);
-  --palette-clay-border: oklch(0.84 0.029 34);
-  --palette-ember-rose: oklch(0.715 0.096 15);
-  --palette-water-blue: oklch(0.54 0.043 235);
-  --palette-golden-hour: oklch(0.76 0.112 78);
+     - Ember field keeps the existing warmth while removing the pink cast.
+     - Paper and ink carry the long reading surfaces.
+     - Rust is reserved for actions and links on paper; ember orange behaves like light on dark ground.
+     - Peach wash separates sections without becoming a decorative sunset gradient.
+     - Warm black gives Workshop, Podcast, and the footer depth without reading like a software dashboard. */
+  --palette-sun-paper: #fff6ee;
+  --palette-warm-paper: #fffdfa;
+  --palette-lake-shadow: #251715;
+  --palette-fired-clay: #b4451f;
+  --palette-clay-foreground: #fff6ee;
+  --palette-dusk-mist: #f5e2d7;
+  --palette-dusk-ink: #331f1d;
+  --palette-oat-rest: #fbf3ea;
+  --palette-weathered-ink: #6b5349;
+  --palette-sage-straw: #fbe9b4;
+  --palette-sage-ink: #45341f;
+  --palette-clay-border: #efdfd2;
+  --palette-input-border: #ad8479;
+  --palette-ember-rose: #e39ea2;
+  --palette-water-blue: #567384;
+  --palette-golden-hour: #e8a93c;
+  --palette-golden-hour-ink: #765117;
+  --palette-reading-violet: #574e70;
+  --palette-daylight-gold: #ebc45f;
+  --palette-daylight-ochre: #8a6a1e;
+  --palette-moss-signal: oklch(0.58 0.072 148);
+  --palette-moss-wash: oklch(0.938 0.028 148);
+
+  --palette-night-water: #17110f;
+  --palette-night-card: #211917;
+  --palette-night-paper: #f7eee6;
+  --palette-night-muted: #d6c6bb;
+  --palette-night-quiet: #a89388;
+  --palette-ember-clay: #ee7a3c;
+  --palette-ember-ink: #17110f;
+  --palette-dusk-plum: #211917;
+  --palette-oat-dark: #211917;
+  --palette-oat-muted: #d6c6bb;
+  --palette-sage-shadow: #3a2c28;
+  --palette-night-border: #3a2c28;
+
+  /* Golden Hour is the Workshop route identity. Keep it separate from the
+     generic night and Podcast palettes so every Workshop surface can inherit
+     the same dark ground, warm text ladder, and gold action color. */
+  --palette-workshop-night: #17110f;
+  --palette-workshop-card: #211917;
+  --palette-workshop-paper: #f7eee6;
+  --palette-workshop-muted: #d6c6bb;
+  --palette-workshop-quiet: #a89388;
+  --palette-workshop-border: #3a2c28;
+
+  --palette-podcast-night: #120e1f;
+  --palette-podcast-card: #1f1832;
+  --palette-podcast-paper: #f5ede4;
+  --palette-podcast-muted: #dccfe6;
+  --palette-podcast-quiet: #a79db4;
+  --palette-podcast-border: #3f3757;
+
+  /* Route accessories are punctuation, not general-purpose accent colors.
+     Each primary route gets one eyebrow, one rule, and one active-nav marker. */
+  --route-workshop-accessory: var(--palette-golden-hour);
+  --route-workshop-accessory-ink: var(--palette-golden-hour-ink);
+  --route-pledge-accessory: var(--palette-daylight-gold);
+  --route-pledge-accessory-ink: var(--palette-daylight-ochre);
+  --route-podcast-accessory: var(--palette-ember-rose);
+  --route-podcast-accessory-ink: var(--palette-reading-violet);
+  --route-blog-accessory: var(--palette-reading-violet);
+
+  /* The Workshop is the one place where the sunset becomes a complete device:
+     one orb, one horizon, and one sun-fill action. Rose only appears as a
+     transition inside these gradients, never as a flat page surface. */
+  --gradient-workshop-orb: radial-gradient(
+    circle at 34% 30%,
+    #f6d98a 0%,
+    #ebc45f 17%,
+    #ee7a3c 45%,
+    #b4451f 68%,
+    #211917 100%
+  );
+  --gradient-workshop-orb-halo: radial-gradient(
+    circle,
+    rgb(238 122 60 / 0.28) 0%,
+    rgb(227 158 162 / 0.1) 42%,
+    transparent 72%
+  );
+  --gradient-workshop-horizon: linear-gradient(
+    90deg,
+    #3a2c28 0%,
+    #b4451f 28%,
+    #e39ea2 50%,
+    #ee7a3c 74%,
+    #ebc45f 100%
+  );
+  --gradient-pledge-horizon: linear-gradient(
+    90deg,
+    #fbf3ea 0%,
+    #e7b9bc 26%,
+    #e08a66 62%,
+    #ebc45f 100%
+  );
+  --gradient-sun-fill: linear-gradient(102deg, #ee7a3c 0%, #f09a4b 54%, #ebc45f 100%);
 
   --background: var(--palette-sun-paper);
   --foreground: var(--palette-lake-shadow);
@@ -86,16 +178,51 @@
   --muted-foreground: var(--palette-weathered-ink);
   --accent: var(--palette-sage-straw);
   --accent-foreground: var(--palette-sage-ink);
-  --destructive: oklch(0.501 0.178 28.7);
+  --destructive: #b2352a;
+  --success: var(--palette-moss-signal);
+  --success-surface: var(--palette-moss-wash);
+  --success-foreground: oklch(0.29 0.05 148);
+  --alert: var(--palette-ember-rose);
+  --alert-surface: oklch(0.95 0.021 15);
+  --alert-foreground: oklch(0.395 0.075 18);
   --border: var(--palette-clay-border);
-  --input: var(--palette-clay-border);
+  --input: var(--palette-input-border);
   --ring: var(--palette-fired-clay);
+  --focus-ring: var(--ring);
+  --focus-offset: var(--background);
+  --border-width: 1px;
+  --border-soft: color-mix(in oklab, var(--border) 60%, transparent);
+  --border-card: color-mix(in oklab, var(--border) 70%, transparent);
   --chart-1: var(--palette-fired-clay);
   --chart-2: var(--palette-ember-rose);
   --chart-3: var(--palette-sage-straw);
   --chart-4: var(--palette-water-blue);
   --chart-5: var(--palette-golden-hour);
   --radius: 1rem;
+  --radius-hero: 2rem;
+  --measure-prose: 42rem;
+  --measure-reading: 48rem;
+  --measure-blog: 70ch;
+  --measure-wide: 56rem;
+  --measure-form: 64rem;
+  --container: 72rem;
+  --container-gutter: 1.5rem;
+  --section-y: 5rem;
+  --section-y-wide: 7rem;
+  --section-y-intro: 8rem;
+  --section-y-immersive: 9rem;
+  --control-h-xs: 1.5rem;
+  --control-h-sm: 1.75rem;
+  --control-h-md: 2rem;
+  --control-h-lg: 2.25rem;
+  --control-h-field: 2.75rem;
+  --control-h-pill: 2.25rem;
+  --control-h-cta: 3rem;
+  --label-size-eyebrow: 0.875rem;
+  --label-size-sequence: 0.75rem;
+  --label-size-meta: 0.6875rem;
+  --tracking-eyebrow: 0.2em;
+  --tracking-meta: 0.18em;
   --sidebar: var(--palette-sun-paper);
   --sidebar-foreground: var(--palette-lake-shadow);
   --sidebar-primary: var(--palette-fired-clay);
@@ -104,20 +231,82 @@
   --sidebar-accent-foreground: var(--palette-sage-ink);
   --sidebar-border: var(--palette-clay-border);
   --sidebar-ring: var(--palette-fired-clay);
+
+  /* Quiet interaction layers from Orbit. These warm washes belong on
+     low-emphasis controls and navigational surfaces, not primary actions. */
+  --state-hover: oklch(0.925 0.025 52 / 0.55);
+  --state-press: oklch(0.84 0.029 34 / 0.5);
+  --state-selected: oklch(0.935 0.032 96 / 0.85);
+  --state-disabled-opacity: 0.5;
+
+  /* Elevation is a warm pool, never a hard drop shadow. These values mirror
+     the Orbit system: large blur, large negative spread, no lifted edge. */
+  --shadow-tint: 63 38 36;
+  --elevation-1: 0 1px 2px 0 rgb(var(--shadow-tint) / 0.06);
+  --elevation-2: 0 20px 60px -45px rgb(var(--shadow-tint) / 0.42);
+  --elevation-3: 0 20px 50px -30px rgb(var(--shadow-tint) / 0.38);
+  --elevation-4: 0 30px 80px -30px rgb(var(--shadow-tint) / 0.34);
+  --glow-action-hover: 0 0 28px -8px rgb(238 122 60 / 0.2);
+
+  /* Motion stays quiet: colour, shadow, and a one-pixel press. Nothing
+     bounces or overshoots; the Workshop orb is the only ambient loop. */
+  --duration-instant: 90ms;
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+  --duration-slow: 420ms;
+  --duration-veil: 700ms;
+  --duration-breath: 4200ms;
+  --ease-standard: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-soft: cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-breath: cubic-bezier(0.45, 0, 0.55, 1);
+  --transition-color: color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard);
+  --transition-shadow: box-shadow var(--duration-base) var(--ease-out-soft);
+  --press-offset: 1px;
 }
 
 .dark {
-  --palette-night-water: oklch(0.19 0.024 340);
-  --palette-night-card: oklch(0.225 0.025 25);
-  --palette-night-paper: oklch(0.924 0.022 50);
-  --palette-ember-clay: oklch(0.745 0.13 34);
-  --palette-ember-ink: oklch(0.217 0.04 26);
-  --palette-dusk-plum: oklch(0.304 0.029 346);
-  --palette-oat-dark: oklch(0.281 0.021 14);
-  --palette-oat-muted: oklch(0.76 0.033 35);
-  --palette-sage-shadow: oklch(0.335 0.04 92);
-  --palette-night-border: oklch(0.358 0.034 27);
+  --background: var(--palette-night-water);
+  --foreground: var(--palette-night-paper);
+  --card: var(--palette-night-card);
+  --card-foreground: var(--palette-night-paper);
+  --popover: var(--palette-night-card);
+  --popover-foreground: var(--palette-night-paper);
+  --primary: var(--palette-night-paper);
+  --primary-foreground: var(--palette-night-water);
+  --secondary: var(--palette-dusk-plum);
+  --secondary-foreground: var(--palette-night-paper);
+  --muted: var(--palette-oat-dark);
+  --muted-foreground: var(--palette-oat-muted);
+  --accent: var(--palette-sage-shadow);
+  --accent-foreground: var(--palette-night-paper);
+  --destructive: #c97c84;
+  --border: var(--palette-night-border);
+  --input: var(--palette-input-border);
+  --ring: var(--palette-night-paper);
+  --chart-1: var(--palette-ember-clay);
+  --chart-2: var(--palette-ember-rose);
+  --chart-3: var(--palette-sage-straw);
+  --chart-4: var(--palette-water-blue);
+  --chart-5: var(--palette-golden-hour);
+  --sidebar: var(--palette-night-card);
+  --sidebar-foreground: var(--palette-night-paper);
+  --sidebar-primary: var(--palette-night-paper);
+  --sidebar-primary-foreground: var(--palette-night-water);
+  --sidebar-accent: var(--palette-sage-shadow);
+  --sidebar-accent-foreground: var(--palette-night-paper);
+  --sidebar-border: var(--palette-night-border);
+  --sidebar-ring: var(--palette-night-paper);
+  --state-hover: oklch(0.281 0.021 14 / 0.7);
+  --state-press: oklch(0.358 0.034 27 / 0.7);
+  --state-selected: oklch(0.335 0.04 92 / 0.85);
+  --shadow-tint: 8 4 8;
+}
 
+.surface-dark {
+  --shadow-tint: 8 4 8;
   --background: var(--palette-night-water);
   --foreground: var(--palette-night-paper);
   --card: var(--palette-night-card);
@@ -129,36 +318,602 @@
   --secondary: var(--palette-dusk-plum);
   --secondary-foreground: var(--palette-night-paper);
   --muted: var(--palette-oat-dark);
-  --muted-foreground: var(--palette-oat-muted);
+  --muted-foreground: var(--palette-night-muted);
   --accent: var(--palette-sage-shadow);
   --accent-foreground: var(--palette-night-paper);
-  --destructive: oklch(0.704 0.191 22.2);
   --border: var(--palette-night-border);
-  --input: var(--palette-night-border);
-  --ring: var(--palette-ember-clay);
-  --chart-1: var(--palette-ember-clay);
-  --chart-2: var(--palette-ember-rose);
-  --chart-3: var(--palette-sage-straw);
-  --chart-4: var(--palette-water-blue);
-  --chart-5: var(--palette-golden-hour);
-  --sidebar: var(--palette-night-card);
-  --sidebar-foreground: var(--palette-night-paper);
-  --sidebar-primary: var(--palette-ember-clay);
-  --sidebar-primary-foreground: var(--palette-ember-ink);
-  --sidebar-accent: var(--palette-sage-shadow);
-  --sidebar-accent-foreground: var(--palette-night-paper);
-  --sidebar-border: var(--palette-night-border);
-  --sidebar-ring: var(--palette-ember-clay);
+  --success: oklch(0.72 0.078 148);
+  --success-surface: oklch(0.3 0.038 148);
+  --success-foreground: var(--palette-night-paper);
+  --alert: var(--palette-ember-rose);
+  --alert-surface: oklch(0.31 0.045 15);
+  --alert-foreground: var(--palette-night-paper);
+  --focus-ring: var(--palette-night-paper);
+  --focus-offset: var(--palette-night-water);
+  --border-soft: color-mix(in oklab, var(--palette-night-border) 60%, transparent);
+  --border-card: color-mix(in oklab, var(--palette-night-border) 70%, transparent);
+  --state-hover: oklch(0.281 0.021 14 / 0.7);
+  --state-press: oklch(0.358 0.034 27 / 0.7);
+  --state-selected: oklch(0.335 0.04 92 / 0.85);
+}
+
+.surface-workshop {
+  --palette-night-water: var(--palette-workshop-night);
+  --palette-night-card: var(--palette-workshop-card);
+  --palette-night-paper: var(--palette-workshop-paper);
+  --palette-night-muted: var(--palette-workshop-muted);
+  --palette-night-quiet: var(--palette-workshop-quiet);
+  --palette-night-border: var(--palette-workshop-border);
+  --primary: var(--palette-golden-hour);
+  --primary-foreground: var(--palette-workshop-night);
+  --route-workshop-accessory: var(--palette-golden-hour);
+  --route-workshop-accessory-ink: var(--palette-golden-hour);
+  --focus-offset: var(--palette-workshop-night);
+  --border-soft: color-mix(in oklab, var(--palette-workshop-border) 60%, transparent);
+  --border-card: color-mix(in oklab, var(--palette-workshop-border) 70%, transparent);
+  --state-hover: rgb(58 44 40 / 0.72);
+  --state-press: rgb(76 51 38 / 0.74);
+  --state-selected: rgb(82 61 34 / 0.88);
+}
+
+.surface-podcast {
+  --palette-night-water: var(--palette-podcast-night);
+  --palette-night-card: var(--palette-podcast-card);
+  --palette-night-paper: var(--palette-podcast-paper);
+  --palette-night-muted: var(--palette-podcast-muted);
+  --palette-night-quiet: var(--palette-podcast-quiet);
+  --palette-night-border: var(--palette-podcast-border);
+  --route-podcast-accessory-ink: var(--palette-ember-rose);
+  --shadow-tint: 6 3 16;
+  --focus-offset: var(--palette-podcast-night);
+  --border-soft: color-mix(in oklab, var(--palette-podcast-border) 60%, transparent);
+  --border-card: color-mix(in oklab, var(--palette-podcast-border) 70%, transparent);
+  --state-hover: rgb(58 42 69 / 0.7);
+  --state-press: rgb(63 55 87 / 0.72);
+  --state-selected: rgb(58 42 69 / 0.9);
+}
+
+@keyframes workshop-orb-breath {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 24%, transparent);
+  }
+  html {
+    @apply scroll-smooth font-sans;
+  }
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    @apply font-sans;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading;
+  }
+  h1,
+  h2 {
+    font-weight: 300;
+  }
+  h3,
+  h4 {
+    font-weight: 400;
+  }
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2 focus-visible:ring-offset-focus-offset;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 999px;
+  background: var(--foreground);
+  color: var(--background);
+  padding: 0.65rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@layer components {
+  .tinker-card {
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--elevation-2);
+  }
+
+  .tinker-feature-card {
+    border-radius: var(--radius-3xl);
+    box-shadow: var(--elevation-3);
+    transition: var(--transition-shadow);
+  }
+
+  .tinker-hero-frame {
+    border-radius: var(--radius-hero);
+    box-shadow: var(--elevation-4);
+  }
+
+  .tinker-photo {
+    filter: sepia(0.06) saturate(0.96);
+  }
+
+  .tinker-reading-measure {
+    max-width: var(--measure-reading);
+  }
+
+  .tinker-blog-reading-measure {
+    max-width: var(--measure-blog);
+  }
+
+  .tinker-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--primary);
+    font-family: var(--font-sans);
+    font-size: var(--label-size-eyebrow);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .tinker-step-label {
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: var(--label-size-sequence);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+  }
+
+  .tinker-meta-label {
+    font-family: var(--font-mono);
+    font-size: var(--label-size-meta);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: var(--tracking-meta);
+    text-transform: uppercase;
+  }
+
+  .tinker-sequence {
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: var(--label-size-sequence);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+
+  .tinker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: var(--control-h-sm);
+    padding-inline: 0.875rem;
+    border-radius: 9999px;
+    background: var(--accent);
+    color: var(--accent-foreground);
+    font-family: var(--font-sans);
+    font-size: var(--label-size-sequence);
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .tinker-badge__dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    flex: none;
+    border-radius: 9999px;
+    background: currentColor;
+  }
+
+  .tinker-badge--success {
+    background: var(--success-surface);
+    color: var(--success-foreground);
+  }
+
+  .tinker-badge--progress {
+    background: var(--alert-surface);
+    color: var(--alert-foreground);
+  }
+
+  .tinker-icon-well {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xl);
+    background: var(--accent);
+    color: var(--primary);
+  }
+
+  .tinker-list-row {
+    display: grid;
+    gap: 0.75rem;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--border-card);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .tinker-list-row:last-child,
+  li:last-child > .tinker-list-row {
+    border-bottom: 0;
+  }
+
+  .tinker-list-row__arrow {
+    color: var(--muted-foreground);
+    transition: var(--transition-color);
+  }
+
+  @media (hover: hover) {
+    .tinker-list-row:hover .tinker-list-row__arrow {
+      color: var(--primary);
+    }
+  }
+
+  .tinker-frame,
+  .tinker-container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+  }
+
+  .tinker-container {
+    padding-inline: var(--container-gutter);
+  }
+
+  .tinker-section,
+  .tinker-route-intro,
+  .tinker-route-immersive {
+    padding-block: var(--section-y);
+  }
+
+  @media (min-width: 40rem) {
+    .tinker-section,
+    .tinker-route-intro,
+    .tinker-route-immersive {
+      padding-block: var(--section-y-wide);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .tinker-route-intro {
+      padding-block: var(--section-y-intro);
+    }
+
+    .tinker-route-immersive {
+      padding-block: var(--section-y-immersive);
+    }
+  }
+
+  .tinker-button {
+    transition: var(--transition-color), var(--transition-shadow),
+      filter var(--duration-fast) var(--ease-standard),
+      transform var(--duration-instant) var(--ease-standard);
+  }
+
+  .tinker-button:disabled {
+    opacity: var(--state-disabled-opacity);
+  }
+
+  .tinker-button--paper:hover {
+    box-shadow: var(--glow-action-hover);
+  }
+
+  .tinker-field {
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--control-h-field);
+    border: 1px solid var(--input);
+    border-radius: var(--radius-xl);
+    background: var(--card);
+    color: var(--foreground);
+    padding-inline: 1rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition-color), var(--transition-shadow);
+  }
+
+  .tinker-field::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  .tinker-field:focus {
+    border-color: var(--primary);
+  }
+
+  .tinker-field:disabled {
+    pointer-events: none;
+    opacity: var(--state-disabled-opacity);
+  }
+
+  textarea.tinker-field {
+    height: auto;
+    padding-block: 0.75rem;
+    line-height: 1.625;
+    resize: vertical;
+  }
+
+  .tinker-label {
+    display: block;
+    margin-bottom: 0.375rem;
+    color: var(--foreground);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .tinker-search {
+    display: flex;
+    height: var(--control-h-field);
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid var(--input);
+    border-radius: var(--radius-xl);
+    background: var(--background);
+    padding-inline: 1rem;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    transition: var(--transition-color), var(--transition-shadow);
+  }
+
+  .tinker-search:focus-within {
+    border-color: var(--primary);
+  }
+
+  .tinker-search:has(input:focus-visible) {
+    box-shadow: 0 0 0 2px var(--focus-offset), 0 0 0 4px var(--focus-ring);
+  }
+
+  .tinker-search input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    background: transparent;
+    color: var(--foreground);
+    font: inherit;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .tinker-search input:focus-visible {
+    box-shadow: none;
+  }
+
+  .tinker-search input::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  .tinker-filter-pill {
+    height: var(--control-h-pill);
+  }
+
+  .tinker-segmented-control {
+    height: 2.5rem;
+    border-radius: var(--radius-xl);
+  }
+
+  .tinker-state-surface,
+  .tinker-choice-state,
+  .tinker-nav-state {
+    transition: var(--transition-color), var(--transition-shadow);
+  }
+
+  .tinker-state-surface:active,
+  .tinker-nav-state:active,
+  .tinker-choice-state[aria-pressed="false"]:active {
+    background-color: var(--state-press);
+  }
+
+  .tinker-state-surface[aria-expanded="true"],
+  .tinker-state-surface[aria-current="page"],
+  .tinker-nav-state[aria-current="page"] {
+    background-color: var(--state-selected);
+  }
+
+  .tinker-nav-state {
+    margin-inline: -0.5rem;
+    padding-inline: 0.5rem;
+  }
+
+  @media (hover: hover) {
+    .tinker-state-surface:hover,
+    .tinker-nav-state:hover,
+    .tinker-choice-state[aria-pressed="false"]:hover {
+      background-color: var(--state-hover);
+    }
+  }
+
+  .workshop-orb {
+    position: relative;
+    display: grid;
+    flex: none;
+    place-items: center;
+  }
+
+  .workshop-orb::before {
+    position: absolute;
+    inset: -38%;
+    border-radius: 999px;
+    background: var(--gradient-workshop-orb-halo);
+    content: "";
+  }
+
+  .workshop-orb__body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    background: var(--gradient-workshop-orb);
+    box-shadow: 0 18px 56px -22px rgb(238 122 60 / 0.62);
+    animation: workshop-orb-breath var(--duration-breath) var(--ease-breath) infinite;
+  }
+
+  .sun-fill-button {
+    background: var(--gradient-sun-fill);
+    color: var(--palette-ember-ink);
+    box-shadow: 0 12px 34px -14px rgb(238 122 60 / 0.68);
+  }
+
+  .sun-fill-button:hover {
+    filter: brightness(1.04) saturate(1.04);
+  }
+
+  .sun-fill-button:focus-visible {
+    outline: 3px solid var(--palette-night-paper);
+    outline-offset: 3px;
+  }
+
+  /*
+    Long-form content styling for rendered markdown. Every selector is wrapped in
+    :where() so specificity is zero — a utility class on a wrapping element always wins.
+    Values are lifted from the conventions already used across the hand-written sections
+    so posts read as part of the same site rather than as a bolted-on blog.
+  */
+  .prose-tinker {
+    @apply text-lg leading-[1.7] text-muted-foreground;
+  }
+
+  .prose-tinker :where(h2) {
+    @apply mt-20 mb-4 scroll-mt-24 text-balance text-3xl font-light leading-tight tracking-[-0.03em] text-foreground;
+  }
+  .prose-tinker :where(h3) {
+    @apply mt-12 mb-3 scroll-mt-24 text-balance text-xl font-normal tracking-[-0.02em] text-foreground;
+  }
+  .prose-tinker :where(h4) {
+    @apply mt-10 mb-2 scroll-mt-24 text-lg font-normal text-foreground;
+  }
+  .prose-tinker :where(h2, h3, h4):first-child {
+    @apply mt-0;
+  }
+
+  .prose-tinker :where(p) {
+    @apply mt-4 text-pretty leading-[1.7];
+  }
+
+  .prose-tinker :where(a) {
+    @apply font-medium text-primary underline underline-offset-4 transition-colors hover:text-foreground focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring;
+  }
+
+  .prose-tinker :where(strong) {
+    @apply font-medium text-foreground;
+  }
+  .prose-tinker :where(em) {
+    @apply italic;
+  }
+
+  .prose-tinker :where(ul) {
+    @apply mt-5 list-disc space-y-2 pl-6 marker:text-primary;
+  }
+  .prose-tinker :where(ol) {
+    @apply mt-5 list-decimal space-y-2 pl-6 marker:text-muted-foreground;
+  }
+  .prose-tinker :where(li > ul, li > ol) {
+    @apply mt-2;
+  }
+  .prose-tinker :where(li) {
+    @apply leading-[1.7];
+  }
+
+  .prose-tinker :where(blockquote) {
+    @apply mt-8 border-l-2 border-primary pl-6 text-pretty text-xl font-medium leading-relaxed tracking-[-0.02em] text-foreground;
+  }
+  .prose-tinker :where(blockquote p) {
+    @apply mt-0;
+  }
+
+  .prose-tinker :where(hr) {
+    @apply mt-12 border-t border-border/60;
+  }
+
+  .prose-tinker :where(code) {
+    @apply rounded-sm bg-muted px-1.5 py-0.5 font-mono text-[0.85em] text-foreground;
+  }
+  .prose-tinker :where(pre) {
+    @apply mt-6 overflow-x-auto border border-border bg-card p-5 font-mono text-sm leading-relaxed text-foreground;
+  }
+  .prose-tinker :where(pre code) {
+    @apply bg-transparent p-0 text-inherit;
+  }
+
+  .prose-tinker :where(table) {
+    @apply mt-8 w-full border-collapse text-left text-sm;
+  }
+  .prose-tinker :where(th) {
+    @apply border-b border-border px-3 py-2 font-medium text-foreground;
+  }
+  .prose-tinker :where(td) {
+    @apply border-b border-border/60 px-3 py-2 align-top;
+  }
+
+  .prose-tinker :where(img) {
+    @apply mt-8 border border-border;
+  }
+  .prose-tinker :where(figcaption) {
+    @apply mt-2 text-sm text-muted-foreground;
+  }
+
+  /*
+    Heading anchors from rehype-autolink-headings. Decorative: aria-hidden and
+    tabindex="-1" are set by the plugin, so these are invisible to screen readers
+    and out of the tab order. Revealed on hover of the heading.
+  */
+  .prose-tinker :where(.heading-anchor) {
+    @apply -ml-5 inline-block w-5 text-primary no-underline opacity-0 transition-opacity;
+  }
+  .prose-tinker :where(h2, h3, h4):hover .heading-anchor {
+    @apply opacity-100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-breath: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

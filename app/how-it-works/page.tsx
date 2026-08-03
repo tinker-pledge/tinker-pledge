@@ -1,36 +1,25 @@
-import type { Metadata } from "next"
-import {
-  CalendarDays,
-  CircleDollarSign,
-  ClipboardCheck,
-  LockKeyhole,
-  Receipt,
-  Scale,
-  ShieldCheck,
-  Users,
-} from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ToolsSection } from "@/components/tools-section"
+import { createPageMetadata } from "@/lib/site-metadata"
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "How It Works | The Tinker Pledge",
   description:
     "Budget guidance, starter tools, rollout steps, and guardrails for launching a personal AI budget at work.",
-}
+  path: "/how-it-works",
+})
 
 const budgetNotes = [
   {
-    icon: CircleDollarSign,
     title: "Pick a simple monthly amount",
     body: "Start with a number your company can explain in one sentence. It can be small; the point is repeated personal use, not a flashy perk.",
   },
   {
-    icon: Receipt,
     title: "Use lightweight reimbursement",
     body: "Treat it like a recurring benefit with a simple reimbursement path and a curated starter list. Keep exceptions possible, but make the default easy.",
   },
   {
-    icon: Users,
     title: "Offer it broadly",
     body: "AI fluency is not only for technical teams. The benefit is strongest when operations, recruiting, design, sales, support, and leadership all get reps.",
   },
@@ -38,17 +27,14 @@ const budgetNotes = [
 
 const guardrails = [
   {
-    icon: LockKeyhole,
     title: "Keep company data out",
     body: "Make the boundary explicit: personal tools are for personal use, public information, and low-risk experimentation unless a tool is approved for company data.",
   },
   {
-    icon: ShieldCheck,
     title: "Do not turn it into surveillance",
     body: "No usage reports, prompt reviews, or productivity scorekeeping. The company funds fluency; people keep their private life private.",
   },
   {
-    icon: Scale,
     title: "Check payroll and tax treatment",
     body: "Review the benefit with your finance or payroll partner before launch. Different companies and locations may need different handling.",
   },
@@ -95,160 +81,163 @@ const audiences = [
 export default function HowItWorksPage() {
   return (
     <main>
-      <section className="border-b border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">How it works</p>
-            <h1 className="mt-4 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl md:text-6xl">
-              A personal AI budget, with enough structure to launch safely.
-            </h1>
-            <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              The Tinker Pledge should feel simple to employees and legible to the people approving it. Set the budget,
-              define the boundaries, and keep the policy light enough that curiosity still does the work.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button render={<a href="/proposal" />} nativeButton={false} size="lg" className="rounded-full px-7">
-                Generate your proposal
-              </Button>
-              <Button
-                render={<a href="/#case" />}
-                nativeButton={false}
-                size="lg"
-                variant="outline"
-                className="rounded-full px-7"
-              >
-                Read the business case
-              </Button>
+      <section className="border-b border-border bg-background">
+        <div className="tinker-container tinker-route-intro">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-8">
+              <div className="flex items-center gap-4">
+                <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">How it works</p>
+                <span aria-hidden="true" className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
+              </div>
+              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
+                A personal AI budget, with enough structure to launch safely.
+              </h1>
+            </div>
+            <div className="flex flex-col justify-end lg:col-span-4 lg:pb-2">
+              <p className="max-w-md text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
+                The Tinker Pledge should feel simple to employees and legible to the people approving it. Set the budget,
+                define the boundaries, and keep the policy light enough that curiosity still does the work.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:items-start">
+                <Button render={<a href="/proposal" />} nativeButton={false} size="lg" className="rounded-full px-7">
+                  Generate your proposal
+                </Button>
+                <Button render={<a href="/pledge" />} nativeButton={false} size="lg" variant="outline" className="rounded-full px-7">
+                  Read the pledge
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">
-            <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary">Budget design</p>
-              <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
+      <section className="border-b border-border bg-background">
+        <div className="tinker-container tinker-section">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-4">
+              <p className="tinker-step-label">01 · Budget design</p>
+            </div>
+            <div className="lg:col-span-8">
+              <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 Make the benefit easy to understand.
               </h2>
-              <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 The best version is boring to administer and generous in spirit. People should know what they can spend,
                 how they get reimbursed, and what is outside the line.
               </p>
             </div>
-
-            <div className="grid gap-5 sm:grid-cols-3">
-              {budgetNotes.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-border/70 bg-card p-6">
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-accent text-primary">
-                    <item.icon className="size-5" strokeWidth={1.75} />
-                  </span>
-                  <h3 className="mt-5 font-serif text-xl text-foreground">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-                </div>
-              ))}
-            </div>
+          </div>
+          <div className="mt-9 grid border-t border-border md:grid-cols-3">
+            {budgetNotes.map((item, index) => (
+              <article key={item.title} className="border-b border-border py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0">
+                <span className="tinker-sequence">0{index + 1}</span>
+                <h3 className="mt-10 text-xl font-normal tracking-[-0.02em] text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="border-y border-border/60 bg-secondary/40">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">Guardrails</p>
-            <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
+      <section className="surface-dark border-b border-[var(--palette-night-border)] bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+        <div className="tinker-frame grid lg:grid-cols-2">
+          <div className="border-b border-[var(--palette-night-border)] px-6 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
+            <p className="tinker-step-label">02 · Guardrails</p>
+            <h2 className="mt-7 max-w-xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] sm:text-4xl">
               Give freedom without making the policy vague.
             </h2>
           </div>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {guardrails.map((item) => (
-              <div key={item.title} className="rounded-2xl border border-border/70 bg-background p-7">
-                <span className="flex size-11 items-center justify-center rounded-xl bg-accent text-primary">
-                  <item.icon className="size-5" strokeWidth={1.75} />
-                </span>
-                <h3 className="mt-5 font-serif text-xl text-foreground">{item.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{item.body}</p>
-              </div>
-            ))}
+          <div className="px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+            <div className="divide-y divide-[var(--palette-night-border)] border-y border-[var(--palette-night-border)]">
+              {guardrails.map((item, index) => (
+                <article key={item.title} className="grid gap-3 py-6 sm:grid-cols-[3rem_1fr]">
+                  <span className="tinker-sequence">0{index + 1}</span>
+                  <div>
+                    <h3 className="text-xl font-normal text-[var(--palette-night-paper)]">{item.title}</h3>
+                    <p className="mt-2 leading-relaxed text-[var(--palette-night-muted)]">{item.body}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <ToolsSection />
 
-      <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
-            <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-primary">Rollout</p>
-              <h2 className="mt-4 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
+      <section className="border-b border-border bg-background">
+        <div className="tinker-container tinker-section">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-4">
+              <p className="tinker-step-label">04 · Rollout</p>
+            </div>
+            <div className="lg:col-span-8">
+              <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 Launch it in weeks, then improve it from signal.
               </h2>
-              <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 Avoid turning the launch into a platform selection project. Start with a clear budget and policy, then
                 adjust once people show you what they actually use.
               </p>
             </div>
+          </div>
+          <ol className="mt-12 divide-y divide-border border-y border-border bg-card">
+            {rollout.map((item) => (
+              <li key={item.step} className="grid gap-5 p-7 sm:p-10 lg:grid-cols-12 lg:p-12">
+                <span className="tinker-sequence lg:col-span-1">{item.step}</span>
+                <h3 className="text-xl font-normal tracking-[-0.02em] text-foreground lg:col-span-4">{item.title}</h3>
+                <p className="max-w-2xl leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">{item.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-            <ol className="flex flex-col gap-px overflow-hidden rounded-3xl border border-border/70 bg-border/70">
-              {rollout.map((item) => (
-                <li key={item.step} className="flex gap-6 bg-card p-7">
-                  <span className="font-serif text-2xl text-primary">{item.step}</span>
-                  <div>
-                    <h3 className="font-serif text-xl text-foreground">{item.title}</h3>
-                    <p className="mt-2 leading-relaxed text-muted-foreground">{item.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+      <section className="border-b border-border bg-secondary/45">
+        <div className="tinker-container tinker-section">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
+            <div className="lg:col-span-4">
+              <p className="tinker-step-label">05 · Reviewer guidance</p>
+              <h2 className="mt-7 max-w-xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
+                Frame it differently for each reviewer.
+              </h2>
+              <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                The same pledge has different approval questions. Answer those directly instead of making every reviewer
+                infer the part they care about.
+              </p>
+            </div>
+            <div className="lg:col-span-8">
+              <div className="grid border-t border-border md:grid-cols-3">
+                {audiences.map((item, index) => (
+                  <article key={item.title} className="border-b border-border py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0">
+                    <span className="tinker-sequence">0{index + 1}</span>
+                    <h3 className="mt-10 text-xl font-normal tracking-[-0.02em] text-foreground">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-border/60 bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] md:py-24">
-          <div>
-            <span className="flex size-12 items-center justify-center rounded-2xl bg-primary-foreground/15">
-              <ClipboardCheck className="size-6" strokeWidth={1.75} />
-            </span>
-            <h2 className="mt-5 text-balance font-serif text-3xl font-light leading-tight sm:text-4xl">
-              Frame it differently for each reviewer.
+      <section className="bg-primary text-primary-foreground">
+        <div className="tinker-container grid gap-10 py-16 sm:py-20 lg:grid-cols-12 lg:items-end">
+          <div className="lg:col-span-8">
+            <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] sm:text-4xl">
+              Ready to turn this into the first internal note?
             </h2>
-            <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/80">
-              The same pledge has different approval questions. Answer those directly instead of making every reviewer
-              infer the part they care about.
+            <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/90">
+              Use the proposal generator to turn these choices into something a manager, People lead, or finance partner
+              can react to.
             </p>
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-3">
-            {audiences.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-primary-foreground/20 bg-primary-foreground/10 p-6"
-              >
-                <h3 className="font-serif text-xl text-primary-foreground">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">{item.body}</p>
-              </div>
-            ))}
+          <div className="lg:col-span-4 lg:text-right">
+            <Button render={<a href="/proposal" />} nativeButton={false} size="lg" variant="secondary" className="h-12 rounded-full px-7">
+              Generate your proposal
+              <ArrowRight className="size-4" />
+            </Button>
           </div>
-        </div>
-      </section>
-
-      <section className="border-t border-border/60">
-        <div className="mx-auto max-w-4xl px-6 py-20 text-center md:py-24">
-          <CalendarDays className="mx-auto size-9 text-primary" strokeWidth={1.75} />
-          <h2 className="mt-5 text-balance font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl">
-            Ready to turn this into the first internal note?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-            Use the proposal generator to turn these choices into something a manager, People lead, or finance partner
-            can react to.
-          </p>
-          <Button render={<a href="/proposal" />} nativeButton={false} size="lg" className="mt-8 rounded-full px-7">
-            Generate your proposal
-          </Button>
         </div>
       </section>
     </main>

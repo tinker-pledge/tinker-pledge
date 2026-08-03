@@ -40,16 +40,16 @@ export function SharePledgeSection() {
   }
 
   return (
-    <section className="border-t border-border/60 bg-secondary/40">
-      <div className="mx-auto flex max-w-6xl flex-col gap-7 px-6 py-12 md:flex-row md:items-center md:justify-between">
+    <section className="border-t border-border-soft bg-secondary/40">
+      <div className="tinker-container flex flex-col gap-7 py-12 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl">
           <div className="flex items-center gap-3">
-            <span className="flex size-10 items-center justify-center rounded-2xl bg-accent text-primary">
+            <span className="tinker-icon-well size-10">
               <Share2 className="size-5" strokeWidth={1.75} />
             </span>
-            <p className="text-sm uppercase tracking-[0.2em] text-primary">Share the pledge</p>
+            <p className="tinker-eyebrow">Share the pledge</p>
           </div>
-          <h2 className="mt-4 text-balance font-serif text-2xl font-light leading-tight text-foreground sm:text-3xl">
+          <h2 className="mt-4 text-balance font-heading text-2xl font-light leading-tight text-foreground sm:text-3xl">
             Help the idea reach someone who can say yes.
           </h2>
           <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
@@ -79,7 +79,14 @@ export function SharePledgeSection() {
           >
             LinkedIn
           </Button>
-          <Button type="button" variant="outline" className="rounded-full" onClick={handleCopy}>
+          <Button
+            type="button"
+            variant="outline"
+            data-status={copied ? "success" : undefined}
+            aria-live="polite"
+            className="rounded-full"
+            onClick={handleCopy}
+          >
             {copied ? "Copied" : "Copy link"}
           </Button>
         </div>
