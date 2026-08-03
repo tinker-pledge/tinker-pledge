@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ArrowRight } from 'lucide-react'
 import { AuthorByline } from '@/components/blog/author-byline'
 import { NewsletterSignup } from '@/components/blog/newsletter-signup'
 import { getAllPosts } from '@/lib/blog/posts'
@@ -31,12 +32,14 @@ export default function BlogIndexPage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <header className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
               <div className="flex items-center gap-4">
-                <span className="h-px w-10 bg-border" />
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Field notes</p>
+                <span className="h-0.5 w-10 bg-[var(--route-blog-accessory)]" />
+                <p className="tinker-eyebrow text-[var(--route-blog-accessory)]">
+                  Field notes · Next morning
+                </p>
               </div>
               <p className="mt-8 max-w-xs text-pretty text-lg leading-relaxed text-muted-foreground">
                 What we are learning about practice, access, and the people trying these tools for themselves.
@@ -44,7 +47,7 @@ export default function BlogIndexPage() {
             </div>
 
             <div className="lg:col-span-8">
-              <h1 className="max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-medium leading-[0.93] tracking-[-0.06em] text-foreground">
+              <h1 className="max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-light leading-[0.93] tracking-[-0.05em] text-foreground">
                 Notes from the pledge.
               </h1>
             </div>
@@ -55,23 +58,26 @@ export default function BlogIndexPage() {
               Nothing published yet. The first post is on its way.
             </p>
           ) : (
-            <ul className="mt-16 divide-y divide-border border-y border-border sm:mt-24">
+            <ul className="mt-16 border-y border-border sm:mt-24">
               {posts.map((post) => (
-                <li key={post.slug} className="grid gap-5 py-8 sm:py-10 lg:grid-cols-12 lg:gap-8">
-                  <div className="lg:col-span-7">
-                    <h2 className="text-2xl font-medium tracking-[-0.025em] text-foreground sm:text-3xl">
-                      <a
-                        href={`/blog/${post.slug}`}
-                        className="transition-colors hover:text-primary"
-                      >
-                        {post.title}
-                      </a>
-                    </h2>
-                    <AuthorByline authors={post.authors} publishedAt={post.publishedAt} className="mt-3" />
-                  </div>
-                  <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground lg:col-span-4 lg:col-start-9">
-                    {post.description}
-                  </p>
+                <li key={post.slug}>
+                  <a
+                    href={`/blog/${post.slug}`}
+                    className="tinker-list-row group gap-5 py-8 sm:py-10 lg:grid-cols-12 lg:gap-8"
+                  >
+                    <div className="lg:col-span-7">
+                      <h2 className="flex items-start gap-3 text-2xl font-light tracking-[-0.025em] text-foreground sm:text-3xl">
+                        <span>
+                          {post.title}
+                        </span>
+                        <ArrowRight className="tinker-list-row__arrow mt-1.5 size-4 shrink-0" strokeWidth={1.75} />
+                      </h2>
+                      <AuthorByline authors={post.authors} publishedAt={post.publishedAt} className="mt-3" />
+                    </div>
+                    <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground lg:col-span-4 lg:col-start-9">
+                      {post.description}
+                    </p>
+                  </a>
                 </li>
               ))}
             </ul>

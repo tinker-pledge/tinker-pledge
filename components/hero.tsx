@@ -2,11 +2,11 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-5 pb-0 pt-14 sm:px-8 sm:pt-20 lg:px-10 lg:pt-24">
+    <section className="relative border-b border-border bg-background">
+      <div className="tinker-container pb-0 pt-14 sm:pt-20 lg:pt-24">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-8">
-            <h1 className="max-w-5xl text-balance text-[clamp(3.5rem,8vw,7.6rem)] font-medium leading-[0.88] tracking-[-0.065em] text-foreground">
+            <h1 className="max-w-5xl text-balance text-[clamp(3.5rem,8vw,7.6rem)] font-light leading-[0.88] tracking-[-0.055em] text-foreground">
               Start with the work in front of you.
             </h1>
           </div>
@@ -16,42 +16,42 @@ export function Hero() {
           <div className="grid md:grid-cols-3">
             <a
               href="/workshops"
-              className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
+              className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
             >
-              <span className="mt-1 font-mono text-xs text-primary">01</span>
+              <span className="tinker-sequence mt-1">01</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Workshop</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
                   Bring one real task. Leave knowing how to build the thing that runs the next hundred.
                 </span>
               </span>
-              <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />
+              <ArrowRight className="mt-1 size-4 text-muted-foreground md:hidden" />
             </a>
             <a
               href="/pledge"
-              className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6"
+              className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6"
             >
-              <span className="mt-1 font-mono text-xs text-primary">02</span>
+              <span className="tinker-sequence mt-1">02</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">The pledge</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
                   Give everyone a budget to tinker with AI. We wrote the proposal for you.
                 </span>
               </span>
-              <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />
+              <ArrowRight className="mt-1 size-4 text-muted-foreground md:hidden" />
             </a>
             <a
               href="/podcast"
-              className="group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 py-6 transition-colors hover:bg-card md:min-h-40 md:grid-cols-[2.5rem_1fr] md:px-6 md:last:pr-0"
+              className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:px-6 md:last:pr-0"
             >
-              <span className="mt-1 font-mono text-xs text-primary">03</span>
+              <span className="tinker-sequence mt-1">03</span>
               <span>
                 <span className="block text-lg font-medium tracking-tight text-foreground">Podcast</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
                   One person outside tech shares what they doubted, what surprised them, and what they&apos;d change.
                 </span>
               </span>
-              <ArrowRight className="mt-1 size-4 text-muted-foreground transition-transform group-hover:translate-x-1 md:hidden" />
+              <ArrowRight className="mt-1 size-4 text-muted-foreground md:hidden" />
             </a>
           </div>
         </nav>

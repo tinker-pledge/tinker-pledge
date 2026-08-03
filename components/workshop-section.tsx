@@ -25,19 +25,19 @@ export function WorkshopSection() {
   return (
     <section
       id="workshop"
-      className="scroll-mt-20 bg-[linear-gradient(135deg,var(--palette-golden-hour)_0%,var(--palette-ember-rose)_52%,var(--palette-dusk-mist)_100%)] text-foreground"
+      className="scroll-mt-20 border-b border-border bg-[var(--palette-warm-paper)] text-foreground"
     >
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+      <div className="tinker-container py-20 sm:py-28 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-4">
-              <span className="font-mono text-xs text-primary">01</span>
-              <span className="h-px w-10 bg-foreground/25" />
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-foreground/65">
+              <span className="tinker-sequence">01</span>
+              <span aria-hidden="true" className="h-px w-10 bg-[var(--route-workshop-accessory)]" />
+              <p className="tinker-eyebrow text-[var(--route-workshop-accessory-ink)]">
                 Hands-on sessions
               </p>
             </div>
-            <h2 className="mt-8 text-[clamp(3.5rem,7vw,6.5rem)] font-medium leading-[0.9] tracking-[-0.06em]">
+            <h2 className="mt-8 text-[clamp(3.5rem,7vw,6.5rem)] font-light leading-[0.9] tracking-[-0.05em]">
               Workshop
             </h2>
             <p className="mt-8 max-w-lg text-pretty text-2xl leading-snug tracking-[-0.02em] text-foreground/95 sm:text-3xl">
@@ -56,16 +56,17 @@ export function WorkshopSection() {
           </div>
 
           <figure className="lg:col-span-7 lg:pt-2">
-            <div className="relative overflow-hidden bg-background/10">
+            <div className="tinker-hero-frame relative aspect-[4/3] overflow-hidden bg-background/10">
               <Image
                 src="/images/workshop-tinkering-photo.jpg"
                 alt="A person working at a laptop with handwritten notes spread across the table"
                 width={1200}
                 height={1800}
                 sizes="(min-width: 1024px) 58vw, 100vw"
-                className="aspect-[4/3] w-full object-cover object-[center_52%] grayscale-[12%]"
+                loading="eager"
+                className="tinker-photo h-full w-full object-cover object-[center_52%]"
               />
-              <div className="absolute bottom-0 left-0 bg-primary px-4 py-3 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-primary-foreground sm:px-5">
+              <div className="tinker-meta-label absolute bottom-0 left-0 bg-primary px-4 py-3 text-primary-foreground sm:px-5">
                 Laptop open · task in front of you
               </div>
             </div>
@@ -86,7 +87,7 @@ export function WorkshopSection() {
         <div className="mt-20 border-y border-foreground/20 lg:mt-28">
           <div className="grid lg:grid-cols-[1.1fr_1fr_auto] lg:items-stretch">
             <div className="border-b border-foreground/20 py-7 lg:border-b-0 lg:border-r lg:py-8 lg:pr-8">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-foreground/50">Next workshop</p>
+              <p className="tinker-meta-label text-foreground/50">Next workshop</p>
               <p className="mt-3 text-2xl font-medium tracking-[-0.025em]">{ANN_ARBOR_WORKSHOP.title}</p>
             </div>
             <div className="grid gap-3 border-b border-foreground/20 py-7 text-sm text-foreground/75 sm:grid-cols-2 lg:border-b-0 lg:border-r lg:px-8 lg:py-8">
@@ -109,7 +110,7 @@ export function WorkshopSection() {
                 className="h-12 w-full rounded-full px-7 lg:w-auto"
               >
                 Register on Luma
-                <ArrowRight className="size-4 transition-transform group-hover/button:translate-x-0.5" />
+                <ArrowRight className="size-4" />
               </Button>
             </div>
           </div>
@@ -117,7 +118,7 @@ export function WorkshopSection() {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-[0.8fr_2.2fr] lg:gap-12">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-foreground/50">In the room</p>
+            <p className="tinker-eyebrow text-foreground/50">In the room</p>
             <a
               href="/workshops"
               className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-foreground/30 underline-offset-4 hover:decoration-foreground"
@@ -132,8 +133,8 @@ export function WorkshopSection() {
                 key={note.number}
                 className="border-b border-foreground/20 py-7 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
-                <span className="font-mono text-xs text-primary">{note.number}</span>
-                <h3 className="mt-8 text-xl font-medium tracking-[-0.02em]">{note.title}</h3>
+                <span className="tinker-sequence">{note.number}</span>
+                <h3 className="mt-8 text-xl font-normal tracking-[-0.02em]">{note.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-foreground/60">{note.body}</p>
               </li>
             ))}

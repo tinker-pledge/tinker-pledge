@@ -22,14 +22,14 @@ export default function AboutPage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Why we built it</p>
+              <p className="tinker-eyebrow">Why we built it</p>
             </div>
 
             <div className="lg:col-span-8">
-              <h1 className="max-w-4xl text-balance text-[clamp(3.4rem,7vw,6.8rem)] font-medium leading-[0.9] tracking-[-0.06em] text-foreground">
+              <h1 className="max-w-4xl text-balance text-[clamp(3.4rem,7vw,6.8rem)] font-light leading-[0.9] tracking-[-0.05em] text-foreground">
                 AI makes more sense when it is in your hands.
               </h1>
               <div className="mt-9 max-w-3xl space-y-5 text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
@@ -50,7 +50,7 @@ export default function AboutPage() {
                 className="mt-9 h-12 rounded-full px-7"
               >
                 Read how it started
-                <ArrowRight className="size-4 transition-transform group-hover/button:translate-x-0.5" />
+                <ArrowRight className="size-4" />
               </Button>
             </div>
           </div>
@@ -58,11 +58,11 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-secondary/45">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <header className="grid gap-8 lg:grid-cols-12 lg:gap-8">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary lg:col-span-4">The co-creators</p>
+            <p className="tinker-eyebrow lg:col-span-4">The co-creators</p>
             <div className="lg:col-span-8">
-              <h2 className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              <h2 className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 Built side by side.
               </h2>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -82,10 +82,11 @@ export default function AboutPage() {
               return (
                 <article
                   key={creator.id}
-                  className="border-b border-border py-10 last:border-b-0 md:border-b-0 md:first:border-r md:first:pr-8 md:last:pl-8 lg:first:pr-12 lg:last:pl-12"
+                  id={creator.id}
+                  className="scroll-mt-24 border-b border-border py-10 last:border-b-0 md:border-b-0 md:first:border-r md:first:pr-8 md:last:pl-8 lg:first:pr-12 lg:last:pl-12"
                 >
-                  <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-primary">{creator.role}</p>
-                  <h3 className="mt-6 text-4xl font-medium tracking-[-0.045em] text-foreground sm:text-5xl">
+                  <p className="tinker-meta-label text-primary">{creator.role}</p>
+                  <h3 className="mt-6 text-4xl font-light tracking-[-0.04em] text-foreground sm:text-5xl">
                     {creator.name}
                   </h3>
                   <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">{creator.bio}</p>

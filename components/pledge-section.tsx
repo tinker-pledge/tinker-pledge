@@ -44,11 +44,11 @@ export function PledgeSection() {
 
   return (
     <section id="pledge" className="bg-secondary/45">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+      <div className="tinker-container tinker-section">
         <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Add your voice</p>
-            <h2 className="mt-5 text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+            <p className="tinker-eyebrow">Add your voice</p>
+            <h2 className="mt-5 text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
               Take the Tinker Pledge.
             </h2>
             <p className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -57,7 +57,7 @@ export function PledgeSection() {
             </p>
 
             <div className="mt-7 max-w-sm">
-              <label htmlFor="pledge-name" className="mb-1.5 block text-sm font-medium text-foreground">
+              <label htmlFor="pledge-name" className="tinker-label">
                 Your first name <span className="font-normal text-muted-foreground">(optional)</span>
               </label>
               <input
@@ -65,12 +65,12 @@ export function PledgeSection() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Jordan"
-                className="h-12 w-full border border-border bg-background px-4 text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary"
+                className="tinker-field bg-background"
               />
             </div>
           </div>
 
-          <div className="border-t-4 border-primary bg-background p-7 sm:p-10 lg:col-span-7 lg:col-start-6">
+          <div className="tinker-card border border-border-card bg-background p-7 sm:p-10 lg:col-span-7 lg:col-start-6">
             <div className="flex items-center gap-3">
               <span className="grid size-7 grid-cols-2 gap-[3px]" aria-hidden="true">
                 <span className="bg-primary" />
@@ -97,14 +97,14 @@ export function PledgeSection() {
 
             <div className="mt-9 flex flex-wrap gap-2.5">
               {canNativeShare && (
-                <Button type="button" className="h-10 rounded-full px-5" onClick={handleNativeShare}>
+                <Button type="button" variant="ink" className="h-10 rounded-full px-5" onClick={handleNativeShare}>
                   Share the pledge
                 </Button>
               )}
               <Button
                 render={<a href={xHref} target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
-                variant={canNativeShare ? "outline" : "default"}
+                variant={canNativeShare ? "outline" : "ink"}
                 className="h-10 rounded-full px-5"
               >
                 Post on X
@@ -117,7 +117,14 @@ export function PledgeSection() {
               >
                 Share on LinkedIn
               </Button>
-              <Button type="button" variant="outline" className="h-10 rounded-full px-5" onClick={handleCopy}>
+              <Button
+                type="button"
+                variant="outline"
+                data-status={copied ? "success" : undefined}
+                aria-live="polite"
+                className="h-10 rounded-full px-5"
+                onClick={handleCopy}
+              >
                 {copied ? "Copied" : "Copy"}
               </Button>
             </div>

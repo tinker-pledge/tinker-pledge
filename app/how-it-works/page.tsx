@@ -82,11 +82,14 @@ export default function HowItWorksPage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-8">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">How it works</p>
-              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-medium leading-[0.9] tracking-[-0.065em] text-foreground">
+              <div className="flex items-center gap-4">
+                <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">How it works</p>
+                <span aria-hidden="true" className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
+              </div>
+              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
                 A personal AI budget, with enough structure to launch safely.
               </h1>
             </div>
@@ -109,13 +112,13 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">01 · Budget design</p>
+              <p className="tinker-step-label">01 · Budget design</p>
             </div>
             <div className="lg:col-span-8">
-              <h2 className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 Make the benefit easy to understand.
               </h2>
               <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -127,8 +130,8 @@ export default function HowItWorksPage() {
           <div className="mt-9 grid border-t border-border md:grid-cols-3">
             {budgetNotes.map((item, index) => (
               <article key={item.title} className="border-b border-border py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0">
-                <span className="font-mono text-xs text-primary">0{index + 1}</span>
-                <h3 className="mt-10 text-xl font-medium tracking-[-0.02em] text-foreground">{item.title}</h3>
+                <span className="tinker-sequence">0{index + 1}</span>
+                <h3 className="mt-10 text-xl font-normal tracking-[-0.02em] text-foreground">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
               </article>
             ))}
@@ -136,22 +139,22 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="border-b border-border bg-foreground text-background">
-        <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
-          <div className="border-b border-background/18 px-5 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">02 · Guardrails</p>
-            <h2 className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] sm:text-4xl">
+      <section className="surface-dark border-b border-[var(--palette-night-border)] bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+        <div className="tinker-frame grid lg:grid-cols-2">
+          <div className="border-b border-[var(--palette-night-border)] px-6 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
+            <p className="tinker-step-label">02 · Guardrails</p>
+            <h2 className="mt-7 max-w-xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] sm:text-4xl">
               Give freedom without making the policy vague.
             </h2>
           </div>
-          <div className="px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-            <div className="divide-y divide-background/18 border-y border-background/18">
+          <div className="px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+            <div className="divide-y divide-[var(--palette-night-border)] border-y border-[var(--palette-night-border)]">
               {guardrails.map((item, index) => (
                 <article key={item.title} className="grid gap-3 py-6 sm:grid-cols-[3rem_1fr]">
-                  <span className="font-mono text-xs text-primary">0{index + 1}</span>
+                  <span className="tinker-sequence">0{index + 1}</span>
                   <div>
-                    <h3 className="text-xl font-medium text-background">{item.title}</h3>
-                    <p className="mt-2 leading-relaxed text-background/65">{item.body}</p>
+                    <h3 className="text-xl font-normal text-[var(--palette-night-paper)]">{item.title}</h3>
+                    <p className="mt-2 leading-relaxed text-[var(--palette-night-muted)]">{item.body}</p>
                   </div>
                 </article>
               ))}
@@ -163,13 +166,13 @@ export default function HowItWorksPage() {
       <ToolsSection />
 
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">04 · Rollout</p>
+              <p className="tinker-step-label">04 · Rollout</p>
             </div>
             <div className="lg:col-span-8">
-              <h2 className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 Launch it in weeks, then improve it from signal.
               </h2>
               <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -181,8 +184,8 @@ export default function HowItWorksPage() {
           <ol className="mt-12 divide-y divide-border border-y border-border bg-card">
             {rollout.map((item) => (
               <li key={item.step} className="grid gap-5 p-7 sm:p-10 lg:grid-cols-12 lg:p-12">
-                <span className="font-mono text-xs text-primary lg:col-span-1">{item.step}</span>
-                <h3 className="text-xl font-medium tracking-[-0.02em] text-foreground lg:col-span-4">{item.title}</h3>
+                <span className="tinker-sequence lg:col-span-1">{item.step}</span>
+                <h3 className="text-xl font-normal tracking-[-0.02em] text-foreground lg:col-span-4">{item.title}</h3>
                 <p className="max-w-2xl leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">{item.body}</p>
               </li>
             ))}
@@ -191,11 +194,11 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="border-b border-border bg-secondary/45">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">05 · Reviewer guidance</p>
-              <h2 className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              <p className="tinker-step-label">05 · Reviewer guidance</p>
+              <h2 className="mt-7 max-w-xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 Frame it differently for each reviewer.
               </h2>
               <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -207,8 +210,8 @@ export default function HowItWorksPage() {
               <div className="grid border-t border-border md:grid-cols-3">
                 {audiences.map((item, index) => (
                   <article key={item.title} className="border-b border-border py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0">
-                    <span className="font-mono text-xs text-primary">0{index + 1}</span>
-                    <h3 className="mt-10 text-xl font-medium tracking-[-0.02em] text-foreground">{item.title}</h3>
+                    <span className="tinker-sequence">0{index + 1}</span>
+                    <h3 className="mt-10 text-xl font-normal tracking-[-0.02em] text-foreground">{item.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
                   </article>
                 ))}
@@ -219,9 +222,9 @@ export default function HowItWorksPage() {
       </section>
 
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-12 lg:items-end lg:px-10">
+        <div className="tinker-container grid gap-10 py-16 sm:py-20 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
-            <h2 className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] sm:text-4xl">
+            <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] sm:text-4xl">
               Ready to turn this into the first internal note?
             </h2>
             <p className="mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/90">

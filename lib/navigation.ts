@@ -10,6 +10,15 @@ export const footerProjectNavigation = [
   { label: "About", href: "/about" },
 ] as const
 
+const navigationRouteFamilies: Partial<Record<(typeof primaryNavigation)[number]["href"], readonly string[]>> = {
+  "/workshops": ["/workplace"],
+  "/pledge": ["/how-it-works", "/proposal"],
+}
+
 export function isCurrentNavigationPath(pathname: string, href: string): boolean {
-  return pathname === href || pathname.startsWith(`${href}/`)
+  if (pathname === href || pathname.startsWith(`${href}/`)) return true
+
+  return navigationRouteFamilies[href as keyof typeof navigationRouteFamilies]?.some(
+    (relatedPath) => pathname === relatedPath || pathname.startsWith(`${relatedPath}/`),
+  ) ?? false
 }

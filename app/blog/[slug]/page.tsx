@@ -78,17 +78,20 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
       <article className="border-b border-border bg-background">
-        <header className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:px-10">
+        <header className="tinker-container tinker-section grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-3">
-            <a
-              href="/blog"
-              className="font-mono text-xs uppercase tracking-[0.2em] text-primary transition-colors hover:text-foreground"
-            >
-              04 / Field notes
-            </a>
+            <div className="flex items-center gap-4">
+              <span className="h-0.5 w-10 bg-[var(--route-blog-accessory)]" />
+              <a
+                href="/blog"
+                className="tinker-eyebrow text-[var(--route-blog-accessory)] transition-colors hover:text-foreground"
+              >
+                04 / Field notes
+              </a>
+            </div>
           </div>
           <div className="lg:col-span-9">
-            <h1 className="max-w-5xl text-balance text-[clamp(3rem,6vw,5.8rem)] font-medium leading-[0.95] tracking-[-0.055em] text-foreground">
+            <h1 className="max-w-5xl text-balance text-[clamp(3rem,6vw,5.8rem)] font-light leading-[0.95] tracking-[-0.05em] text-foreground">
               {post.title}
             </h1>
             <AuthorByline
@@ -101,12 +104,12 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
 
         <div className="border-t border-border">
-          <div className="mx-auto grid max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-12 lg:px-10">
+          <div className="tinker-container grid py-16 sm:py-20 lg:grid-cols-12">
             <div
-              className="prose-tinker lg:col-span-7 lg:col-start-5"
+              className="prose-tinker tinker-blog-reading-measure lg:col-span-8 lg:col-start-5"
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-            <div className="lg:col-span-7 lg:col-start-5">
+            <div className="tinker-reading-measure lg:col-span-8 lg:col-start-5">
               <NewsletterSignup className="mt-16" />
               <p className="mt-12 border-t border-border pt-8 text-sm">
                 <a

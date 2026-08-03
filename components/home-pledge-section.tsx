@@ -4,18 +4,18 @@ import { Button } from "@/components/ui/button"
 export function HomePledgeSection() {
   return (
     <section id="pledge" className="scroll-mt-20 border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-36">
+      <div className="tinker-container tinker-route-immersive">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-4">
-              <span className="font-mono text-xs text-primary">02</span>
+              <span className="tinker-sequence">02</span>
               <span className="h-px w-10 bg-border" />
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Build fluency</p>
+              <p className="tinker-eyebrow text-muted-foreground">Build fluency</p>
             </div>
           </div>
 
           <div className="lg:col-span-8">
-            <h2 className="max-w-4xl text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-medium leading-[0.95] tracking-[-0.06em] text-foreground">
+            <h2 className="max-w-4xl text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-light leading-[0.95] tracking-[-0.05em] text-foreground">
               Give people a small personal AI budget. Let them learn what the tools are for.
             </h2>
           </div>
@@ -35,10 +35,11 @@ export function HomePledgeSection() {
                 render={<a href="/pledge" />}
                 nativeButton={false}
                 size="lg"
+                variant="ink"
                 className="h-12 rounded-full px-7"
               >
                 Read the one-page pledge
-                <ArrowRight className="size-4 transition-transform group-hover/button:translate-x-0.5" />
+                <ArrowRight className="size-4" />
               </Button>
               <Button
                 render={<a href="/proposal" />}
@@ -52,9 +53,9 @@ export function HomePledgeSection() {
             </div>
           </div>
 
-          <aside className="mt-12 border-t-4 border-primary bg-card p-6 sm:p-8 lg:col-span-4 lg:col-start-9 lg:mt-0">
+          <aside className="tinker-card mt-12 border border-border-card bg-card p-6 sm:p-8 lg:col-span-4 lg:col-start-9 lg:mt-0">
             <LockKeyhole className="size-6 text-primary" strokeWidth={1.7} />
-            <p className="mt-8 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-primary">One clear boundary</p>
+            <p className="tinker-eyebrow mt-8">One clear boundary</p>
             <p className="mt-4 text-xl font-medium leading-snug tracking-[-0.02em] text-foreground">
               Personal tools are for personal practice.
             </p>

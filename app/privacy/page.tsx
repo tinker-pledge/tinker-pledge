@@ -14,13 +14,13 @@ export default function PrivacyPage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-3">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">Privacy</p>
+              <p className="tinker-eyebrow">Privacy</p>
             </div>
             <div className="lg:col-span-8">
-              <h1 className="max-w-4xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-medium leading-[0.9] tracking-[-0.065em] text-foreground">
+              <h1 className="max-w-4xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
                 What this site collects, and why.
               </h1>
               <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
@@ -33,9 +33,9 @@ export default function PrivacyPage() {
       </section>
 
       <section className="bg-background">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:gap-8 lg:px-10">
+        <div className="tinker-container tinker-section grid gap-12 lg:grid-cols-12 lg:gap-8">
           <aside className="lg:col-span-3">
-            <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-primary">Last updated</p>
+            <p className="tinker-meta-label text-primary">Last updated</p>
             <p className="mt-3 text-sm text-muted-foreground">August 2, 2026</p>
             <p className="mt-8 max-w-xs text-sm leading-relaxed text-muted-foreground">
               Tinker Pledge is an open community project run by Eva and Abhi. In this policy, “we” means the people
@@ -43,19 +43,19 @@ export default function PrivacyPage() {
             </p>
           </aside>
 
-          <article className="space-y-14 lg:col-span-7 lg:col-start-5">
+          <article className="tinker-reading-measure space-y-20 lg:col-span-8 lg:col-start-5">
             <section aria-labelledby="information-you-give-us">
               <h2
                 id="information-you-give-us"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 Information you give us
               </h2>
 
-              <div className="mt-7 space-y-8 text-pretty leading-relaxed text-muted-foreground">
+              <div className="mt-4 space-y-8 text-pretty leading-relaxed text-muted-foreground">
                 <div>
-                  <h3 className="text-xl font-medium tracking-[-0.02em] text-foreground">Newsletter</h3>
-                  <p className="mt-3">
+                  <h3 className="text-xl font-normal tracking-[-0.02em] text-foreground">Newsletter</h3>
+                  <p className="mt-4">
                     When you subscribe, the form sends your email address to Buttondown, the service we use to send new
                     posts. Buttondown also records the IP address and referrer-level information connected with a
                     subscription. Every newsletter includes an unsubscribe link.
@@ -63,8 +63,8 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-medium tracking-[-0.02em] text-foreground">Email</h3>
-                  <p className="mt-3">
+                  <h3 className="text-xl font-normal tracking-[-0.02em] text-foreground">Email</h3>
+                  <p className="mt-4">
                     When you email us, we receive your email address, the name attached to your account, and anything
                     you include in the message or its attachments. We use that information to reply and to follow up on
                     the conversation you started.
@@ -72,8 +72,8 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-medium tracking-[-0.02em] text-foreground">Workshop registration</h3>
-                  <p className="mt-3">
+                  <h3 className="text-xl font-normal tracking-[-0.02em] text-foreground">Workshop registration</h3>
+                  <p className="mt-4">
                     Workshop registration happens on Luma. Information you enter there is handled under Luma&apos;s
                     privacy policy. We may receive the registration details Luma makes available to event hosts so we
                     can run the workshop and send messages about that event.
@@ -81,8 +81,8 @@ export default function PrivacyPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-medium tracking-[-0.02em] text-foreground">Tools that stay in your browser</h3>
-                  <p className="mt-3">
+                  <h3 className="text-xl font-normal tracking-[-0.02em] text-foreground">Tools that stay in your browser</h3>
+                  <p className="mt-4">
                     The details you enter in the proposal generator and the optional name you add to the pledge share
                     card are processed in your browser. We do not receive those entries. If you copy, download, or share
                     the result, the destination you choose handles it from there.
@@ -94,12 +94,12 @@ export default function PrivacyPage() {
             <section aria-labelledby="information-collected-automatically">
               <h2
                 id="information-collected-automatically"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 Information collected when the site loads
               </h2>
 
-              <div className="mt-7 space-y-5 text-pretty leading-relaxed text-muted-foreground">
+              <div className="mt-4 space-y-5 text-pretty leading-relaxed text-muted-foreground">
                 <p>
                   Vercel hosts this site and may process basic request and network information needed to deliver and
                   secure it.
@@ -124,11 +124,11 @@ export default function PrivacyPage() {
             <section aria-labelledby="how-we-use-information">
               <h2
                 id="how-we-use-information"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 How we use information
               </h2>
-              <ul className="mt-7 list-disc space-y-3 pl-5 leading-relaxed text-muted-foreground marker:text-primary">
+              <ul className="mt-4 list-disc space-y-3 pl-5 leading-relaxed text-muted-foreground marker:text-primary">
                 <li>Send new posts to people who joined the newsletter.</li>
                 <li>Reply to questions and workshop inquiries.</li>
                 <li>Organize workshops and send event information to registered attendees.</li>
@@ -143,11 +143,11 @@ export default function PrivacyPage() {
             <section aria-labelledby="services-we-use">
               <h2
                 id="services-we-use"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 Services we use
               </h2>
-              <div className="mt-7 space-y-5 text-pretty leading-relaxed text-muted-foreground">
+              <div className="mt-4 space-y-5 text-pretty leading-relaxed text-muted-foreground">
                 <p>
                   <a
                     href="https://buttondown.com/legal/privacy"
@@ -191,11 +191,11 @@ export default function PrivacyPage() {
             <section aria-labelledby="retention-and-choices">
               <h2
                 id="retention-and-choices"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 Retention and your choices
               </h2>
-              <div className="mt-7 space-y-5 text-pretty leading-relaxed text-muted-foreground">
+              <div className="mt-4 space-y-5 text-pretty leading-relaxed text-muted-foreground">
                 <p>
                   Buttondown keeps your newsletter subscription until you unsubscribe or ask for it to be removed.
                   Email and workshop correspondence is kept for as long as we need it to answer you, run the event, and
@@ -216,11 +216,11 @@ export default function PrivacyPage() {
             <section aria-labelledby="changes-to-this-policy">
               <h2
                 id="changes-to-this-policy"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 Changes to this policy
               </h2>
-              <p className="mt-7 text-pretty leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
                 If the site starts collecting different information or uses a new service, we will update this page and
                 change the date at the top.
               </p>
@@ -229,11 +229,11 @@ export default function PrivacyPage() {
             <section aria-labelledby="privacy-contact" className="border-t border-border pt-10">
               <h2
                 id="privacy-contact"
-                className="text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl"
+                className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl"
               >
                 Questions about your information
               </h2>
-              <p className="mt-7 text-pretty leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
                 Email{" "}
                 <a href="mailto:hello@tinkerpledge.org" className={externalLinkClass}>
                   hello@tinkerpledge.org

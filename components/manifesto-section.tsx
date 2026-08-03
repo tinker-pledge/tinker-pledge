@@ -27,28 +27,35 @@ export function ManifestoSection() {
   }
 
   return (
-    <section id="manifesto" className="border-b border-border bg-background">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+    <section id="manifesto" className="relative border-b border-border bg-background">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-pledge-horizon)]"
+      />
+      <div className="tinker-container tinker-section">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-8 lg:col-start-5">
-            <h1 className="max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-medium leading-[0.93] tracking-[-0.06em] text-foreground">
+            <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">
+              The pledge · Full daylight
+            </p>
+            <h1 className="mt-8 max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-light leading-[0.93] tracking-[-0.05em] text-foreground">
               Give people enough room to try again.
             </h1>
           </div>
         </div>
 
-        <article className="mt-16 border-y border-border bg-card sm:mt-24">
-          <header className="border-b border-border p-7 sm:p-10 lg:p-12">
+        <article className="tinker-card mt-16 overflow-hidden border border-border-card bg-card sm:mt-24">
+          <header className="border-b border-border-card p-7 sm:p-10 lg:p-12">
             <p className="max-w-4xl text-balance text-2xl font-medium leading-snug tracking-[-0.03em] text-foreground sm:text-3xl">
               Give your team access to AI at work and in their own life. Experimentation builds fluency.
             </p>
           </header>
 
-          <div className="divide-y divide-border">
+          <div className="divide-y divide-border-card">
             {principles.map((principle, index) => (
               <div key={principle.title} className="grid gap-5 p-7 sm:p-10 lg:grid-cols-12 lg:p-12">
-                <span className="font-mono text-xs text-primary lg:col-span-1">0{index + 1}</span>
-                <h2 className="text-xl font-medium tracking-[-0.02em] text-foreground lg:col-span-4">
+                <span className="tinker-sequence lg:col-span-1">0{index + 1}</span>
+                <h2 className="text-xl font-normal tracking-[-0.02em] text-foreground lg:col-span-4">
                   {principle.title}
                 </h2>
                 <p className="max-w-2xl leading-relaxed text-muted-foreground lg:col-span-6 lg:col-start-7">
@@ -58,7 +65,7 @@ export function ManifestoSection() {
             ))}
           </div>
 
-          <footer className="border-t border-border px-7 py-6 sm:px-10 lg:px-12">
+          <footer className="border-t border-border-card px-7 py-6 sm:px-10 lg:px-12">
             <p className="text-sm text-muted-foreground">
               Give people a reason to try, and enough access to try again.
             </p>
@@ -66,7 +73,7 @@ export function ManifestoSection() {
         </article>
 
         <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row print:hidden">
-          <Button type="button" size="lg" className="h-12 rounded-full px-7" onClick={handlePrint}>
+          <Button type="button" size="lg" variant="ink" className="h-12 rounded-full px-7" onClick={handlePrint}>
             Print or save as PDF
           </Button>
           <Button

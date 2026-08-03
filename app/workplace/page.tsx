@@ -39,13 +39,16 @@ export default function WorkplacePage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-8">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">
-                Workshop · Private sessions
-              </p>
-              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-medium leading-[0.9] tracking-[-0.065em] text-foreground">
+              <div className="flex items-center gap-4">
+                <p className="tinker-eyebrow text-[var(--route-workshop-accessory-ink)]">
+                  Workshop · Private sessions
+                </p>
+                <span aria-hidden="true" className="h-px w-10 bg-[var(--route-workshop-accessory)]" />
+              </div>
+              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
                 Shape the room around your team.
               </h1>
             </div>
@@ -61,31 +64,31 @@ export default function WorkplacePage() {
                 className="mt-8 h-12 w-fit rounded-full px-7"
               >
                 Tell us about your team
-                <ArrowRight className="size-4 transition-transform group-hover/button:translate-x-0.5" />
+                <ArrowRight className="size-4" />
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="border-b border-border bg-foreground text-background">
-        <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
-          <div className="border-b border-background/18 px-5 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">What it is</p>
+      <section className="surface-dark border-b border-[var(--palette-night-border)] bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+        <div className="tinker-frame grid lg:grid-cols-2">
+          <div className="border-b border-[var(--palette-night-border)] px-6 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
+            <p className="tinker-eyebrow">What it is</p>
             <p className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] sm:text-4xl">
               A teaching engagement built around real work.
             </p>
-            <p className="mt-6 max-w-lg leading-relaxed text-background/65">
+            <p className="mt-6 max-w-lg leading-relaxed text-[var(--palette-night-muted)]">
               We listen to what people are trying to do, help them choose and use the tools, and make space to question
               the output.
             </p>
           </div>
-          <div className="px-5 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-background/45">What it is not</p>
-            <p className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-background/80 sm:text-4xl">
+          <div className="px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+            <p className="tinker-eyebrow text-[var(--palette-night-quiet)]">What it is not</p>
+            <p className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-[var(--palette-night-muted)] sm:text-4xl">
               A giant rollout, a tool mandate, or the pledge.
             </p>
-            <p className="mt-6 max-w-lg leading-relaxed text-background/55">
+            <p className="mt-6 max-w-lg leading-relaxed text-[var(--palette-night-quiet)]">
               A team can book a workshop whether or not the employer adopts the Tinker Pledge. They are connected
               projects, not a package deal.
             </p>
@@ -94,11 +97,11 @@ export default function WorkplacePage() {
       </section>
 
       <section className="border-b border-border bg-secondary/45">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">A flexible starting point</p>
-              <h2 className="mt-5 max-w-md text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              <p className="tinker-eyebrow">A flexible starting point</p>
+              <h2 className="mt-5 max-w-md text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 We set the agenda after we hear what the room needs.
               </h2>
               <p className="mt-5 max-w-md text-pretty leading-relaxed text-muted-foreground">
@@ -119,16 +122,16 @@ export default function WorkplacePage() {
       </section>
 
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">How we hold the room</p>
+        <div className="tinker-container tinker-section">
+          <p className="tinker-eyebrow">How we hold the room</p>
           <div className="mt-9 grid border-t border-border md:grid-cols-3">
             {principles.map((principle) => (
               <article
                 key={principle.number}
                 className="border-b border-border py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
-                <span className="font-mono text-xs text-primary">{principle.number}</span>
-                <h2 className="mt-10 text-xl font-medium tracking-[-0.02em] text-foreground">{principle.title}</h2>
+                <span className="tinker-sequence">{principle.number}</span>
+                <h2 className="mt-10 text-xl font-normal tracking-[-0.02em] text-foreground">{principle.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{principle.body}</p>
               </article>
             ))}
@@ -137,12 +140,12 @@ export default function WorkplacePage() {
       </section>
 
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-12 lg:items-end lg:px-10">
+        <div className="tinker-container grid gap-10 py-16 sm:py-20 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary-foreground/65">
+            <p className="tinker-eyebrow text-primary-foreground/65">
               Paid sessions help cover the public work
             </p>
-            <h2 className="mt-5 max-w-4xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] sm:text-4xl">
+            <h2 className="mt-5 max-w-4xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] sm:text-4xl">
               Tell us who will be in the room and what they need to move forward.
             </h2>
           </div>

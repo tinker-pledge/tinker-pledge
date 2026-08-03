@@ -12,11 +12,14 @@ export default function ProposalPage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-8">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">Make it real</p>
-              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-medium leading-[0.9] tracking-[-0.065em] text-foreground">
+              <div className="flex items-center gap-4">
+                <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Make it real</p>
+                <span aria-hidden="true" className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
+              </div>
+              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
                 Turn the idea into a proposal you can send today.
               </h1>
             </div>

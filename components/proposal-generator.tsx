@@ -94,21 +94,20 @@ export function ProposalGenerator() {
     URL.revokeObjectURL(url)
   }
 
-  const inputClass =
-    "h-11 w-full rounded-xl border border-border bg-card px-4 text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary"
-  const labelClass = "mb-1.5 block text-sm font-medium text-foreground"
+  const inputClass = "tinker-field"
+  const labelClass = "tinker-label"
 
   return (
     <section id="proposal" className="border-b border-border bg-secondary/45">
-      <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+      <div className="tinker-container tinker-section">
         <div className="mb-8 flex items-center gap-4">
-          <span className="font-mono text-xs text-primary">01</span>
+          <span className="tinker-sequence">01</span>
           <span className="h-px w-10 bg-border" />
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">Build the draft</p>
+          <p className="tinker-eyebrow text-muted-foreground">Build the draft</p>
         </div>
 
-        <div className="grid border-y border-border bg-card lg:grid-cols-12">
-          <div className="border-b border-border p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-10">
+        <div className="tinker-card grid overflow-hidden border border-border-card bg-card lg:grid-cols-12">
+          <div className="border-b border-border-card p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-10">
             <div className="flex flex-col gap-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
@@ -196,7 +195,7 @@ export function ProposalGenerator() {
                       type="button"
                       onClick={() => setTone(t.id)}
                       aria-pressed={tone === t.id}
-                      className={`h-10 flex-1 rounded-xl border text-sm font-medium transition-colors ${
+                      className={`tinker-choice-state tinker-segmented-control flex-1 border text-sm font-medium ${
                         tone === t.id
                           ? "border-primary bg-primary text-primary-foreground"
                           : "border-border bg-card text-muted-foreground hover:border-primary/50"
@@ -212,9 +211,17 @@ export function ProposalGenerator() {
 
           <div className="flex min-w-0 flex-col p-6 sm:p-8 lg:col-span-7 lg:p-10">
             <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <span className="font-mono text-xs uppercase tracking-[0.16em] text-muted-foreground">Your proposal</span>
+              <span className="tinker-meta-label text-muted-foreground">Your proposal</span>
               <div className="flex gap-2">
-                <Button type="button" size="sm" variant="outline" className="rounded-full" onClick={handleCopy}>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="outline"
+                  data-status={copied ? "success" : undefined}
+                  aria-live="polite"
+                  className="rounded-full"
+                  onClick={handleCopy}
+                >
                   {copied ? "Copied" : "Copy"}
                 </Button>
                 <Button type="button" size="sm" className="rounded-full" onClick={handleDownload}>
@@ -222,7 +229,7 @@ export function ProposalGenerator() {
                 </Button>
               </div>
             </div>
-            <pre className="min-h-[28rem] flex-1 whitespace-pre-wrap rounded-xl border border-border/70 bg-background p-5 font-sans text-sm leading-relaxed text-foreground sm:p-6">
+            <pre className="min-h-[28rem] flex-1 whitespace-pre-wrap rounded-xl border border-border-card bg-background p-5 font-sans text-sm leading-relaxed text-foreground sm:p-6">
               {proposal}
             </pre>
           </div>

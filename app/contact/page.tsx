@@ -16,13 +16,13 @@ export default function ContactPage() {
   return (
     <main>
       <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-32">
+        <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-[0.7rem] uppercase tracking-[0.22em] text-primary">Contact</p>
+              <p className="tinker-eyebrow">Contact</p>
             </div>
             <div className="lg:col-span-8">
-              <h1 className="max-w-4xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-medium leading-[0.9] tracking-[-0.065em] text-foreground">
+              <h1 className="max-w-4xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
                 Start with what you want to make possible.
               </h1>
               <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
@@ -52,11 +52,11 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-secondary/45">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
+        <div className="tinker-container tinker-section">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-4">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Choose a starting point</p>
-              <h2 className="mt-5 max-w-sm text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+              <p className="tinker-eyebrow">Choose a starting point</p>
+              <h2 className="mt-5 max-w-sm text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 A little context helps us answer well.
               </h2>
             </div>
@@ -64,12 +64,12 @@ export default function ContactPage() {
             <div className="border-y border-border lg:col-span-8">
               <article id="podcast" className="scroll-mt-20 py-9 sm:py-10">
                 <div className="grid gap-6 sm:grid-cols-[3rem_1fr] sm:gap-8">
-                  <span className="flex size-12 items-center justify-center border border-border bg-background text-primary">
+                  <span className="tinker-icon-well size-12">
                     <Mic2 className="size-5" strokeWidth={1.75} />
                   </span>
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Podcast</p>
-                    <h3 className="mt-3 max-w-xl text-balance text-2xl font-medium tracking-[-0.03em] text-foreground sm:text-3xl">
+                    <p className="tinker-eyebrow">Podcast</p>
+                    <h3 className="mt-3 max-w-xl text-balance text-2xl font-light tracking-[-0.025em] text-foreground sm:text-3xl">
                       Share what happened after your first try.
                     </h3>
                     <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
@@ -81,7 +81,7 @@ export default function ContactPage() {
                       nativeButton={false}
                       size="lg"
                       variant="outline"
-                      className="mt-7 h-11 rounded-full px-6"
+                      className="mt-7 h-[var(--control-h-cta)] rounded-full px-6"
                     >
                       Talk with us about the podcast
                       <ArrowUpRight className="size-4" />
@@ -92,12 +92,12 @@ export default function ContactPage() {
 
               <article id="workshops" className="scroll-mt-20 border-t border-border py-9 sm:py-10">
                 <div className="grid gap-6 sm:grid-cols-[3rem_1fr] sm:gap-8">
-                  <span className="flex size-12 items-center justify-center border border-border bg-background text-primary">
+                  <span className="tinker-icon-well size-12">
                     <UsersRound className="size-5" strokeWidth={1.75} />
                   </span>
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Workshops</p>
-                    <h3 className="mt-3 max-w-xl text-balance text-2xl font-medium tracking-[-0.03em] text-foreground sm:text-3xl">
+                    <p className="tinker-eyebrow">Workshops</p>
+                    <h3 className="mt-3 max-w-xl text-balance text-2xl font-light tracking-[-0.025em] text-foreground sm:text-3xl">
                       Shape a practical session around your team.
                     </h3>
                     <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
@@ -109,7 +109,7 @@ export default function ContactPage() {
                       nativeButton={false}
                       size="lg"
                       variant="outline"
-                      className="mt-7 h-11 rounded-full px-6"
+                      className="mt-7 h-[var(--control-h-cta)] rounded-full px-6"
                     >
                       Ask about a team workshop
                       <ArrowUpRight className="size-4" />

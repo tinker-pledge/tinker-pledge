@@ -19,46 +19,60 @@ const questions = [
 export default function PodcastPage() {
   return (
     <main>
-      <section className="bg-[oklch(0.205_0.028_330)] text-[oklch(0.96_0.014_60)]">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10 lg:py-36">
+      <section className="surface-dark surface-podcast bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+        <div className="tinker-container tinker-route-immersive">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-4">
-                <span className="font-mono text-xs text-[oklch(0.74_0.13_31)]">03</span>
-                <span className="h-px w-10 bg-white/20" />
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/55">Podcast · In development</p>
+                <span className="tinker-sequence text-[var(--palette-night-quiet)]">03</span>
+                <span className="h-0.5 w-10 bg-[var(--route-podcast-accessory)]" />
+                <div className="flex items-center gap-3">
+                  <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">Podcast</p>
+                  <span className="tinker-badge tinker-badge--progress">
+                    <span aria-hidden="true" className="tinker-badge__dot" />
+                    In development
+                  </span>
+                </div>
               </div>
-              <h1 className="mt-9 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7.2rem)] font-medium leading-[0.89] tracking-[-0.065em]">
+              <h1 className="mt-9 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7.2rem)] font-light leading-[0.89] tracking-[-0.055em]">
                 Conversations after the first try.
               </h1>
-              <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-white/65 sm:text-xl">
+              <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-[var(--palette-night-muted)] sm:text-xl">
                 Each episode, Eva will talk with someone outside tech who tried AI in their own life. Some kept going,
                 some went back to doing it by hand. Listen to their journey and see what you can bring to your own.
               </p>
             </div>
 
-            <aside className="border border-white/18 bg-white/[0.035] lg:col-span-5">
-              <div className="flex items-center justify-between border-b border-white/15 px-6 py-4">
-                <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-white/50">Production brief</p>
-                <span className="inline-flex items-center gap-2 text-xs text-white/60">
-                  <span className="size-2 rounded-full bg-[oklch(0.74_0.13_31)]" />
+            <aside className="tinker-card overflow-hidden border border-border-card bg-[var(--palette-night-card)] lg:col-span-5">
+              <div className="flex items-center justify-between border-b border-border-card px-6 py-4">
+                <p className="tinker-meta-label text-[var(--palette-night-quiet)]">
+                  Production brief
+                </p>
+                <span className="tinker-badge tinker-badge--progress">
+                  <span aria-hidden="true" className="tinker-badge__dot" />
                   Early work
                 </span>
               </div>
-              <dl className="divide-y divide-white/15 px-6">
+              <dl className="divide-y divide-border-card px-6">
                 <div className="grid grid-cols-[5rem_1fr] gap-5 py-5">
-                  <dt className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-white/40">Host</dt>
-                  <dd className="text-sm leading-relaxed text-white/80">Eva</dd>
+                  <dt className="tinker-meta-label text-[var(--palette-night-quiet)]">
+                    Host
+                  </dt>
+                  <dd className="text-sm leading-relaxed text-[var(--palette-night-muted)]">Eva</dd>
                 </div>
                 <div className="grid grid-cols-[5rem_1fr] gap-5 py-5">
-                  <dt className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-white/40">Subject</dt>
-                  <dd className="text-sm leading-relaxed text-white/80">
+                  <dt className="tinker-meta-label text-[var(--palette-night-quiet)]">
+                    Subject
+                  </dt>
+                  <dd className="text-sm leading-relaxed text-[var(--palette-night-muted)]">
                     The lived experience of trying AI, not another tour of the launch cycle.
                   </dd>
                 </div>
                 <div className="grid grid-cols-[5rem_1fr] gap-5 py-5">
-                  <dt className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-white/40">Release</dt>
-                  <dd className="text-sm leading-relaxed text-white/80">
+                  <dt className="tinker-meta-label text-[var(--palette-night-quiet)]">
+                    Release
+                  </dt>
+                  <dd className="text-sm leading-relaxed text-[var(--palette-night-muted)]">
                     After the first conversations have been recorded and are ready to share.
                   </dd>
                 </div>
@@ -66,13 +80,15 @@ export default function PodcastPage() {
             </aside>
           </div>
 
-          <div className="mt-20 border-t border-white/18 pt-10 lg:mt-28">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/45">The working question list</p>
-            <ol className="mt-8 divide-y divide-white/15 border-y border-white/15">
+          <div className="mt-20 border-t border-[var(--palette-night-border)] pt-10 lg:mt-28">
+            <p className="tinker-eyebrow text-[var(--palette-night-quiet)]">
+              The working question list
+            </p>
+            <ol className="mt-8 divide-y divide-[var(--palette-night-border)] border-y border-[var(--palette-night-border)]">
               {questions.map((question, index) => (
                 <li key={question} className="grid gap-5 py-7 sm:grid-cols-[3rem_1fr] sm:items-start">
-                  <span className="font-mono text-xs text-[oklch(0.74_0.13_31)]">0{index + 1}</span>
-                  <p className="max-w-4xl text-balance text-2xl leading-snug tracking-[-0.025em] text-white/85 sm:text-3xl">
+                  <span className="tinker-sequence text-[var(--palette-night-quiet)]">0{index + 1}</span>
+                  <p className="max-w-4xl text-balance text-2xl leading-snug tracking-[-0.025em] text-[var(--palette-night-paper)] sm:text-3xl">
                     {question}
                   </p>
                 </li>
@@ -82,16 +98,16 @@ export default function PodcastPage() {
         </div>
       </section>
 
-      <section className="bg-background">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-12 lg:px-10">
+      <section className="surface-dark surface-podcast border-t border-[var(--palette-night-border)] bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+        <div className="tinker-container tinker-section grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-primary">Hosted by Eva</p>
+            <p className="tinker-eyebrow text-[var(--palette-night-quiet)]">Hosted by Eva</p>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
-            <h2 className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-foreground sm:text-4xl">
+            <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-[var(--palette-night-paper)] sm:text-4xl">
               A host who started with the same questions you have.
             </h2>
-            <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-[var(--palette-night-muted)]">
               Eva went to her first hackathon in high school without knowing how to code. She kept showing up, started
               a media and technology company, and built a career around helping people meet technology that&apos;s new
               to them. On this show, she&apos;s keen to learn about your journey: what you doubted, what surprised you,
@@ -102,6 +118,7 @@ export default function PodcastPage() {
                 render={<a href="/contact#podcast" />}
                 nativeButton={false}
                 size="lg"
+                variant="paper"
                 className="h-12 rounded-full px-7"
               >
                 Talk with us about the podcast
@@ -109,7 +126,7 @@ export default function PodcastPage() {
               </Button>
               <a
                 href="/about#eva"
-                className="inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-border underline-offset-4 hover:text-primary"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[var(--palette-night-muted)] underline decoration-[var(--palette-night-border)] underline-offset-4 hover:text-[var(--palette-night-paper)]"
               >
                 About Eva
                 <ArrowRight className="size-4" />
