@@ -218,7 +218,7 @@ export default function WorkshopsPage() {
             </p>
             <a
               href="/workplace"
-              className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-foreground underline decoration-border underline-offset-4 hover:text-primary"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-primary underline decoration-primary/50 underline-offset-4 hover:text-foreground"
             >
               See the team format
               <ArrowRight className="size-4" />

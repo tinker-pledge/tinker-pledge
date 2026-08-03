@@ -34,7 +34,10 @@ export function SiteFooter() {
           <nav aria-label="Ways to work with us" className="md:col-span-3 md:col-start-10">
             <p className="tinker-meta-label text-[var(--palette-night-quiet)]">Work with us</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-[var(--palette-night-muted)]">
-              <a href="/workplace" className="transition-colors hover:text-[var(--palette-night-paper)]">
+              <a
+                href="/workplace"
+                className="text-[var(--palette-golden-hour)] transition-colors hover:text-[var(--palette-night-paper)]"
+              >
                 Bring the workshop to your team
               </a>
               <a href="/how-it-works" className="transition-colors hover:text-[var(--palette-night-paper)]">

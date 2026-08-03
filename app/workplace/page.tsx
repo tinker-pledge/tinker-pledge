@@ -7,6 +7,12 @@ export const metadata = createPageMetadata({
   description:
     "Bring a practical hands-on AI workshop to your small or midsize business.",
   path: "/workplace",
+  image: {
+    url: "/workplace/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Shape the room around your team. Hands-on AI workshops for teams from the Tinker Pledge.",
+  },
 })
 
 const sessionPoints = [
@@ -37,8 +43,12 @@ const principles = [
 
 export default function WorkplacePage() {
   return (
-    <main>
-      <section className="border-b border-border bg-background">
+    <main className="surface-dark surface-workshop bg-background text-foreground">
+      <section className="relative border-b border-border bg-background">
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-workshop-horizon)]"
+        />
         <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-8">
@@ -71,21 +81,21 @@ export default function WorkplacePage() {
         </div>
       </section>
 
-      <section className="surface-dark border-b border-[var(--palette-night-border)] bg-[var(--palette-night-water)] text-[var(--palette-night-paper)]">
+      <section className="border-b border-border bg-card text-foreground">
         <div className="tinker-frame grid lg:grid-cols-2">
-          <div className="border-b border-[var(--palette-night-border)] px-6 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
-            <p className="tinker-eyebrow">What it is</p>
+          <div className="border-b border-border px-6 py-16 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-10 lg:py-24">
+            <p className="tinker-eyebrow text-primary">What it is</p>
             <p className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] sm:text-4xl">
               A teaching engagement built around real work.
             </p>
-            <p className="mt-6 max-w-lg leading-relaxed text-[var(--palette-night-muted)]">
+            <p className="mt-6 max-w-lg leading-relaxed text-muted-foreground">
               We listen to what people are trying to do, help them choose and use the tools, and make space to question
               the output.
             </p>
           </div>
           <div className="px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
-            <p className="tinker-eyebrow text-[var(--palette-night-quiet)]">What it is not</p>
-            <p className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-[var(--palette-night-muted)] sm:text-4xl">
+            <p className="tinker-eyebrow text-muted-foreground">What it is not</p>
+            <p className="mt-7 max-w-xl text-balance text-3xl font-medium leading-tight tracking-[-0.04em] text-muted-foreground sm:text-4xl">
               A giant rollout, a tool mandate, or the pledge.
             </p>
             <p className="mt-6 max-w-lg leading-relaxed text-[var(--palette-night-quiet)]">

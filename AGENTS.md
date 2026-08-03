@@ -71,12 +71,12 @@
 
 ## Route Color Associations
 
-- A route's color association travels with it everywhere it appears: destination page, homepage preview, active navigation marker, compact route index, and related support-route eyebrow. Do not give the same route a different visual identity in a different context.
+- A route's color association travels with it everywhere it appears: destination page, homepage preview, active navigation marker, compact route index, and related routes. Do not give the same route a different visual identity in a different context.
 - **Workshop — Golden Hour**
   - Dark warm-black ground, cream text, Golden Hour gold actions and markers, with ember used inside the horizon/orb/sun-fill apparatus.
-  - Use `surface-dark surface-workshop` for the complete `/workshops` page and the homepage Workshop section. Do not switch later Workshop sections back to paper.
-  - The `/workshops` Open Graph image also uses the dark Golden Hour system; do not fall back to the generic paper share card.
-  - `/workplace` remains a paper support route and carries only the accessible Golden Hour ink marker; it does not become a full dark Workshop surface.
+  - Use `surface-dark surface-workshop` for the complete `/workshops` and `/workplace` pages and the homepage Workshop section. Do not switch later Workshop sections back to paper.
+  - The `/workshops` and `/workplace` Open Graph images also use the dark Golden Hour system; do not fall back to the generic paper share card.
+  - Links to `/workplace` use the Golden Hour action color so the private format remains visibly part of Workshop.
 - **Pledge — Full Daylight**
   - Cream paper, warm-black ink, the daylight gold horizon, and accessible ochre labels. Primary document actions use the warm-black `ink` treatment.
   - Repeat the daylight horizon and gold eyebrow on `/pledge` and the homepage Pledge section.
