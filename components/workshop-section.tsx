@@ -5,17 +5,14 @@ import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
 
 const roomNotes = [
   {
-    number: "01",
     title: "Start from your real work",
     body: "Bring one thing: a vendor email, a messy CSV, an interview rubric, a weekly report, family chores scheduling, a task you still do by hand.",
   },
   {
-    number: "02",
     title: "Work side by side",
     body: "We help you choose an approach, ask better questions, check the result, and change course when it fails.",
   },
   {
-    number: "03",
     title: "Leave with it running",
     body: "Your files, your agents, your skills. Open your laptop at home and feel confident about tackling a bigger, more complex task.",
   },
@@ -33,8 +30,10 @@ export function WorkshopSection() {
       />
       <div className="tinker-container py-20 sm:py-28 lg:py-32">
         <div className="mb-16 border-y border-foreground/20 py-7 sm:mb-24 sm:py-9">
-          <p className="tinker-meta-label text-foreground/50">Next workshop</p>
-          <p className="mt-3 max-w-3xl text-2xl font-medium tracking-[-0.025em]">
+          <h2 className="max-w-3xl text-3xl font-light tracking-[-0.035em] sm:text-4xl">
+            The next workshop is in Ann Arbor.
+          </h2>
+          <p className="mt-4 max-w-3xl text-2xl font-medium tracking-[-0.025em]">
             {ANN_ARBOR_WORKSHOP.title}
           </p>
           <div className="mt-5 flex flex-col gap-3 text-sm text-foreground/75">
@@ -62,12 +61,7 @@ export function WorkshopSection() {
 
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-4">
-              <span aria-hidden="true" className="h-px w-10 bg-[var(--route-workshop-accessory)]" />
-              <p className="tinker-eyebrow text-[var(--route-workshop-accessory)]">
-                Workshop
-              </p>
-            </div>
+            <p className="tinker-eyebrow text-[var(--route-workshop-accessory)]">Workshop</p>
             <h2 className="mt-8 text-[clamp(3.5rem,7vw,6.5rem)] font-light leading-[0.9] tracking-[-0.05em]">
               Bring the task you keep doing by hand.
             </h2>
@@ -123,18 +117,17 @@ export function WorkshopSection() {
               <ArrowRight className="size-4" />
             </a>
           </div>
-          <ol className="grid border-t border-foreground/20 md:grid-cols-3">
+          <ul className="grid border-t border-foreground/20 md:grid-cols-3">
             {roomNotes.map((note) => (
               <li
-                key={note.number}
+                key={note.title}
                 className="border-b border-foreground/20 py-7 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
-                <span className="tinker-sequence">{note.number}</span>
-                <h3 className="mt-8 text-xl font-normal tracking-[-0.02em]">{note.title}</h3>
+                <h3 className="text-xl font-normal tracking-[-0.02em]">{note.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-foreground/60">{note.body}</p>
               </li>
             ))}
-          </ol>
+          </ul>
         </div>
       </div>
     </section>

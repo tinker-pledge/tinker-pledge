@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ANN_ARBOR_WORKSHOP, NYC_WORKSHOP } from "@/data/workshops"
@@ -7,13 +6,13 @@ import { createPageMetadata } from "@/lib/site-metadata"
 export const metadata = createPageMetadata({
   title: "Hands-on AI Workshops | The Tinker Pledge",
   description:
-    "Bring a problem or workflow to a hands-on public AI workshop. No coding required.",
+    "Bring a real task to a hands-on public AI workshop. No coding required.",
   path: "/workshops",
   image: {
     url: "/workshops/opengraph-image",
     width: 1200,
     height: 630,
-    alt: "Bring one real problem. Hands-on AI workshops from the Tinker Pledge.",
+    alt: "Bring one real task. Hands-on AI workshops from the Tinker Pledge.",
   },
 })
 
@@ -50,13 +49,13 @@ export default function WorkshopsPage() {
                 Workshop · Hands-on public session
               </p>
               <h1 className="mt-7 text-balance font-heading text-[clamp(3.8rem,8vw,7.6rem)] font-light leading-[0.88] tracking-[-0.055em]">
-                Bring one real problem.
+                Bring one real task.
               </h1>
             </div>
             <div className="flex flex-col lg:col-span-7">
-              <p className="max-w-md text-pretty text-lg leading-relaxed text-[var(--palette-night-muted)] sm:text-xl">
+              <p className="text-pretty text-lg leading-relaxed text-[var(--palette-night-muted)] sm:text-xl">
                 Bring the task on your laptop. Abhi and Eva will work beside you and help you find out what today&apos;s
-                tools can—and cannot—do with it.
+                tools can and cannot do with it.
               </p>
               <Button
                 render={
@@ -76,37 +75,13 @@ export default function WorkshopsPage() {
             </div>
           </div>
 
-          <figure className="mt-16 sm:mt-24">
-            <div className="tinker-hero-frame aspect-[16/7] overflow-hidden">
-              <Image
-                src="/images/workshop-tinkering-photo.jpg"
-                alt="A person working at a laptop with handwritten notes spread across the table"
-                width={1200}
-                height={1800}
-                preload
-                sizes="(min-width: 1280px) 1200px, 100vw"
-                className="tinker-photo h-full w-full object-cover object-[center_53%]"
-              />
-            </div>
-            <figcaption className="mt-2 text-right text-[0.68rem] text-[var(--palette-night-quiet)]">
-              Photo:{" "}
-              <a
-                href="https://www.pexels.com/photo/person-using-a-laptop-on-a-table-7429471/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:text-foreground"
-              >
-                cottonbro studio / Pexels
-              </a>
-            </figcaption>
-          </figure>
         </div>
       </section>
 
       <section className="border-b border-border bg-background">
         <div className="tinker-container tinker-section">
           <div className="flex items-center gap-4">
-            <span className="tinker-meta-label text-primary">Next up:</span>
+            <span className="tinker-meta-label text-primary">Up next</span>
             <span className="h-px w-10 bg-border" />
           </div>
 
@@ -115,10 +90,6 @@ export default function WorkshopsPage() {
               <p className="font-mono text-5xl font-normal tracking-[-0.055em] text-foreground">{ANN_ARBOR_WORKSHOP.day}</p>
               <p className="tinker-meta-label mt-2 text-muted-foreground">
                 {ANN_ARBOR_WORKSHOP.monthYear}
-              </p>
-              <p className="tinker-badge tinker-badge--success mt-5">
-                <span aria-hidden="true" className="tinker-badge__dot" />
-                Open registration
               </p>
             </div>
             <div className="border-b border-border-card px-7 py-7 lg:col-span-7 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
@@ -132,6 +103,10 @@ export default function WorkshopsPage() {
                   {ANN_ARBOR_WORKSHOP.date}
                 </span>
               </div>
+              <p className="tinker-badge tinker-badge--success mt-5">
+                <span aria-hidden="true" className="tinker-badge__dot" />
+                Open registration
+              </p>
               <h2 className="mt-8 max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
                 {ANN_ARBOR_WORKSHOP.title}
               </h2>

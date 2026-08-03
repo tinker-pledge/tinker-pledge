@@ -25,17 +25,14 @@ const sessionPoints = [
 
 const principles = [
   {
-    number: "01",
     title: "Start with the work",
     body: "Participants arrive with something real to move forward, not a generic productivity exercise.",
   },
   {
-    number: "02",
     title: "Practice safely",
     body: "The room begins with clear boundaries for company information and unapproved tools.",
   },
   {
-    number: "03",
     title: "Keep the group small",
     body: "The format leaves enough time for people to work and get help when the process breaks down.",
   },
@@ -137,11 +134,10 @@ export default function WorkplacePage() {
           <div className="mt-9 grid border-t border-border md:grid-cols-3">
             {principles.map((principle) => (
               <article
-                key={principle.number}
+                key={principle.title}
                 className="border-b border-border py-8 md:border-b-0 md:border-r md:px-7 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
-                <span className="tinker-sequence">{principle.number}</span>
-                <h2 className="mt-10 text-xl font-normal tracking-[-0.02em] text-foreground">{principle.title}</h2>
+                <h2 className="text-xl font-normal tracking-[-0.02em] text-foreground">{principle.title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{principle.body}</p>
               </article>
             ))}

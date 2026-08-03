@@ -11,10 +11,7 @@ export function HomePledgeSection() {
       <div className="tinker-container tinker-route-immersive">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-12">
-            <div className="flex items-center gap-4">
-              <span className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
-              <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Pledge</p>
-            </div>
+            <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Pledge</p>
           </div>
 
           <div className="lg:col-span-12">

@@ -23,11 +23,7 @@ export default function PodcastPage() {
         <div className="tinker-container tinker-route-immersive">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-7">
-              <div className="flex items-center gap-4">
-                <span className="tinker-sequence text-[var(--palette-night-quiet)]">03</span>
-                <span className="h-0.5 w-10 bg-[var(--route-podcast-accessory)]" />
-                <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">Podcast</p>
-              </div>
+              <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">Podcast</p>
               <h1 className="mt-9 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7.2rem)] font-light leading-[0.89] tracking-[-0.055em]">
                 Conversations after the first try.
               </h1>

@@ -38,7 +38,8 @@ export default function BlogIndexPage() {
               Blog
             </h1>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              Field notes from the workshops, the pledge, and people learning what these tools are useful for.
+              Stories from hands-on workshops and what happened when people and organizations tried AI. We also share
+              our methods, findings, and experiments.
             </p>
           </header>
 

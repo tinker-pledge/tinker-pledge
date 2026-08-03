@@ -16,14 +16,9 @@ export function HomePodcastSection() {
       <div className="tinker-container tinker-route-immersive">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-4">
-              <span className="h-0.5 w-10 bg-[var(--route-podcast-accessory)]" />
-              <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">
-                Podcast
-              </p>
-            </div>
+            <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">Podcast</p>
             <h2 className="mt-9 max-w-4xl text-balance text-[clamp(3rem,6.5vw,6.5rem)] font-light leading-[0.92] tracking-[-0.05em]">
-              What did you try—and what happened next?
+              What did you try? What happened next?
             </h2>
             <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-[var(--palette-night-muted)] sm:text-xl">
               You already have the story. Someone still at the point where you started is listening for it. We want

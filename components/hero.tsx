@@ -16,11 +16,10 @@ export function Hero() {
           <div className="grid md:grid-cols-3">
             <a
               href="#workshop"
-              className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
+              className="tinker-state-surface group grid min-h-32 grid-cols-[1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-1 md:border-b-0 md:border-r md:px-6 md:first:pl-0"
             >
-              <span className="tinker-sequence mt-1 text-[var(--route-workshop-accessory-ink)]">01</span>
               <span>
-                <span className="block text-lg font-medium tracking-tight text-foreground">Workshop</span>
+                <span className="block text-lg font-medium tracking-tight text-[var(--route-workshop-accessory-ink)]">Workshop</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
                   Bring one real task. Leave knowing how to build the thing that runs the next hundred.
                 </span>
@@ -29,11 +28,10 @@ export function Hero() {
             </a>
             <a
               href="/pledge"
-              className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6"
+              className="tinker-state-surface group grid min-h-32 grid-cols-[1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-1 md:border-b-0 md:border-r md:px-6"
             >
-              <span className="tinker-sequence mt-1 text-[var(--route-pledge-accessory-ink)]">02</span>
               <span>
-                <span className="block text-lg font-medium tracking-tight text-foreground">The pledge</span>
+                <span className="block text-lg font-medium tracking-tight text-[var(--route-pledge-accessory-ink)]">The pledge</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
                   Give everyone a budget to tinker with AI. We wrote the proposal for you.
                 </span>
@@ -42,11 +40,10 @@ export function Hero() {
             </a>
             <a
               href="/podcast"
-              className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:px-6 md:last:pr-0"
+              className="tinker-state-surface group grid min-h-32 grid-cols-[1fr_auto] items-start gap-3 py-6 md:min-h-40 md:grid-cols-1 md:px-6 md:last:pr-0"
             >
-              <span className="tinker-sequence mt-1 text-[var(--route-podcast-accessory-ink)]">03</span>
               <span>
-                <span className="block text-lg font-medium tracking-tight text-foreground">Podcast</span>
+                <span className="block text-lg font-medium tracking-tight text-[var(--route-podcast-accessory-ink)]">Podcast</span>
                 <span className="mt-2 block max-w-52 text-sm leading-relaxed text-muted-foreground">
                   One person outside tech shares what they doubted, what surprised them, and what they&apos;d change.
                 </span>

@@ -21,6 +21,7 @@ const paperFocusClasses =
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
+  const isWorkshopsPage = pathname === "/workshops"
 
   useEffect(() => {
     setOpen(false)
@@ -36,7 +37,14 @@ export function SiteHeader() {
   }, [])
 
   return (
-    <header className="surface-dark sticky top-0 z-50 border-b border-[var(--palette-night-border)] bg-[var(--palette-night-water)] text-[var(--palette-night-paper)] print:hidden">
+    <header
+      className={cn(
+        "surface-dark sticky top-0 z-50 border-b border-[var(--palette-night-border)] text-[var(--palette-night-paper)] print:hidden",
+        isWorkshopsPage
+          ? "bg-[var(--palette-night-water)]/90 backdrop-blur-xl"
+          : "bg-[var(--palette-night-water)]",
+      )}
+    >
       <div className="tinker-container flex h-[4.5rem] items-center justify-between">
         <a
           href="/"

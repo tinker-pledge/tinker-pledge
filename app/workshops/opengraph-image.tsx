@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 import { OG_SIZE, loadGeist } from "@/lib/og"
 
-export const alt = "Bring one real problem. Hands-on AI workshops from the Tinker Pledge."
+export const alt = "Bring one real task. Hands-on AI workshops from the Tinker Pledge."
 export const size = OG_SIZE
 export const contentType = "image/png"
 
@@ -69,7 +69,7 @@ export default async function Image() {
             color: colors.foreground,
           }}
         >
-          Bring one real problem.
+          Bring one real task.
         </div>
         <div
           style={{
