@@ -26,7 +26,7 @@ Use `surface-podcast` together with `surface-dark` on every content section of t
 
 ## Typography Invariant
 
-Every route uses the same type system. Fraunces carries authored headings: display headings use weight 300, while smaller editorial headings use weight 400. Geist carries body copy, navigation, labels, controls, and other interface language. Geist Mono carries dates, sequence numbers, ratios, and other figures.
+Every route uses the same type system. Geist carries the complete visual hierarchy: display headings use weight 300, smaller editorial headings use weight 400, and body copy, navigation, labels, and controls use their appropriate Geist weights. Geist Mono carries dates, sequence numbers, ratios, and other figures.
 
 The heading family is enforced centrally in `app/globals.css`; component classes control size and the 300/400 weight distinction. Routes must not introduce their own display face.
 

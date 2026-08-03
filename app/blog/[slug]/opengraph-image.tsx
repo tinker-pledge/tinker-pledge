@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { getPost, getPostSlugs } from '@/lib/blog/posts'
 import { formatPostDate } from '@/lib/site'
-import { OG_COLORS, OG_SIZE, loadFraunces } from '@/lib/og'
+import { OG_COLORS, OG_SIZE, loadGeist } from '@/lib/og'
 
 export const alt = 'A post on The Tinker Pledge'
 export const size = OG_SIZE
@@ -26,7 +26,7 @@ function titleFontSize(title: string): number {
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = await getPost(slug)
-  const fraunces = await loadFraunces(300)
+  const geist = await loadGeist(300)
 
   const byline = post
     ? `${post.authors.map((a) => a.name).join(' & ')} · ${formatPostDate(post.publishedAt)}`
@@ -44,7 +44,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           justifyContent: 'space-between',
           background: OG_COLORS.background,
           padding: 80,
-          fontFamily: 'Fraunces',
+          fontFamily: 'Geist',
         }}
       >
         <div style={{ display: 'flex', fontSize: 28, letterSpacing: 6, color: OG_COLORS.primary }}>
@@ -63,6 +63,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         <div style={{ display: 'flex', fontSize: 28, color: OG_COLORS.muted }}>{byline}</div>
       </div>
     ),
-    { ...size, fonts: [{ name: 'Fraunces', data: fraunces, style: 'normal', weight: 300 }] },
+    { ...size, fonts: [{ name: 'Geist', data: geist, style: 'normal', weight: 300 }] },
   )
 }

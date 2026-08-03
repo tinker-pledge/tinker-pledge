@@ -49,7 +49,7 @@ export function SharePledgeSection() {
             </span>
             <p className="tinker-eyebrow">Share the pledge</p>
           </div>
-          <h2 className="mt-4 text-balance font-serif text-2xl font-light leading-tight text-foreground sm:text-3xl">
+          <h2 className="mt-4 text-balance font-heading text-2xl font-light leading-tight text-foreground sm:text-3xl">
             Help the idea reach someone who can say yes.
           </h2>
           <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">

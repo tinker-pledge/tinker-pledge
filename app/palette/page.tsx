@@ -313,7 +313,7 @@ function SwatchGrid({ tokens }: { tokens: Token[] }) {
           <div className="p-5">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <h3 className="font-serif text-xl text-foreground">{token.name}</h3>
+                <h3 className="font-heading text-xl text-foreground">{token.name}</h3>
                 <p className="tinker-meta-label mt-1 text-primary">{token.role}</p>
               </div>
               <code className="tinker-badge bg-muted px-2.5 font-mono text-muted-foreground">{token.token}</code>
@@ -333,7 +333,7 @@ function PairGrid({ pairs }: { pairs: TokenPair[] }) {
         <article key={pair.name} className="overflow-hidden rounded-2xl border border-border-card bg-card">
           <div className="min-h-36 p-6" style={pairStyle(pair)}>
             <p className="tinker-meta-label opacity-75">{pair.name}</p>
-            <p className="mt-4 font-serif text-3xl font-light leading-tight">People who tinker build fluency.</p>
+            <p className="mt-4 font-heading text-3xl font-light leading-tight">People who tinker build fluency.</p>
             <p className="mt-4 text-sm leading-relaxed opacity-80">{pair.use}</p>
           </div>
           <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border-card p-4 text-sm">
@@ -356,7 +356,7 @@ function ChartPreview() {
           <Layers className="size-5" strokeWidth={1.75} />
         </span>
         <div>
-          <h3 className="font-serif text-2xl text-foreground">Chart spread</h3>
+          <h3 className="font-heading text-2xl text-foreground">Chart spread</h3>
           <p className="text-sm text-muted-foreground">Use sparingly, but keep the set tied to the sunset source.</p>
         </div>
       </div>
@@ -386,10 +386,10 @@ function ComponentSamples() {
           <span className="tinker-icon-well size-10">
             <Type className="size-5" strokeWidth={1.75} />
           </span>
-          <h3 className="font-serif text-2xl text-foreground">Copy rhythm</h3>
+          <h3 className="font-heading text-2xl text-foreground">Copy rhythm</h3>
         </div>
         <p className="tinker-eyebrow mt-5">Make it real</p>
-        <p className="mt-3 font-serif text-4xl font-light leading-tight text-foreground">
+        <p className="mt-3 font-heading text-4xl font-light leading-tight text-foreground">
           A benefit for the humans behind the work.
         </p>
         <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
@@ -411,7 +411,7 @@ function ComponentSamples() {
           <span className="tinker-icon-well size-10">
             <Sprout className="size-5" strokeWidth={1.75} />
           </span>
-          <h3 className="font-serif text-2xl text-foreground">Controls and panels</h3>
+          <h3 className="font-heading text-2xl text-foreground">Controls and panels</h3>
         </div>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <label className="block">
@@ -456,7 +456,7 @@ export default function PalettePage() {
               </span>
               <p className="tinker-eyebrow">Palette test</p>
             </div>
-            <h1 className="mt-5 text-balance font-serif text-4xl font-light leading-tight text-foreground sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-balance font-heading text-4xl font-light leading-tight text-foreground sm:text-5xl md:text-6xl">
               Test the Tinker Pledge colors where the product actually uses them.
             </h1>
             <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -472,7 +472,7 @@ export default function PalettePage() {
           <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="tinker-eyebrow">Source palette</p>
-              <h2 className="mt-3 font-serif text-3xl font-light text-foreground sm:text-4xl">Meaningful primitives</h2>
+              <h2 className="mt-3 font-heading text-3xl font-light text-foreground sm:text-4xl">Meaningful primitives</h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-muted-foreground">
               These are the named source colors. The semantic tokens below should map back to these meanings.
@@ -486,7 +486,7 @@ export default function PalettePage() {
         <div className="tinker-container py-16 md:py-20">
           <div className="mb-8">
             <p className="tinker-eyebrow">Semantic roles</p>
-            <h2 className="mt-3 font-serif text-3xl font-light text-foreground sm:text-4xl">How the app consumes color</h2>
+            <h2 className="mt-3 font-heading text-3xl font-light text-foreground sm:text-4xl">How the app consumes color</h2>
           </div>
           <SwatchGrid tokens={semanticTokens} />
         </div>
@@ -500,7 +500,7 @@ export default function PalettePage() {
             </span>
             <div>
               <p className="tinker-eyebrow">Contrast checks</p>
-              <h2 className="mt-2 font-serif text-3xl font-light text-foreground sm:text-4xl">Common pairings</h2>
+              <h2 className="mt-2 font-heading text-3xl font-light text-foreground sm:text-4xl">Common pairings</h2>
             </div>
           </div>
           <PairGrid pairs={lightPairs} />
@@ -522,7 +522,7 @@ export default function PalettePage() {
             </span>
             <div>
               <p className="tinker-eyebrow">Dark preview</p>
-              <h2 className="mt-2 font-serif text-3xl font-light text-foreground sm:text-4xl">
+              <h2 className="mt-2 font-heading text-3xl font-light text-foreground sm:text-4xl">
                 Same story after sunset
               </h2>
             </div>

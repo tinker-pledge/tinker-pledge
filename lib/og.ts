@@ -6,15 +6,15 @@
  * wants. Fetched at build time only — every consumer of this module is a
  * statically generated image route.
  */
-export async function loadFraunces(weight: 300 | 400 = 300): Promise<ArrayBuffer> {
-  const api = `https://fonts.googleapis.com/css2?family=Fraunces:wght@${weight}`
+export async function loadGeist(weight: 300 | 400 = 300): Promise<ArrayBuffer> {
+  const api = `https://fonts.googleapis.com/css2?family=Geist:wght@${weight}`
   const css = await fetch(api).then((r) => r.text())
 
   const match = css.match(/src:\s*url\((https:\/\/[^)]+)\)/)
-  if (!match) throw new Error('Could not resolve a Fraunces font URL from the Google Fonts CSS API')
+  if (!match) throw new Error('Could not resolve a Geist font URL from the Google Fonts CSS API')
 
   const res = await fetch(match[1])
-  if (!res.ok) throw new Error(`Failed to download Fraunces: ${res.status}`)
+  if (!res.ok) throw new Error(`Failed to download Geist: ${res.status}`)
   return res.arrayBuffer()
 }
 
