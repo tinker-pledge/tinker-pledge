@@ -47,8 +47,7 @@ export function PledgeSection() {
       <div className="tinker-container tinker-section">
         <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
-            <p className="tinker-eyebrow">Add your voice</p>
-            <h2 className="mt-5 text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
+            <h2 className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
               Take the Tinker Pledge.
             </h2>
             <p className="mt-5 max-w-md text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -73,7 +72,7 @@ export function PledgeSection() {
           <div className="tinker-card border border-border-card bg-background p-7 sm:p-10 lg:col-span-7 lg:col-start-6">
             <div className="flex items-center gap-3">
               <span className="grid size-7 grid-cols-2 gap-[3px]" aria-hidden="true">
-                <span className="bg-primary" />
+                <span className="bg-[var(--palette-golden-hour)]" />
                 <span className="border border-foreground/35" />
                 <span className="border border-foreground/35" />
                 <span className="bg-foreground" />

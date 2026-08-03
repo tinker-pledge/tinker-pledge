@@ -45,18 +45,15 @@ export default function WorkshopsPage() {
         />
         <div className="tinker-container relative pb-16 pt-16 sm:pb-24 sm:pt-24 lg:pb-28">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-12">
               <p className="tinker-eyebrow text-[var(--route-workshop-accessory)]">
                 Workshop · Hands-on public session
               </p>
-              <h1 className="mt-7 max-w-5xl text-balance font-heading text-[clamp(3.8rem,8vw,7.6rem)] font-light leading-[0.88] tracking-[-0.055em]">
+              <h1 className="mt-7 text-balance font-heading text-[clamp(3.8rem,8vw,7.6rem)] font-light leading-[0.88] tracking-[-0.055em]">
                 Bring one real problem.
               </h1>
             </div>
-            <div className="flex flex-col justify-end lg:col-span-4 lg:pb-2">
-              <div aria-hidden="true" className="workshop-orb mb-12 size-20 sm:size-24 lg:mb-auto lg:size-28">
-                <div className="workshop-orb__body" />
-              </div>
+            <div className="flex flex-col lg:col-span-7">
               <p className="max-w-md text-pretty text-lg leading-relaxed text-[var(--palette-night-muted)] sm:text-xl">
                 Bring the task on your laptop. Abhi and Eva will work beside you and help you find out what today&apos;s
                 tools can—and cannot—do with it.
@@ -109,12 +106,8 @@ export default function WorkshopsPage() {
       <section className="border-b border-border bg-background">
         <div className="tinker-container tinker-section">
           <div className="flex items-center gap-4">
-            <span className="tinker-meta-label text-primary">Next</span>
+            <span className="tinker-meta-label text-primary">Next up:</span>
             <span className="h-px w-10 bg-border" />
-            <p className="tinker-badge tinker-badge--success">
-              <span aria-hidden="true" className="tinker-badge__dot" />
-              Open registration
-            </p>
           </div>
 
           <div className="tinker-card mt-9 grid overflow-hidden border border-border-card bg-card lg:grid-cols-12">
@@ -122,6 +115,10 @@ export default function WorkshopsPage() {
               <p className="font-mono text-5xl font-normal tracking-[-0.055em] text-foreground">{ANN_ARBOR_WORKSHOP.day}</p>
               <p className="tinker-meta-label mt-2 text-muted-foreground">
                 {ANN_ARBOR_WORKSHOP.monthYear}
+              </p>
+              <p className="tinker-badge tinker-badge--success mt-5">
+                <span aria-hidden="true" className="tinker-badge__dot" />
+                Open registration
               </p>
             </div>
             <div className="border-b border-border-card px-7 py-7 lg:col-span-7 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">

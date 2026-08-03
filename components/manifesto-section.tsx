@@ -34,11 +34,11 @@ export function ManifestoSection() {
       />
       <div className="tinker-container tinker-section">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-8 lg:col-start-5">
+          <div className="lg:col-span-12">
             <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">
-              The pledge · Full daylight
+              The pledge
             </p>
-            <h1 className="mt-8 max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-light leading-[0.93] tracking-[-0.05em] text-foreground">
+            <h1 className="mt-8 text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-light leading-[0.93] tracking-[-0.05em] text-foreground">
               Give people enough room to try again.
             </h1>
           </div>

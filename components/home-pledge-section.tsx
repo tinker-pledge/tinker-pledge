@@ -10,16 +10,15 @@ export function HomePledgeSection() {
       />
       <div className="tinker-container tinker-route-immersive">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-12">
             <div className="flex items-center gap-4">
-              <span className="tinker-sequence">02</span>
               <span className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
-              <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Build fluency</p>
+              <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Pledge</p>
             </div>
           </div>
 
-          <div className="lg:col-span-8">
-            <h2 className="max-w-4xl text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-light leading-[0.95] tracking-[-0.05em] text-foreground">
+          <div className="lg:col-span-12">
+            <h2 className="text-balance text-[clamp(2.8rem,6vw,5.8rem)] font-light leading-[0.95] tracking-[-0.05em] text-foreground">
               Give people a small personal AI budget. Let them learn what the tools are for.
             </h2>
           </div>

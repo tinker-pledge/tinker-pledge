@@ -32,21 +32,45 @@ export function WorkshopSection() {
         className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-workshop-horizon)]"
       />
       <div className="tinker-container py-20 sm:py-28 lg:py-32">
+        <div className="mb-16 border-y border-foreground/20 py-7 sm:mb-24 sm:py-9">
+          <p className="tinker-meta-label text-foreground/50">Next workshop</p>
+          <p className="mt-3 max-w-3xl text-2xl font-medium tracking-[-0.025em]">
+            {ANN_ARBOR_WORKSHOP.title}
+          </p>
+          <div className="mt-5 flex flex-col gap-3 text-sm text-foreground/75">
+            <span className="inline-flex items-center gap-2">
+              <MapPin className="size-4 text-primary" strokeWidth={1.8} />
+              {ANN_ARBOR_WORKSHOP.city}, {ANN_ARBOR_WORKSHOP.region}
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <CalendarDays className="size-4 text-primary" strokeWidth={1.8} />
+              {ANN_ARBOR_WORKSHOP.date}
+            </span>
+          </div>
+          <Button
+            render={
+              <a href={ANN_ARBOR_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
+            }
+            nativeButton={false}
+            size="lg"
+            className="mt-7 h-12 rounded-full px-7"
+          >
+            Register on Luma
+            <ArrowRight className="size-4" />
+          </Button>
+        </div>
+
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-4">
-              <span className="tinker-sequence">01</span>
               <span aria-hidden="true" className="h-px w-10 bg-[var(--route-workshop-accessory)]" />
               <p className="tinker-eyebrow text-[var(--route-workshop-accessory)]">
-                Hands-on sessions
+                Workshop
               </p>
             </div>
             <h2 className="mt-8 text-[clamp(3.5rem,7vw,6.5rem)] font-light leading-[0.9] tracking-[-0.05em]">
-              Workshop
-            </h2>
-            <p className="mt-8 max-w-lg text-pretty text-2xl leading-snug tracking-[-0.02em] text-foreground/95 sm:text-3xl">
               Bring the task you keep doing by hand.
-            </p>
+            </h2>
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-foreground/65">
               You already use AI. Some weeks that&apos;s a quick email, some weeks something bigger. It hands back a
               plan, and the doing still lands on you, so the same job is back on your desk next week, and the week
@@ -86,38 +110,6 @@ export function WorkshopSection() {
               </a>
             </figcaption>
           </figure>
-        </div>
-
-        <div className="mt-20 border-y border-foreground/20 lg:mt-28">
-          <div className="grid lg:grid-cols-[1.1fr_1fr_auto] lg:items-stretch">
-            <div className="border-b border-foreground/20 py-7 lg:border-b-0 lg:border-r lg:py-8 lg:pr-8">
-              <p className="tinker-meta-label text-foreground/50">Next workshop</p>
-              <p className="mt-3 text-2xl font-medium tracking-[-0.025em]">{ANN_ARBOR_WORKSHOP.title}</p>
-            </div>
-            <div className="grid gap-3 border-b border-foreground/20 py-7 text-sm text-foreground/75 sm:grid-cols-2 lg:border-b-0 lg:border-r lg:px-8 lg:py-8">
-              <span className="inline-flex items-center gap-2">
-                <MapPin className="size-4 text-primary" strokeWidth={1.8} />
-                {ANN_ARBOR_WORKSHOP.city}, {ANN_ARBOR_WORKSHOP.region}
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <CalendarDays className="size-4 text-primary" strokeWidth={1.8} />
-                {ANN_ARBOR_WORKSHOP.date}
-              </span>
-            </div>
-            <div className="flex items-center py-7 lg:pl-8">
-              <Button
-                render={
-                  <a href={ANN_ARBOR_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
-                }
-                nativeButton={false}
-                size="lg"
-                className="h-12 w-full rounded-full px-7 lg:w-auto"
-              >
-                Register on Luma
-                <ArrowRight className="size-4" />
-              </Button>
-            </div>
-          </div>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-[0.8fr_2.2fr] lg:gap-12">

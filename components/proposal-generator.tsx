@@ -100,12 +100,6 @@ export function ProposalGenerator() {
   return (
     <section id="proposal" className="border-b border-border bg-secondary/45">
       <div className="tinker-container tinker-section">
-        <div className="mb-8 flex items-center gap-4">
-          <span className="tinker-sequence">01</span>
-          <span className="h-px w-10 bg-border" />
-          <p className="tinker-eyebrow text-muted-foreground">Build the draft</p>
-        </div>
-
         <div className="tinker-card grid overflow-hidden border border-border-card bg-card lg:grid-cols-12">
           <div className="border-b border-border-card p-6 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-10">
             <div className="flex flex-col gap-5">

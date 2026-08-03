@@ -60,10 +60,9 @@ export default function AboutPage() {
       <section className="bg-secondary/45">
         <div className="tinker-container tinker-section">
           <header className="grid gap-8 lg:grid-cols-12 lg:gap-8">
-            <p className="tinker-eyebrow lg:col-span-4">The co-creators</p>
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-8 lg:col-start-5">
               <h2 className="text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
-                Built side by side.
+                Built because we needed it.
               </h2>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
                 Eva and Abhi co-created The Tinker Pledge. The introductions below and their published writing carry the

@@ -15,7 +15,7 @@ export function Hero() {
         <nav aria-label="Explore the project" className="mt-16 border-t border-border sm:mt-24 lg:mt-28">
           <div className="grid md:grid-cols-3">
             <a
-              href="/workshops"
+              href="#workshop"
               className="tinker-state-surface group grid min-h-32 grid-cols-[2.5rem_1fr_auto] items-start gap-3 border-b border-border py-6 md:min-h-40 md:grid-cols-[2.5rem_1fr] md:border-b-0 md:border-r md:px-6 md:first:pl-0"
             >
               <span className="tinker-sequence mt-1 text-[var(--route-workshop-accessory-ink)]">01</span>

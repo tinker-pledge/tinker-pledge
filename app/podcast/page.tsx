@@ -26,13 +26,7 @@ export default function PodcastPage() {
               <div className="flex items-center gap-4">
                 <span className="tinker-sequence text-[var(--palette-night-quiet)]">03</span>
                 <span className="h-0.5 w-10 bg-[var(--route-podcast-accessory)]" />
-                <div className="flex items-center gap-3">
-                  <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">Podcast</p>
-                  <span className="tinker-badge tinker-badge--progress">
-                    <span aria-hidden="true" className="tinker-badge__dot" />
-                    In development
-                  </span>
-                </div>
+                <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">Podcast</p>
               </div>
               <h1 className="mt-9 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7.2rem)] font-light leading-[0.89] tracking-[-0.055em]">
                 Conversations after the first try.
@@ -50,7 +44,7 @@ export default function PodcastPage() {
                 </p>
                 <span className="tinker-badge tinker-badge--progress">
                   <span aria-hidden="true" className="tinker-badge__dot" />
-                  Early work
+                  Under Production
                 </span>
               </div>
               <dl className="divide-y divide-border-card px-6">

@@ -15,11 +15,7 @@ export default function ProposalPage() {
         <div className="tinker-container tinker-route-intro">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-8">
-              <div className="flex items-center gap-4">
-                <p className="tinker-eyebrow text-[var(--route-pledge-accessory-ink)]">Make it real</p>
-                <span aria-hidden="true" className="h-px w-10 bg-[var(--route-pledge-accessory)]" />
-              </div>
-              <h1 className="mt-7 max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
+              <h1 className="max-w-5xl text-balance text-[clamp(3.5rem,7.5vw,7rem)] font-light leading-[0.9] tracking-[-0.055em] text-foreground">
                 Turn the idea into a proposal you can send today.
               </h1>
             </div>

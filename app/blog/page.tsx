@@ -33,24 +33,13 @@ export default function BlogIndexPage() {
     <main>
       <section className="border-b border-border bg-background">
         <div className="tinker-container tinker-section">
-          <header className="grid gap-12 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-4">
-              <div className="flex items-center gap-4">
-                <span className="h-0.5 w-10 bg-[var(--route-blog-accessory)]" />
-                <p className="tinker-eyebrow text-[var(--route-blog-accessory)]">
-                  Field notes · Next morning
-                </p>
-              </div>
-              <p className="mt-8 max-w-xs text-pretty text-lg leading-relaxed text-muted-foreground">
-                What we are learning about practice, access, and the people trying these tools for themselves.
-              </p>
-            </div>
-
-            <div className="lg:col-span-8">
-              <h1 className="max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-light leading-[0.93] tracking-[-0.05em] text-foreground">
-                Notes from the pledge.
-              </h1>
-            </div>
+          <header>
+            <h1 className="max-w-4xl text-balance text-[clamp(3.2rem,6.5vw,6.4rem)] font-light leading-[0.93] tracking-[-0.05em] text-foreground">
+              Blog
+            </h1>
+            <p className="mt-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl">
+              Field notes from the workshops, the pledge, and people learning what these tools are useful for.
+            </p>
           </header>
 
           {posts.length === 0 ? (

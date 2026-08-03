@@ -17,10 +17,9 @@ export function HomePodcastSection() {
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-4">
-              <span className="tinker-sequence text-[var(--palette-night-quiet)]">03</span>
               <span className="h-0.5 w-10 bg-[var(--route-podcast-accessory)]" />
               <p className="tinker-eyebrow text-[var(--route-podcast-accessory)]">
-                Share your lessons
+                Podcast
               </p>
             </div>
             <h2 className="mt-9 max-w-4xl text-balance text-[clamp(3rem,6.5vw,6.5rem)] font-light leading-[0.92] tracking-[-0.05em]">
