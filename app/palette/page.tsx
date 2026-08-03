@@ -36,7 +36,7 @@ const sourceTokens: Token[] = [
     name: "Warm paper",
     token: "--palette-warm-paper",
     role: "Cards",
-    meaning: "A near-white sheet for cards and workshop surfaces that should feel held, not boxed in.",
+    meaning: "A near-white sheet for cards on paper routes that should feel held, not boxed in.",
   },
   {
     name: "Lake shadow",

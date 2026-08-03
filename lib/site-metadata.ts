@@ -6,6 +6,12 @@ type PageMetadataOptions = {
   description: string
   path: `/${string}` | "/"
   noIndex?: boolean
+  image?: {
+    url: string
+    width: number
+    height: number
+    alt: string
+  }
 }
 
 export function createPageMetadata({
@@ -13,6 +19,7 @@ export function createPageMetadata({
   description,
   path,
   noIndex = false,
+  image = DEFAULT_OG_IMAGE,
 }: PageMetadataOptions): Metadata {
   return {
     title,
@@ -26,12 +33,13 @@ export function createPageMetadata({
       url: path,
       siteName: "The Tinker Pledge",
       type: "website",
-      images: [DEFAULT_OG_IMAGE],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [image.url],
     },
     ...(noIndex
       ? {

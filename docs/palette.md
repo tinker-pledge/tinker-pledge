@@ -12,7 +12,7 @@ The Workshop is the only route with the full sunset apparatus. Its destination p
 
 ## Route Theme Invariant
 
-The route association travels with the route wherever it appears. Workshop is dark Golden Hour, Pledge is paper in Full Daylight, Podcast is violet-black After Dark, and Blog is paper with a reading-violet Next Morning marker. A homepage preview must use the same ground, text ladder, action family, and route punctuation as its destination. Navigation and compact route indexes repeat the association with one accessible marker rather than reproducing the full surface.
+The route association travels with the route wherever it appears, including its social share image. Workshop is dark Golden Hour, Pledge is paper in Full Daylight, Podcast is violet-black After Dark, and Blog is paper with a reading-violet Next Morning marker. A homepage preview must use the same ground, text ladder, action family, and route punctuation as its destination. Navigation and compact route indexes repeat the association with one accessible marker rather than reproducing the full surface.
 
 ## Route Chrome
 

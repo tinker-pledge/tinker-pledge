@@ -96,7 +96,10 @@ export default function ContactPage() {
                     <UsersRound className="size-5" strokeWidth={1.75} />
                   </span>
                   <div>
-                    <p className="tinker-eyebrow">Workshops</p>
+                    <div className="flex items-center gap-4">
+                      <span aria-hidden="true" className="h-px w-10 bg-[var(--route-workshop-accessory)]" />
+                      <p className="tinker-eyebrow text-[var(--route-workshop-accessory-ink)]">Workshops</p>
+                    </div>
                     <h3 className="mt-3 max-w-xl text-balance text-2xl font-light tracking-[-0.025em] text-foreground sm:text-3xl">
                       Shape a practical session around your team.
                     </h3>

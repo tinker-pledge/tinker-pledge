@@ -75,6 +75,7 @@
 - **Workshop — Golden Hour**
   - Dark warm-black ground, cream text, Golden Hour gold actions and markers, with ember used inside the horizon/orb/sun-fill apparatus.
   - Use `surface-dark surface-workshop` for the complete `/workshops` page and the homepage Workshop section. Do not switch later Workshop sections back to paper.
+  - The `/workshops` Open Graph image also uses the dark Golden Hour system; do not fall back to the generic paper share card.
   - `/workplace` remains a paper support route and carries only the accessible Golden Hour ink marker; it does not become a full dark Workshop surface.
 - **Pledge — Full Daylight**
   - Cream paper, warm-black ink, the daylight gold horizon, and accessible ochre labels. Primary document actions use the warm-black `ink` treatment.

@@ -9,6 +9,12 @@ export const metadata = createPageMetadata({
   description:
     "Bring a problem or workflow to a hands-on public AI workshop. No coding required.",
   path: "/workshops",
+  image: {
+    url: "/workshops/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Bring one real problem. Hands-on AI workshops from the Tinker Pledge.",
+  },
 })
 
 const workshopSteps = [
