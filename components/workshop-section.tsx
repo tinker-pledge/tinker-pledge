@@ -28,12 +28,14 @@ export function WorkshopSection() {
         className="absolute inset-x-0 top-0 h-[3px] bg-[image:var(--gradient-workshop-horizon)]"
       />
       <div className="tinker-container py-20 sm:py-28 lg:py-32">
-        <div className="mb-16 grid gap-7 border-y border-foreground/20 py-7 sm:mb-24 sm:py-9 lg:grid-cols-12 lg:items-end">
-          <div className="lg:col-span-9">
+        <div className="mb-16 grid gap-7 border-y border-foreground/20 py-7 sm:mb-24 sm:py-9 lg:grid-cols-3 lg:items-center lg:gap-8">
+          <div>
             <h2 className="max-w-3xl text-3xl font-light tracking-[-0.035em] sm:text-4xl">
               The next workshop is in Ann Arbor.
             </h2>
-            <p className="mt-4 max-w-3xl text-2xl font-medium tracking-[-0.025em]">
+          </div>
+          <div>
+            <p className="max-w-3xl text-2xl font-medium tracking-[-0.025em]">
               {ANN_ARBOR_WORKSHOP.title}
             </p>
             <div className="mt-5 flex flex-col gap-3 text-sm text-foreground/75">
@@ -53,7 +55,7 @@ export function WorkshopSection() {
             }
             nativeButton={false}
             size="lg"
-            className="h-12 justify-self-start rounded-full px-7 lg:col-span-3 lg:justify-self-end"
+            className="h-12 justify-self-start rounded-full px-7 lg:justify-self-end"
           >
             Register on Luma
             <ArrowRight className="size-4" />

@@ -33,7 +33,7 @@ export function HomePodcastSection() {
               </p>
               <span className="tinker-badge tinker-badge--progress">
                 <span aria-hidden="true" className="tinker-badge__dot" />
-                In development
+                Under production
               </span>
             </div>
             <dl className="divide-y divide-border-card px-6">
