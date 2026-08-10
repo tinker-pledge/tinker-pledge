@@ -1,6 +1,6 @@
-import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
+import { ArrowRight, CalendarDays, Video } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ANN_ARBOR_WORKSHOP, NYC_WORKSHOP } from "@/data/workshops"
+import { NYC_WORKSHOP, VIRTUAL_WORKSHOP } from "@/data/workshops"
 import { createPageMetadata } from "@/lib/site-metadata"
 
 export const metadata = createPageMetadata({
@@ -59,7 +59,7 @@ export default function WorkshopsPage() {
               </p>
               <Button
                 render={
-                  <a href={ANN_ARBOR_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
+                  <a href={VIRTUAL_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
                 }
                 nativeButton={false}
                 variant="sun"
@@ -87,18 +87,18 @@ export default function WorkshopsPage() {
 
           <div className="tinker-card mt-9 grid overflow-hidden border border-border-card bg-card lg:grid-cols-12">
             <div className="border-b border-border-card px-7 py-7 lg:col-span-3 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
-              <p className="font-mono text-5xl font-normal tracking-[-0.055em] text-foreground">{ANN_ARBOR_WORKSHOP.day}</p>
+              <p className="font-mono text-5xl font-normal tracking-[-0.055em] text-foreground">{VIRTUAL_WORKSHOP.day}</p>
               <p className="tinker-meta-label mt-2 text-muted-foreground">
-                {ANN_ARBOR_WORKSHOP.monthYear}
+                {VIRTUAL_WORKSHOP.monthYear}
               </p>
               <div className="mt-7 flex flex-col gap-3 text-sm text-muted-foreground">
                 <span className="inline-flex items-center gap-2">
-                  <MapPin className="size-4 text-primary" strokeWidth={1.8} />
-                  {ANN_ARBOR_WORKSHOP.city}, {ANN_ARBOR_WORKSHOP.region}
+                  <Video className="size-4 text-primary" strokeWidth={1.8} />
+                  {VIRTUAL_WORKSHOP.format} · {VIRTUAL_WORKSHOP.platform}
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <CalendarDays className="size-4 text-primary" strokeWidth={1.8} />
-                  {ANN_ARBOR_WORKSHOP.date}
+                  {VIRTUAL_WORKSHOP.date} · {VIRTUAL_WORKSHOP.time}
                 </span>
               </div>
               <p className="tinker-badge tinker-badge--success mt-5">
@@ -108,7 +108,7 @@ export default function WorkshopsPage() {
             </div>
             <div className="border-b border-border-card px-7 py-7 lg:col-span-6 lg:border-b-0 lg:border-r lg:px-9 lg:py-9">
               <h2 className="max-w-3xl text-balance text-3xl font-light leading-tight tracking-[-0.035em] text-foreground sm:text-4xl">
-                {ANN_ARBOR_WORKSHOP.title}
+                {VIRTUAL_WORKSHOP.title}
               </h2>
               <p className="mt-5 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
                 Sort the work already on your plate into the right AI bucket, run a real task, and build something
@@ -121,7 +121,7 @@ export default function WorkshopsPage() {
               </p>
               <Button
                 render={
-                  <a href={ANN_ARBOR_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
+                  <a href={VIRTUAL_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
                 }
                 nativeButton={false}
                 size="lg"

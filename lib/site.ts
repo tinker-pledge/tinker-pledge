@@ -1,5 +1,6 @@
 export const SITE_URL = 'https://tinkerpledge.org'
 export const SITE_NAME = 'The Tinker Pledge'
+export const DISCORD_INVITE_URL = 'https://discord.gg/C3zr2V6kmz'
 
 export function absoluteUrl(pathname: string): string {
   return new URL(pathname, SITE_URL).toString()

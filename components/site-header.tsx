@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { ArrowUpRight, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
+import { VIRTUAL_WORKSHOP } from "@/data/workshops"
 import { isCurrentNavigationPath, primaryNavigation } from "@/lib/navigation"
 import { cn } from "@/lib/utils"
 
@@ -87,7 +87,7 @@ export function SiteHeader() {
           <Button
             render={
               <a
-                href={ANN_ARBOR_WORKSHOP.href}
+                href={VIRTUAL_WORKSHOP.href}
                 target="_blank"
                 rel="noopener noreferrer"
               />
@@ -96,7 +96,7 @@ export function SiteHeader() {
             variant="darkOutline"
             className="h-10 rounded-full px-5"
           >
-            Ann Arbor · {ANN_ARBOR_WORKSHOP.compactDate}
+            Virtual workshop · {VIRTUAL_WORKSHOP.compactDate}
             <ArrowUpRight className="size-3.5" />
           </Button>
         </div>
@@ -144,7 +144,7 @@ export function SiteHeader() {
             <Button
               render={
                 <a
-                  href={ANN_ARBOR_WORKSHOP.href}
+                  href={VIRTUAL_WORKSHOP.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
@@ -154,7 +154,7 @@ export function SiteHeader() {
               variant="darkOutline"
               className="mt-5 h-12 rounded-full"
             >
-              Ann Arbor · {ANN_ARBOR_WORKSHOP.monthDay}
+              Virtual workshop · {VIRTUAL_WORKSHOP.compactDate}
               <ArrowUpRight className="size-4" />
             </Button>
           </nav>

@@ -1,4 +1,5 @@
 import { footerProjectNavigation } from "@/lib/navigation"
+import { DISCORD_INVITE_URL } from "@/lib/site"
 
 export function SiteFooter() {
   return (
@@ -42,6 +43,14 @@ export function SiteFooter() {
               </a>
               <a href="/how-it-works" className="transition-colors hover:text-[var(--palette-night-paper)]">
                 Practical pledge guide
+              </a>
+              <a
+                href={DISCORD_INVITE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-[var(--palette-night-paper)]"
+              >
+                Join Discord
               </a>
               <a href="/contact" className="transition-colors hover:text-[var(--palette-night-paper)]">
                 Contact the team

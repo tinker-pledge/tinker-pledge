@@ -1,6 +1,6 @@
-import { ArrowRight, CalendarDays, MapPin } from "lucide-react"
+import { ArrowRight, CalendarDays, Video } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ANN_ARBOR_WORKSHOP } from "@/data/workshops"
+import { VIRTUAL_WORKSHOP } from "@/data/workshops"
 
 const roomNotes = [
   {
@@ -31,27 +31,27 @@ export function WorkshopSection() {
         <div className="mb-16 grid gap-7 border-y border-foreground/20 py-7 sm:mb-24 sm:py-9 lg:grid-cols-3 lg:items-center lg:gap-8">
           <div>
             <h2 className="max-w-3xl text-3xl font-light tracking-[-0.035em] sm:text-4xl">
-              The next workshop is in Ann Arbor.
+              The next workshop is virtual.
             </h2>
           </div>
           <div>
             <p className="max-w-3xl text-2xl font-medium tracking-[-0.025em]">
-              {ANN_ARBOR_WORKSHOP.title}
+              {VIRTUAL_WORKSHOP.title}
             </p>
             <div className="mt-5 flex flex-col gap-3 text-sm text-foreground/75">
               <span className="inline-flex items-center gap-2">
-                <MapPin className="size-4 text-primary" strokeWidth={1.8} />
-                {ANN_ARBOR_WORKSHOP.city}, {ANN_ARBOR_WORKSHOP.region}
+                <Video className="size-4 text-primary" strokeWidth={1.8} />
+                {VIRTUAL_WORKSHOP.format} · {VIRTUAL_WORKSHOP.platform}
               </span>
               <span className="inline-flex items-center gap-2">
                 <CalendarDays className="size-4 text-primary" strokeWidth={1.8} />
-                {ANN_ARBOR_WORKSHOP.date}
+                {VIRTUAL_WORKSHOP.date} · {VIRTUAL_WORKSHOP.time}
               </span>
             </div>
           </div>
           <Button
             render={
-              <a href={ANN_ARBOR_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
+              <a href={VIRTUAL_WORKSHOP.href} target="_blank" rel="noopener noreferrer" />
             }
             nativeButton={false}
             size="lg"

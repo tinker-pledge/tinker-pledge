@@ -1,13 +1,13 @@
-export const ANN_ARBOR_WORKSHOP = {
-  city: "Ann Arbor",
-  region: "Michigan",
+export const VIRTUAL_WORKSHOP = {
+  format: "Virtual",
+  platform: "Zoom",
   date: "August 10, 2026",
+  time: "6–8 PM ET",
   day: "10",
   monthYear: "August 2026",
   compactDate: "Aug 10",
-  monthDay: "August 10",
   href: "https://luma.com/qwbhwslj",
-  title: "Get the most out of Claude Cowork & Codex",
+  title: "Get the most out of Claude Cowork & Codex: A hands-on AI workshop",
 }
 
 export const NYC_WORKSHOP = {
